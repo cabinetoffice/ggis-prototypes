@@ -1,0 +1,166 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  {{ govukHeader({
+  homepageUrl: "../index.html",
+  serviceName: "Government Grants Management Function",
+  serviceUrl: "#",
+  navigation: [
+    {
+      href: "#",
+      text: "Support tickets"
+    },
+    {
+      href: "#",
+      text: "How to"
+    }
+  ]
+}) }}
+{% endblock %}
+
+{% block pageScripts %}
+  <script type="text/javascript">
+    var $element = document.querySelector('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav($element).init()
+  </script>
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "prototype"
+  },
+  html: 'This is a prototype service'
+}) }}
+
+ {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "/sprint_1/start-page.html"
+      },
+      {
+        text: "Downloads",
+        href: "/sprint_1/downloads.html"
+      }
+    ]
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Downloads
+      </h1>
+        
+        <p>Here are some of the data files you are able to download. You can also download filtered down files on the “View Schemes”, “View Awards” and “View Recipients” pages, as well as within each Recipient record.</p>
+        
+    </div>
+  </div>
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full"> 
+            
+            <div class="govuk-!-padding-bottom-6"></div>
+            
+            <div class="" style="background-color:#f3f3f3; height: 48px;">
+            <h1 class="govuk-heading-m" style="padding:8px; border-bottom-style:solid;">
+               Report name          
+            </h1>   
+            </div>
+  
+            <div class="govuk-!-padding-bottom-4"></div>
+            <ul class="govuk-list">
+              <li style="padding-top:12px;">
+                  <button class="govuk-button govuk-prototype-kit-task-list__tag" data-module="govuk-button">
+                      Download
+                  </button>
+                <a class="govuk-link" href="#">User Licences</a>   
+              </li>
+              <li style="padding-top:8px;"> 
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-two-thirds">
+                        <p>Download a file listing all active users in your department and what type of GGiS account they have, and all departments’ GGIS Grants Champions. These reports are only visible to GGIS Grants Champions.</p>
+                    </div>
+                </div>
+              </li>
+                
+            <hr class="govuk-section-break govuk-section-break--visible">    
+              
+            <li style="padding-top:12px;">
+                  <button class="govuk-button govuk-prototype-kit-task-list__tag" data-module="govuk-button">
+                      Download
+                  </button>
+                <a class="govuk-link" href="#">My Organisation’s Schemes</a>   
+              </li>
+              <li style="padding-top:8px;"> 
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-two-thirds">
+                        <p>Download a file listing your organisation’s grant schemes.</p>
+                    </div>
+                </div>
+              </li>
+                
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+                
+            <li style="padding-top:12px;">
+                  <button class="govuk-button govuk-prototype-kit-task-list__tag" data-module="govuk-button">
+                      Download
+                  </button>
+                <a class="govuk-link" href="#">All Schemes</a>   
+              </li>
+              <li style="padding-top:8px;"> 
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-two-thirds">
+                        <p>Download a file listing all grant schemes on GGiS. You cannot view any data from other departments that has been marked as not for publishing for sensitivity/national security reasons.</p>
+                    </div>
+                </div>
+              </li>
+                
+            <hr class="govuk-section-break govuk-section-break--visible">     
+                
+            <li style="padding-top:12px;">
+                  <button class="govuk-button govuk-prototype-kit-task-list__tag" data-module="govuk-button">
+                      Download
+                  </button>
+                <a class="govuk-link" href="#">My Organisation’s Awards</a>   
+              </li>
+              <li style="padding-top:8px;"> 
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-two-thirds">
+                        <p>Download a file listing your organisation’s grant awards.</p>
+                    </div>
+                </div>
+              </li>
+                
+            <hr class="govuk-section-break govuk-section-break--visible">     
+                
+            <li style="padding-top:12px;">
+                  <button class="govuk-button govuk-prototype-kit-task-list__tag" data-module="govuk-button">
+                      Download
+                  </button>
+                <a class="govuk-link" href="#">All Awards</a>   
+              </li>
+              <li style="padding-top:8px;"> 
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-two-thirds">
+                        <p>Download a file listing all grant awards on GGiS. You cannot view any data from other departments that has been marked as not for publishing for sensitivity/national security reasons.</p>
+                    </div>
+                </div>
+              </li>
+                
+            <hr class="govuk-section-break govuk-section-break--visible">         
+            </ul>
+
+    </div>
+    </div>
+
+{% endblock %}

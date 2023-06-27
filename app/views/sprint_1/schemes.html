@@ -1,0 +1,313 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  {{ govukHeader({
+  homepageUrl: "../index.html",
+  serviceName: "Government Grants Management Function",
+  serviceUrl: "#",
+  navigation: [
+    {
+      href: "#",
+      text: "Support tickets"
+    },
+    {
+      href: "#",
+      text: "How to"
+    }
+  ]
+}) }}
+{% endblock %}
+
+{% block pageScripts %}
+  <script type="text/javascript">
+    var $element = document.querySelector('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav($element).init()
+  </script>
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "prototype"
+  },
+  html: 'This is a prototype service'
+}) }}
+
+ {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "/sprint_1/start-page.html"
+      },
+      {
+        text: "Grant schemes",
+        href: "/sprint_1/schemes.html"
+      },
+      {
+        text: "Current page"
+      }
+    ]
+  }) }}
+
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Grant schemes
+      </h1>
+        
+    </div>
+  </div>
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+
+        <div class="govuk-tabs" data-module="govuk-tabs">
+      <h2 class="govuk-tabs__title">
+        Contents
+      </h2>
+      <ul class="govuk-tabs__list">
+        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+          <a class="govuk-tabs__tab govuk-body govuk-!-font-size-16" href="#add-grant-scheme" style="color: #1d70b8;">
+            Add a grant scheme
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab govuk-body govuk-!-font-size-16" href="#view-grant-scheme" style="color: #1d70b8;">
+            View grant scheme
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab govuk-body govuk-!-font-size-16" href="#readiness-assessments" style="color: #1d70b8;">
+            Readiness assessments 
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab govuk-body govuk-!-font-size-16" href="#add-grant-in-aid" style="color: #1d70b8;">
+            Add a grant in aid
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab govuk-body govuk-!-font-size-16" href="#view-grants-in-aid" style="color: #1d70b8;">
+            View grants in aid
+          </a>
+        </li>  
+      </ul>
+      <div class="govuk-tabs__panel" id="add-grant-scheme">
+        <h2 class="govuk-body govuk-!-font-size-27 govuk-!-font-weight-bold">Add a grant scheme</h2>
+        <p>To create a new grant scheme in GGIS, you need to provide the following details.</p>
+        <div class="govuk-!-padding-bottom-6"></div>
+                <h3 class="govuk-heading-m">Grant scheme details</h3>   
+      </div>
+      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="view-grant-scheme">
+        <h2 class="govuk-body govuk-!-font-size-27 govuk-!-font-weight-bold">View your organisation's grant schemes</h2>
+        
+        <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">  
+        <p>Here are all of your organisation's grant schemes. To narrow your selection, select a filter from the dropdown menu or use the search bar. You can apply the filter and search bar together to narrow your selection. Note that if you then decide to change the filter selected, you will need to press enter on the search bar again to generate your new results.</p>
+        </div>
+            
+             
+            <div class="govuk-grid-column-one-quarter govuk-!-padding-top-6">
+                <button class="govuk-button govuk-prototype-kit-task-list__tag" data-module="govuk-button">
+                      Download all results
+                  </button>
+              </div>
+        </div> 
+        
+        <div class="govuk-!-padding-bottom-6"></div>  
+        <h2 class="govuk-body govuk-!-font-size-27 govuk-!-font-weight-bold">Select a scheme</h2> 
+        <hr class="govuk-section-break govuk-section-break--visible">
+          
+          <div class="govuk-!-padding-bottom-6"></div>
+          
+          <div class="govuk-grid-row">
+              <div class="govuk-grid-column-one-half govuk-!-padding-left-0 govuk-!-padding-top-6">
+              <div class="govuk-grid-column-three-quarters govuk-!-padding-right-0">
+                <input class="govuk-input govuk-!-width-full govuk-!-padding-left-3" id="full" name="full" type="text" placeholder="Search schemes">
+           </div>
+                <div class="govuk-grid-column-one-quarter govuk-!-padding-left-0">
+                    <button class="btn"><img src="/public/images/search.png" alt="Scheme icon"></button>    
+            </div>
+            </div>      
+              
+              <div class="govuk-grid-column-one-quarter">
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                      <label class="govuk-label" for="sort">
+                        Filter grant schemes by:
+                      </label>
+                      <select class="govuk-select" id="sort" name="sort">
+                        <option value="published">Managed by department</option>
+                        <option value="updated" selected>Managed by ALB</option>
+                        <option value="views">Design and Development</option>
+                        <option value="comments">Approved</option>
+                        <option value="comments">In payment</option>
+                        <option value="comments">Closed</option>
+                        <option value="comments">Withdrawn</option>
+                        <option value="comments">Formula</option>
+                        <option value="comments">General - All</option>
+                        <option value="comments">General - Competed</option>  
+                        <option value="comments">General - Uncompeted</option>
+                        <option value="comments">General - Criteria Based</option>
+                        <option value="comments">General - Mixed</option>
+                        <option value="comments">Current financial year</option>
+                        <option value="comments">Last financial year</option>
+                        <option value="comments">Scheme purpose: Covid-19</option>
+                        <option value="comments">Scheme purpose: EU Successor</option>
+                        <option value="comments">Scheme purpose: EU Readiness</option>
+                        <option value="comments">Scheme purpose: Manifesto Commitment</option>
+                        <option value="comments">Scheme purpose: BAU</option>
+                        <option value="comments">Government commitment: Net Zero</option>
+                        <option value="comments">Government commitment: Levelling Up</option>
+                        <option value="comments">Government commitment: Strengthening the Union</option>
+                        <option value="comments">Government commitment: Innovation</option>
+                        <option value="comments">Government commitment: Jobs and Skills</option>
+                        <option value="comments">Government commitment: N/A</option>
+                        <option value="comments">Risk profile: Low</option>  
+                        <option value="comments">Risk profile: Medium</option> 
+                        <option value="comments">Risk profile: High</option>   
+                      </select>
+                    </div>
+              </div>
+              </div>
+              
+            </div>
+          
+          <div class="govuk-!-padding-bottom-4"></div>
+          
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Scheme name</th>
+              <th scope="col" class="govuk-table__header">Total budgeted scheme value</th>
+              <th scope="col" class="govuk-table__header">Managed by</th>
+              <th scope="col" class="govuk-table__header">Scheme start date</th>
+              <th scope="col" class="govuk-table__header">Scheme end date</th>
+              <th scope="col" class="govuk-table__header">GGiS Scheme Ref</th>
+              <th scope="col" class="govuk-table__header">Scheme status</th>     
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-link" href="#">EU Referendum voter registration</td>
+              <td class="govuk-table__cell">£500,000.00</td>
+              <td class="govuk-table__cell">Cabinet Office</td>
+              <td class="govuk-table__cell">01-04-2016</td>
+              <td class="govuk-table__cell">31-03-2017</td>
+              <td class="govuk-table__cell">G2-SCH-2023-03-12553</td>
+              <td class="govuk-table__cell">Approved</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-link">Open Identity Exchange UK</td>
+              <td class="govuk-table__cell">£500,000.00</td>
+              <td class="govuk-table__cell">Cabinet Office</td>
+              <td class="govuk-table__cell">01-04-2016</td>
+              <td class="govuk-table__cell">31-03-2017</td>
+              <td class="govuk-table__cell">G2-SCH-2023-03-12553</td>
+              <td class="govuk-table__cell">Approved</td>    
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell govuk-link">Civil Service Welfare Bodies</td>
+              <td class="govuk-table__cell">£592,000.00</td>
+              <td class="govuk-table__cell">Cabinet Office</td>
+              <td class="govuk-table__cell">01-04-2016</td>
+              <td class="govuk-table__cell">31-03-2018</td>
+              <td class="govuk-table__cell">G2-SCH-2023-03-12553</td>
+              <td class="govuk-table__cell">Approved</td>    
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="readiness-assessments">
+        <h2 class="govuk-body govuk-!-font-size-27 govuk-!-font-weight-bold">View your organisation's readiness assessments</h2>
+        
+        <div class="govuk-grid-row">
+        <div class="govuk-grid-column-three-quarters">  
+        <p>Explanation text here</p>
+        </div>
+        </div> 
+          
+        <div class="govuk-!-padding-bottom-6"></div>  
+        <h2 class="govuk-body govuk-!-font-size-27 govuk-!-font-weight-bold">Select a scheme</h2> 
+        <hr class="govuk-section-break govuk-section-break--visible">
+          
+          <div class="govuk-!-padding-bottom-6"></div>  
+        
+      </div>
+      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="add-grant-in-aid">
+        <h2 class="govuk-body govuk-!-font-size-27 govuk-!-font-weight-bold">Add a grant in aid</h2>
+        
+        <div class="govuk-grid-row">
+        <div class="govuk-grid-column-three-quarters">  
+        <p>To create a new grant-in-aid award in GGIS, you need to provide the following details.</p>
+        </div>
+        </div> 
+          
+        <div class="govuk-!-padding-bottom-6"></div>  
+        <h2 class="govuk-body govuk-!-font-size-27 govuk-!-font-weight-bold">Grant in aid details</h2> 
+        <hr class="govuk-section-break govuk-section-break--visible">
+          
+          <div class="govuk-!-padding-bottom-6"></div> 
+      </div>
+      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="view-grants-in-aid">
+        <h2 class="govuk-body govuk-!-font-size-27 govuk-!-font-weight-bold">View your organisation's grants-in-aid</h2>
+        
+        <div class="govuk-grid-row">
+        <div class="govuk-grid-column-three-quarters">  
+        <p>Here are all of your organisation's grants-in-aid. To narrow your selection, select a filter from the dropdown menu or use the search bar. You can apply the filter and search bar together to narrow your selection. Note that if you then decide to change the filter selected, you will need to press enter on the search bar again to generate your new results.</p>
+        </div>
+        </div> 
+        
+        <div class="govuk-!-padding-bottom-6"></div>  
+        <h2 class="govuk-body govuk-!-font-size-27 govuk-!-font-weight-bold">Select an award</h2> 
+        <hr class="govuk-section-break govuk-section-break--visible">
+          
+          <div class="govuk-!-padding-bottom-6"></div>
+          
+          <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+            <div class="govuk-date-input" id="passport-issued">
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                    Search awards by name
+                  </label>
+                  <input class="govuk-input govuk-!-width-full" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                      <label class="govuk-label" for="sort">
+                        Filter grant awards by:
+                      </label>
+                      <select class="govuk-select" id="sort" name="sort">
+                        <option value="published">Recently published</option>
+                        <option value="updated" selected>Recently updated</option>
+                        <option value="views">Most views</option>
+                        <option value="comments">Most comments</option>
+                      </select>
+                    </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+          
+      </div>        
+    </div>
+    </div>
+    </div>
+
+{% endblock %}

@@ -1,11 +1,13 @@
 {% extends "layouts/main.html" %}
 
-{% set pageName="Home" %}
+{% block pageTitle %}
+Home – {{serviceName}} – GOV.UK Prototype Kit
+{% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-grid-column-full">
 
     {% include "govuk-prototype-kit/includes/homepage-top.njk" %}
 
@@ -13,7 +15,44 @@
       {{ serviceName }}
     </h1>
 
-    {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        
+        <table class="govuk-table">
+          <caption class="govuk-table__caption govuk-table__caption--m"></caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Prototype</th>
+              <th scope="col" class="govuk-table__header">Sprint</th>
+              <th scope="col" class="govuk-table__header">Date</th>
+              <th scope="col" class="govuk-table__header">Status</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><a href="/sprint_1/sign-in.html" aria-describedby="eligibility-status">
+                  Download page v1, search and filters v1
+                </a>
+              </th>
+              <td class="govuk-table__cell">Sprint 1</td>
+              <td class="govuk-table__cell">30 May - 9 June 2023</td>
+              <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue" id="read-declaration-status">Tested</strong></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><a href="/sprint_2/sign-in.html" aria-describedby="eligibility-status">
+                  Final download page, search and filters v2
+                </a>
+              </th>
+              <td class="govuk-table__cell">Sprint 2</td>
+              <td class="govuk-table__cell">12 June - 23 June 2023</td>
+              <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--blue" id="read-declaration-status">In progress</strong></td>
+            </tr>  
+          </tbody>
+        </table>  
+        
+    </div>
+  </div>
+    
   </div>
 </div>
 

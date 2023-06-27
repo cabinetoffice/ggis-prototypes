@@ -1,0 +1,262 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  {{ govukHeader({
+  homepageUrl: "../index.html",
+  serviceName: "Government Grants Management Function",
+  serviceUrl: "#",
+  navigation: [
+    {
+      href: "#",
+      text: "Support tickets"
+    },
+    {
+      href: "#",
+      text: "How to"
+    }
+  ]
+}) }}
+{% endblock %}
+
+{% block pageScripts %}
+  <script type="text/javascript">
+    var $element = document.querySelector('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav($element).init()
+  </script>
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "prototype"
+  },
+  html: 'This is a prototype service'
+}) }}
+
+ {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "/sprint_1/start-page.html"
+      },
+      {
+        text: "Grant awards",
+        href: "/sprint_1/awards.html"
+      },
+      {
+        text: "Current page"
+      }
+    ]
+  }) }}
+
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Grant awards
+      </h1>
+        
+    </div>
+  </div>
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+
+        <div class="govuk-tabs" data-module="govuk-tabs">
+      <h2 class="govuk-tabs__title">
+        Contents
+      </h2>
+      <ul class="govuk-tabs__list">
+        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+          <a class="govuk-tabs__tab govuk-body govuk-!-font-size-16" href="#add-grant-scheme" style="color: #1d70b8;">
+            Upload and edit awards in bulk
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab govuk-body govuk-!-font-size-16" href="#view-grant-scheme" style="color: #1d70b8;">
+            Previous uploads
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab govuk-body govuk-!-font-size-16" href="#readiness-assessments" style="color: #1d70b8;">
+            Add an award 
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab govuk-body govuk-!-font-size-16" href="#add-grant-in-aid" style="color: #1d70b8;">
+            View your awards
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab govuk-body govuk-!-font-size-16" href="#view-grants-in-aid" style="color: #1d70b8;">
+            View recipients
+          </a>
+        </li>  
+      </ul>
+      <div class="govuk-tabs__panel" id="add-grant-scheme">
+        <h2 class="govuk-body govuk-!-font-size-27 govuk-!-font-weight-bold">Upload data</h2>
+        <p>Check what you need to do to upload grants data in bulk.</p>
+          
+      </div>
+      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="view-grant-scheme">
+        <h2 class="govuk-body govuk-!-font-size-27 govuk-!-font-weight-bold">View your previous uploads</h2>
+        
+        <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">  
+        <p>To edit and submit a previously uploaded grant award file, click 'Select' next to the relevant grant award.</p>
+        </div>
+        </div> 
+       
+          
+          <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+            <div class="govuk-date-input" id="passport-issued">
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                    Search uploads by name
+                  </label>
+                  <input class="govuk-input govuk-!-width-full" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                      <label class="govuk-label" for="sort">
+                        Filter uploads by:
+                      </label>
+                      <select class="govuk-select" id="sort" name="sort">
+                        <option value="published">Recently published</option>
+                        <option value="updated" selected>Recently updated</option>
+                        <option value="views">Most views</option>
+                        <option value="comments">Most comments</option>
+                      </select>
+                    </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+      </div>
+      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="readiness-assessments">
+        <h2 class="govuk-body govuk-!-font-size-27 govuk-!-font-weight-bold">Add a grant award</h2>
+        
+        <div class="govuk-grid-row">
+        <div class="govuk-grid-column-three-quarters">  
+        <p>Select one of the following 'In payment' schemes for your award</p>
+        </div>
+        </div> 
+        
+        <div class="govuk-!-padding-bottom-6"></div>  
+        <h2 class="govuk-body govuk-!-font-size-27 govuk-!-font-weight-bold">Select a scheme</h2> 
+        <hr class="govuk-section-break govuk-section-break--visible">
+          
+          <div class="govuk-!-padding-bottom-6"></div>
+          <div class="govuk-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="one-half">
+                    Search schemes by name
+                  </label>
+                  <input class="govuk-input govuk-!-width-one-half" id="one-half" name="one-half" type="text">
+                </div>
+          
+           </div>
+          </div>  
+            
+      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="add-grant-in-aid">
+        <h2 class="govuk-body govuk-!-font-size-27 govuk-!-font-weight-bold">View your organisation's grant awards</h2>
+        
+        <div class="govuk-grid-row">
+        <div class="govuk-grid-column-three-quarters">  
+        <p>Here are all of your organisation's grant awards. To narrow your selection, select a filter from the dropdown menu or use the search bar. You can apply the filter and search bar together to narrow your selection. Note that if you then decide to change the filter selected, you will need to press enter on the search bar again to generate your new results.</p>
+        </div>
+        </div> 
+       
+          <div class="govuk-!-padding-bottom-6"></div>  
+        <h2 class="govuk-body govuk-!-font-size-27 govuk-!-font-weight-bold">Select an award</h2> 
+        <hr class="govuk-section-break govuk-section-break--visible">
+          
+          <div class="govuk-!-padding-bottom-6"></div>
+          
+          <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+            <div class="govuk-date-input" id="passport-issued">
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                    Search organisations by name
+                  </label>
+                  <input class="govuk-input govuk-!-width-full" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                      <label class="govuk-label" for="sort">
+                        Filter organisations by:
+                      </label>
+                      <select class="govuk-select" id="sort" name="sort">
+                        <option value="published">Recently published</option>
+                        <option value="updated" selected>Recently updated</option>
+                        <option value="views">Most views</option>
+                        <option value="comments">Most comments</option>
+                      </select>
+                    </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="view-grants-in-aid">
+        <h2 class="govuk-body govuk-!-font-size-27 govuk-!-font-weight-bold">View organisations</h2>
+        
+        <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">  
+        <p>Here are all of the award recipients. To narrow your selection, select a filter from the dropdown menu or use the search bar. You can apply the filter and search bar together to narrow your selection. Note that if you then decide to change the filter selected, you will need to press enter on the search bar again to generate your new results.</p>
+        </div>
+        </div> 
+       
+          
+          <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+            <div class="govuk-date-input" id="passport-issued">
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                    Search organisations by name
+                  </label>
+                  <input class="govuk-input govuk-!-width-full" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                      <label class="govuk-label" for="sort">
+                        Filter organisations by:
+                      </label>
+                      <select class="govuk-select" id="sort" name="sort">
+                        <option value="published">Recently published</option>
+                        <option value="updated" selected>Recently updated</option>
+                        <option value="views">Most views</option>
+                        <option value="comments">Most comments</option>
+                      </select>
+                    </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>        
+    </div>
+    </div>
+    </div>
+
+{% endblock %}
