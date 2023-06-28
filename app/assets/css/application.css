@@ -1,0 +1,46 @@
+.btn {
+  background-color: #1d70b8; /* Blue background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 6px 8px; /* Some padding */
+  font-size: 16px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: #207dce;
+}
+
+.govuk-filter {
+    @include govuk-font($size: 19);
+    @include govuk-text-colour;
+    @include govuk-responsive-margin(6, "bottom");
+
+    display: block;
+  
+    border-bottom: 1px solid $govuk-border-colour;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    padding-left: 0px;
+  }
+
+}
+    .govuk-chevron::before {
+	border-style: solid;
+	border-width: 2px 2px 0 0;
+	content: '';
+	display: inline-block;
+	height: 0;
+	left: 0;
+	position: relative;
+	top: 0;
+	transform: rotate(135deg);
+	vertical-align: top;
+	width: 8px;
+    color:$govuk-text-colour;
+    margin-right: 8px;
+  }
+
+
+  

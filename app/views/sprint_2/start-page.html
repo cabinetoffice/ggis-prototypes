@@ -45,21 +45,7 @@
   </div>
 
     <div class="govuk-grid-row">
-      <div class="govuk-grid-column-one-third">
-        <a href="/sprint_2/downloads.html">
-            <div class="govuk-panel" style="background-color:#bd5401; height: 300px;">
-                <img src="/public/images/download.png" alt="Download icon">
-            <h1 class="govuk-heading-l" style="color:white; padding-top: 32px;">
-               Downloads           
-            </h1>   
-            </div>
-          </a> 
-          <ul class="govuk-list govuk-list--bullet">
-            <li>Explore your data</li>
-            <li>Export data for analysis</li>  
-          </ul>
-      </div>
-        
+      
         <div class="govuk-grid-column-one-third">
             <a href="/sprint_2/schemes.html">
              <div class="govuk-panel" style="background-color:#1d70b8; height: 300px;">
@@ -69,12 +55,14 @@
               </h1>
              </div>
             </a>
+            <p>Edit, add and view schemes and grants-in-aid.</p>
+            
             <ul class="govuk-list govuk-list--bullet">
-            <li>Add, edit and view schemes</li>
-            <li>Add, edit and view grants-in-aid</li>
-            <li><a href="/sprint_2/schemes-table.html" class="govuk-link">Version 2</a></li>
-            <li><a href="/sprint_2/schemes-stack.html" class="govuk-link">Version 3</a></li>   
-          </ul>
+             <!--<li>Add, edit and view schemes</li>
+            <li>Add, edit and view grants-in-aid</li> -->
+            <li><a href="/sprint_2/schemes-stack.html" class="govuk-link">Version 2</a></li>
+            <li><a href="/sprint_2/schemes-stack-reveal.html" class="govuk-link">Version 3</a></li>   
+          </ul> 
         </div>    
         
       <div class="govuk-grid-column-one-third">
@@ -92,6 +80,23 @@
             <li>View existing awards lists</li>
             <li>View recipient organisation details</li> 
           </ul>
+      </div>
+        
+      <div class="govuk-grid-column-one-third">
+        <a href="/sprint_2/downloads.html">
+            <div class="govuk-panel" style="background-color:#bd5401; height: 300px;">
+                <img src="/public/images/download.png" alt="Download icon">
+            <h1 class="govuk-heading-l" style="color:white; padding-top: 32px;">
+               Downloads           
+            </h1>   
+            </div>
+          </a>
+          <p>Download spreadsheets for grant schemes, grant awards and more.</p>
+          <!--
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Explore your data</li>
+            <li>Export data for analysis</li>  
+          </ul> -->
       </div>    
     </div>
 {% endblock %}
