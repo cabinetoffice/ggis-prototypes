@@ -121,7 +121,7 @@
            
           <div class="govuk-grid-row">
               <div class="govuk-grid-column-one-half govuk-!-padding-right-0">
-                <input class="govuk-input govuk-!-width-full govuk-!-padding-left-3" id="full" name="full" type="text" placeholder="Search scheme name or GGIS reference number">
+                <input class="govuk-input govuk-!-width-full govuk-!-padding-left-3" id="full" name="full" type="text" placeholder="Search scheme name or reference number">
            </div>
                 <div class="govuk-grid-column-one-quarter govuk-!-padding-left-0">
                     <button class="btn"><img src="/public/images/search.png" alt="Scheme icon"></button>    
@@ -169,7 +169,7 @@
                       <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
                         Day
                       </label>
-                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" placeholder="01">
                     </div>
                   </div>
                   <div class="govuk-date-input__item">
@@ -177,7 +177,7 @@
                       <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
                         Month
                       </label>
-                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" placeholder="04">
                     </div>
                   </div>
                   <div class="govuk-date-input__item">
@@ -198,7 +198,7 @@
                       <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
                         Day
                       </label>
-                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" placeholder="31">
                     </div>
                   </div>
                   <div class="govuk-date-input__item">
@@ -206,7 +206,7 @@
                       <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
                         Month
                       </label>
-                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" placeholder="03">
                     </div>
                   </div>
                   <div class="govuk-date-input__item">
@@ -271,11 +271,40 @@
               <div class="govuk-form-group govuk-!-padding-top-4 govuk-!-padding-left-2">
                   <div class="govuk-body">
                   Total budgeted scheme value
-                  </div>       
-                  <div class="govuk-input__wrapper">
+                  </div>
+                  <div class="govuk-form-group">
+                      <label class="govuk-label" for="event-name">
+                        Greater than
+                      </label>
+                      <div class="govuk-input__wrapper">
                     <div class="govuk-input__prefix" aria-hidden="true">£</div>
                     <input class="govuk-input govuk-input--width-10" id="cost" name="cost" type="text" spellcheck="false">
                   </div>
+                      <br>
+                  <div class="govuk-form-group">
+                      <label class="govuk-label" for="event-name">
+                        Less than
+                      </label>
+                      <div class="govuk-input__wrapper">
+                    <div class="govuk-input__prefix" aria-hidden="true">£</div>
+                    <input class="govuk-input govuk-input--width-10" id="cost" name="cost" type="text" spellcheck="false">
+                  </div>      
+                    </div>
+                <div class="govuk-form-group">
+                      <label class="govuk-label" for="event-name">
+                        Between
+                      </label>
+                      <div class="govuk-input__wrapper">
+                    <div class="govuk-input__prefix" aria-hidden="true">£</div>
+                    <input class="govuk-input govuk-input--width-10" id="cost" name="cost" type="text" spellcheck="false">
+                  </div>
+                    <br>
+                    <div class="govuk-input__wrapper">
+                    <div class="govuk-input__prefix" aria-hidden="true">£</div>
+                    <input class="govuk-input govuk-input--width-10" id="cost" name="cost" type="text" spellcheck="false">
+                  </div> 
+                    </div>      
+                  
                   <div class="govuk-!-padding-bottom-5"></div>
                   <div class="govuk-body">
                   Total actual scheme value
@@ -304,7 +333,19 @@
                       <div class="govuk-checkboxes__item">
                         <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
                         <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
-                          ALB's
+                          ALB 1
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                          ALB 2
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                          ALB 3
                         </label>
                       </div>
                   </div>
