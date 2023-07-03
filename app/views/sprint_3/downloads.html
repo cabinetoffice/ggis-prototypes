@@ -1,0 +1,182 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  {{ govukHeader({
+  homepageUrl: "../index.html",
+  serviceName: "Government Grants Management Function",
+  serviceUrl: "#",
+  navigation: [
+    {
+      href: "#",
+      text: "Support tickets"
+    },
+    {
+      href: "#",
+      text: "How to"
+    }
+  ]
+}) }}
+{% endblock %}
+
+{% block pageScripts %}
+  <script type="text/javascript">
+    var $element = document.querySelector('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav($element).init()
+  </script>
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "prototype"
+  },
+  html: 'This is a prototype service'
+}) }}
+
+ {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "/sprint_3/start-page.html"
+      },
+      {
+        text: "Downloads",
+        href: "/sprint_3/downloads.html"
+      }
+    ]
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Downloads
+      </h1>
+        
+        <p>Here are some of the spreadsheets you are able to download.</p>
+        
+        <p>You can also download filtered spreadsheets on the “View Schemes”, “View Awards” and “View Recipients” pages, as well as within each Recipient record.</p>
+        
+    </div>
+  </div>
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full"> 
+            
+            <div class="govuk-!-padding-bottom-4"></div>
+            
+            <div class="" style="background-color:#f3f3f3; height: 48px;">
+            <h1 class="govuk-heading-m" style="padding:8px; border-bottom-style:solid;">
+               Report name          
+            </h1>   
+            </div>
+            
+                <div class="govuk-grid-row">
+                  <div class="govuk-!-padding-top-6"></div>
+                      <div class="govuk-grid-column-two-thirds">
+                        <h2 class="govuk-heading-m">My Organisation’s Schemes</h2>                   
+                        <p>Download a spreadsheet listing your organisation’s grant schemes.</p>
+                      </div>
+                      <div class="govuk-grid-column-one-third">
+                        <button class="govuk-button govuk-prototype-kit-task-list__tag" data-module="govuk-button">
+                          Download Excel spreadsheet
+                      </button>
+                      </div>
+                </div>
+            <div class="govuk-!-padding-bottom-2"></div>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+                <div class="govuk-grid-row">
+                  <div class="govuk-!-padding-top-6"></div>
+                      <div class="govuk-grid-column-two-thirds">
+                        <h2 class="govuk-heading-m">My Organisation’s Awards</h2>                   
+                        <p>Download a spreadsheet listing your organisation’s grant awards.</p>
+                      </div>
+                      <div class="govuk-grid-column-one-third">
+                        <button class="govuk-button govuk-prototype-kit-task-list__tag" data-module="govuk-button">
+                          Download Excel spreadsheet
+                      </button>
+                      </div>
+                </div>
+            <div class="govuk-!-padding-bottom-2"></div>
+              
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+            <div class="govuk-grid-row">
+                  <div class="govuk-!-padding-top-6"></div>
+                      <div class="govuk-grid-column-two-thirds">
+                        <h2 class="govuk-heading-m">My Organisation’s Grants in Aid</h2>                   
+                        <p>Download a spreadsheet listing your organisation’s grants in aid.</p>
+                      </div>
+                      <div class="govuk-grid-column-one-third">
+                        <button class="govuk-button govuk-prototype-kit-task-list__tag" data-module="govuk-button">
+                          Download Excel spreadsheet
+                      </button>
+                      </div>
+                </div>
+            <div class="govuk-!-padding-bottom-2"></div>
+              
+            <hr class="govuk-section-break govuk-section-break--visible">
+            
+                <div class="govuk-grid-row">
+                  <div class="govuk-!-padding-top-6"></div>
+                      <div class="govuk-grid-column-two-thirds">
+                        <h2 class="govuk-heading-m">All Schemes</h2>                   
+                        <p>Download a spreadsheet listing all grant schemes on GGiS.</p>
+                        <span class="govuk-body-s" style="color:#505A5F;">You can view all data from other departments unless it has been marked as “do not publish”.</span>
+                      </div>
+                      <div class="govuk-grid-column-one-third">
+                        <button class="govuk-button govuk-prototype-kit-task-list__tag" data-module="govuk-button">
+                          Download Excel spreadsheet
+                      </button>
+                      </div>
+                </div>
+            <div class="govuk-!-padding-bottom-6"></div>
+              
+            <hr class="govuk-section-break govuk-section-break--visible">
+            
+                <div class="govuk-grid-row">
+                  <div class="govuk-!-padding-top-6"></div>
+                      <div class="govuk-grid-column-two-thirds">
+                        <h2 class="govuk-heading-m">All Awards</h2>                   
+                        <p>Download a spreadsheet listing all grant awards on GGiS.</p>
+                        <span class="govuk-body-s" style="color:#505A5F;">You can view all data from other departments unless it has been marked as “do not publish”.</span>  
+                      </div>
+                      <div class="govuk-grid-column-one-third">
+                        <button class="govuk-button govuk-prototype-kit-task-list__tag" data-module="govuk-button">
+                          Download Excel spreadsheet
+                      </button>
+                      </div>
+                </div>
+            <div class="govuk-!-padding-bottom-6"></div>
+              
+            <hr class="govuk-section-break govuk-section-break--visible">
+            
+            <div class="govuk-grid-row">
+                  <div class="govuk-!-padding-top-6"></div>
+                      <div class="govuk-grid-column-two-thirds">
+                        <h2 class="govuk-heading-m">User Licences</h2>                   
+                        <p>Download a spreadsheet listing all active users in your department and what type of GGiS account they have.</p>
+                        <span class="govuk-body-s" style="color:#505A5F;">This is only visible to GGIS Grants Champions.</span>  
+                      </div>
+                      <div class="govuk-grid-column-one-third">
+                        <button class="govuk-button govuk-prototype-kit-task-list__tag" data-module="govuk-button">
+                          Download Excel spreadsheet
+                      </button>
+                      </div>
+                </div>
+            <div class="govuk-!-padding-bottom-6"></div>
+
+    </div>
+    </div>
+
+{% endblock %}

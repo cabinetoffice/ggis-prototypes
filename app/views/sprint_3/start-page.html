@@ -1,0 +1,102 @@
+{% extends "layouts/main.html" %}
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+{% block pageTitle %}
+  Start page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  {{ govukHeader({
+  homepageUrl: "../index.html",
+  serviceName: "Government Grants Management Function",
+  serviceUrl: "#",
+  navigation: [
+    {
+      href: "#",
+      text: "Support tickets"
+    },
+    {
+      href: "#",
+      text: "How to"
+    }
+  ]
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "prototype"
+  },
+  html: 'This is a prototype service'
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Home
+      </h1>
+
+    </div>
+  </div>
+
+    <div class="govuk-grid-row">
+      
+        <div class="govuk-grid-column-one-third">
+            <a href="/sprint_3/schemes.html">
+             <div class="govuk-panel" style="background-color:#1d70b8; height: 300px;">
+                <img src="/public/images/scheme.png" alt="Scheme icon">
+              <h1 class="govuk-heading-l" style="color:white; padding-top: 32px;">
+                Grant Schemes
+              </h1>
+             </div>
+            </a>
+            <p>Edit, add and view schemes and grants-in-aid.</p>
+            
+          <!--  <ul class="govuk-list govuk-list--bullet">
+             <li>Add, edit and view schemes</li>
+            <li>Add, edit and view grants-in-aid</li> 
+            <li><a href="/sprint_2/schemes-stack.html" class="govuk-link">Version 2</a></li>
+            <li><a href="/sprint_2/schemes-stack-reveal.html" class="govuk-link">Version 3</a></li>   
+          </ul> -->
+        </div>    
+        
+      <div class="govuk-grid-column-one-third">
+          <a href="/sprint_3/awards.html">
+            <div class="govuk-panel govuk-panel--confirmation" style="height: 300px;">
+              <img src="/public/images/award.png" alt="Award icon">
+             <h1 class="govuk-heading-l" style="color:white; padding-top: 32px;">
+                Grant Awards
+             </h1>
+          </div>
+          </a>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Add and edit awards</li>
+            <li>Upload awards in bulk</li>
+            <li>View existing awards lists</li>
+            <li>View recipient organisation details</li> 
+          </ul>
+      </div>
+        
+      <div class="govuk-grid-column-one-third">
+        <a href="/sprint_3/downloads.html">
+            <div class="govuk-panel" style="background-color:#bd5401; height: 300px;">
+                <img src="/public/images/download.png" alt="Download icon">
+            <h1 class="govuk-heading-l" style="color:white; padding-top: 32px;">
+               Downloads           
+            </h1>   
+            </div>
+          </a>
+          <p>Download spreadsheets for grant schemes, grant awards and more.</p>
+          <!--
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Explore your data</li>
+            <li>Export data for analysis</li>  
+          </ul> -->
+      </div>    
+    </div>
+{% endblock %}
