@@ -120,17 +120,28 @@
       </div>
             
       <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="view-grant-scheme">
+          
+        <div class="govuk-grid-row">
+        <div class="govuk-grid-column-three-quarters">   
         <h2 class="govuk-body govuk-!-font-size-27 govuk-!-font-weight-bold">View your organisation's grant schemes</h2>
+        </div>    
+          
+          <div class="govuk-grid-column-one-quarter" style="text-align: right;">
+                <button class="govuk-button" data-module="govuk-button">
+                      Download results
+                  </button>
+              </div></div> 
         
         <div class="govuk-grid-row">
         <div class="govuk-grid-column-three-quarters">  
         <p>Here are all of your organisation's grant schemes. You can search by name and reference numbers or use the filters on the left side. Click the button to download an Excel spreadsheet of all your filtered results.</p>
         </div>
-        <div class="govuk-grid-column-one-quarter" style="text-align: right;">
+        
+        <!--    <div class="govuk-grid-column-one-quarter" style="text-align: right;">
                 <button class="govuk-button" data-module="govuk-button">
                       Download results
                   </button>
-              </div>    
+              </div> -->
         </div> 
         
         <div class="govuk-!-padding-bottom-2"></div>  
@@ -296,35 +307,50 @@
                   <div class="govuk-body">
                   Total budgeted scheme value
                   </div>
-                  <div class="govuk-form-group">
-                      <label class="govuk-label" for="event-name">
+                  <div class="govuk-form-group govuk-!-padding-right-2">
+                    <label class="govuk-label" for="event-name">
                         Greater than
-                      </label>
-                      <div class="govuk-input__wrapper">
+                    </label>
+                  <div class="govuk-input__wrapper">
                     <div class="govuk-input__prefix" aria-hidden="true">£</div>
-                    <input class="govuk-input govuk-input--width-10" id="cost" name="cost" type="text" spellcheck="false">
+                    <input class="govuk-input govuk-!-width-full" id="cost" name="cost" type="text" spellcheck="false">
                   </div>
-                      <br>
+                  <br>
                   <div class="govuk-form-group">
                       <label class="govuk-label" for="event-name">
                         Less than
                       </label>
                       <div class="govuk-input__wrapper">
-                    <div class="govuk-input__prefix" aria-hidden="true">£</div>
-                    <input class="govuk-input govuk-input--width-10" id="cost" name="cost" type="text" spellcheck="false">
-                  </div>      
-                    </div>      
-                  
-                  <div class="govuk-!-padding-bottom-5"></div>
+                        <div class="govuk-input__prefix" aria-hidden="true">£</div>
+                        <input class="govuk-input govuk-!-width-full" id="cost" name="cost" type="text" spellcheck="false">
+                      </div>      
+                  </div>       
+                </div>
+              </div>
+              <div class="govuk-form-group govuk-!-padding-top-2 govuk-!-padding-left-2 govuk-!-padding-right-2">
                   <div class="govuk-body">
                   Total actual scheme value
-                  </div>       
+                  </div>
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="event-name">
+                        Greater than
+                    </label>
                   <div class="govuk-input__wrapper">
                     <div class="govuk-input__prefix" aria-hidden="true">£</div>
-                    <input class="govuk-input govuk-input--width-10" id="cost" name="cost" type="text" spellcheck="false">
+                    <input class="govuk-input govuk-!-width-full" id="cost" name="cost" type="text" spellcheck="false">
                   </div>
+                  <br>
+                  <div class="govuk-form-group">
+                      <label class="govuk-label" for="event-name">
+                        Less than
+                      </label>
+                      <div class="govuk-input__wrapper">
+                        <div class="govuk-input__prefix" aria-hidden="true">£</div>
+                        <input class="govuk-input govuk-!-width-full" id="cost" name="cost" type="text" spellcheck="false">
+                      </div>      
+                  </div>       
                 </div>
-              </div>      
+              </div>     
             </details>
             
             <details class="govuk-details govuk-section-break govuk-section-break--visible govuk-!-padding-bottom-2 govuk-!-margin-bottom-4" data-module="govuk-details">
@@ -333,7 +359,7 @@
                   Managed by
                 </span>
               </summary>      
-              <div class="govuk-form-group govuk-!-padding-top-4 govuk-!-padding-left-2">     
+              <div class="govuk-form-group govuk-!-padding-top-4 govuk-!-padding-left-2 govuk-!-margin-bottom-2">     
               <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
                       <div class="govuk-checkboxes__item">
                         <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
@@ -341,25 +367,18 @@
                           Department
                         </label>
                       </div>
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
-                        <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
-                          ALB 1
-                        </label>
-                      </div>
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
-                        <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
-                          ALB 2
-                        </label>
-                      </div>
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
-                        <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
-                          ALB 3
-                        </label>
-                      </div>
                   </div>
+                </div>
+                <div class="govuk-form-group govuk-!-padding-left-2 govuk-!-padding-right-2">
+                  <label class="govuk-label" for="sort">
+                    ALB's
+                  </label>    
+                  <select class="govuk-select govuk-!-width-full" id="sort" name="sort">
+                    <option value="ALB 1" selected>ALB 1</option>
+                    <option value="ALB 2">ALB 2</option>
+                    <option value="ALB 3">ALB 3</option>
+                    <option value="ALB 4">ALB 4</option>
+                  </select>
                 </div>
             </details>       
         </div> 
@@ -372,13 +391,70 @@
     
     <div class="govuk-grid-column-one-half govuk-!-padding-right-0" style="text-align: right;">     
         
-        <a href="#/" class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" id="map-toggle">Show table view</a>
-        
+        <a href="#/" class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" style="display: inline-flex; align-items: center;" id="map-toggle">
+            <img src="/public/icons/table.svg" class="govuk-!-padding-right-2" alt="table icon" style="height: 20px;">
+            Show table view
+        </a>
+
     </div>
         
     <div class="govuk-grid-column-full govuk-!-padding-0" id="map">
         
+         <!-- <hr class="govuk-section-break govuk-section-break--visible"> 
+        
+        <div class="govuk-form-group govuk-!-padding-top-4">
+          <label class="govuk-label" for="sort">
+            Sort by
+          </label>
+          <select class="govuk-select" id="sort" name="sort">
+            <option value="published">Recently published</option>
+            <option value="updated" selected>Recently updated</option>
+            <option value="views">Most views</option>
+            <option value="comments">Most comments</option>
+          </select>
+        </div> -->
+        
         <ul class="govuk-list">
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#18" class="govuk-link">Veterans’ Gateway</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-SCH-2023-03-12553</p>
+                
+                    <p>The purpose of this grant of £250,000 is to enable the Veterans’ Gateway to continue operating, at existing service levels, in order to support veterans and their families to get in touch with the organisation best ...</p>
+                       
+                    
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Scheme start date:</th>
+                          <td class="govuk-body-s">01-04-2016</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Scheme end date:</th>
+                          <td class="govuk-body-s">31-03-2018</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Total budgeted scheme value:</th>
+                          <td class="govuk-body-s">£250,000</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Scheme status:</th>
+                          <td class="govuk-body-s">In payment</td>
+                        </tr> 
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Managed by:</th>
+                          <td class="govuk-body-s">Cabinet Office</td>
+                        </tr>   
+                      </tbody>
+                    </table>
+                    
+                </div>
+                </div>
+              </li>
             
             <hr class="govuk-section-break govuk-section-break--visible"> 
             
@@ -620,7 +696,487 @@
                 </div>
               </li>
             
-              <hr class="govuk-section-break govuk-section-break--visible"> 
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#18" class="govuk-link">Veterans’ Gateway</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-SCH-2023-03-12553</p>
+                
+                    <p>The purpose of this grant of £250,000 is to enable the Veterans’ Gateway to continue operating, at existing service levels, in order to support veterans and their families to get in touch with the organisation best ...</p>
+                       
+                    
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Scheme start date:</th>
+                          <td class="govuk-body-s">01-04-2016</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Scheme end date:</th>
+                          <td class="govuk-body-s">31-03-2018</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Total budgeted scheme value:</th>
+                          <td class="govuk-body-s">£250,000</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Scheme status:</th>
+                          <td class="govuk-body-s">In payment</td>
+                        </tr> 
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Managed by:</th>
+                          <td class="govuk-body-s">Cabinet Office</td>
+                        </tr>   
+                      </tbody>
+                    </table>
+                    
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#18" class="govuk-link">Veterans’ Gateway</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-SCH-2023-03-12553</p>
+                
+                    <p>The purpose of this grant of £250,000 is to enable the Veterans’ Gateway to continue operating, at existing service levels, in order to support veterans and their families to get in touch with the organisation best ...</p>
+                       
+                    
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Scheme start date:</th>
+                          <td class="govuk-body-s">01-04-2016</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Scheme end date:</th>
+                          <td class="govuk-body-s">31-03-2018</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Total budgeted scheme value:</th>
+                          <td class="govuk-body-s">£250,000</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Scheme status:</th>
+                          <td class="govuk-body-s">In payment</td>
+                        </tr> 
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Managed by:</th>
+                          <td class="govuk-body-s">Cabinet Office</td>
+                        </tr>   
+                      </tbody>
+                    </table>
+                    
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#18" class="govuk-link">Veterans’ Gateway</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-SCH-2023-03-12553</p>
+                
+                    <p>The purpose of this grant of £250,000 is to enable the Veterans’ Gateway to continue operating, at existing service levels, in order to support veterans and their families to get in touch with the organisation best ...</p>
+                       
+                    
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Scheme start date:</th>
+                          <td class="govuk-body-s">01-04-2016</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Scheme end date:</th>
+                          <td class="govuk-body-s">31-03-2018</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Total budgeted scheme value:</th>
+                          <td class="govuk-body-s">£250,000</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Scheme status:</th>
+                          <td class="govuk-body-s">In payment</td>
+                        </tr> 
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Managed by:</th>
+                          <td class="govuk-body-s">Cabinet Office</td>
+                        </tr>   
+                      </tbody>
+                    </table>
+                    
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#18" class="govuk-link">Veterans’ Gateway</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-SCH-2023-03-12553</p>
+                
+                    <p>The purpose of this grant of £250,000 is to enable the Veterans’ Gateway to continue operating, at existing service levels, in order to support veterans and their families to get in touch with the organisation best ...</p>
+                       
+                    
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Scheme start date:</th>
+                          <td class="govuk-body-s">01-04-2016</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Scheme end date:</th>
+                          <td class="govuk-body-s">31-03-2018</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Total budgeted scheme value:</th>
+                          <td class="govuk-body-s">£250,000</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Scheme status:</th>
+                          <td class="govuk-body-s">In payment</td>
+                        </tr> 
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Managed by:</th>
+                          <td class="govuk-body-s">Cabinet Office</td>
+                        </tr>   
+                      </tbody>
+                    </table>
+                    
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#18" class="govuk-link">Veterans’ Gateway</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-SCH-2023-03-12553</p>
+                
+                    <p>The purpose of this grant of £250,000 is to enable the Veterans’ Gateway to continue operating, at existing service levels, in order to support veterans and their families to get in touch with the organisation best ...</p>
+                       
+                    
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Scheme start date:</th>
+                          <td class="govuk-body-s">01-04-2016</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Scheme end date:</th>
+                          <td class="govuk-body-s">31-03-2018</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Total budgeted scheme value:</th>
+                          <td class="govuk-body-s">£250,000</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Scheme status:</th>
+                          <td class="govuk-body-s">In payment</td>
+                        </tr> 
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Managed by:</th>
+                          <td class="govuk-body-s">Cabinet Office</td>
+                        </tr>   
+                      </tbody>
+                    </table>
+                    
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#18" class="govuk-link">Veterans’ Gateway</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-SCH-2023-03-12553</p>
+                
+                    <p>The purpose of this grant of £250,000 is to enable the Veterans’ Gateway to continue operating, at existing service levels, in order to support veterans and their families to get in touch with the organisation best ...</p>
+                       
+                    
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Scheme start date:</th>
+                          <td class="govuk-body-s">01-04-2016</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Scheme end date:</th>
+                          <td class="govuk-body-s">31-03-2018</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Total budgeted scheme value:</th>
+                          <td class="govuk-body-s">£250,000</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Scheme status:</th>
+                          <td class="govuk-body-s">In payment</td>
+                        </tr> 
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Managed by:</th>
+                          <td class="govuk-body-s">Cabinet Office</td>
+                        </tr>   
+                      </tbody>
+                    </table>
+                    
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#18" class="govuk-link">Veterans’ Gateway</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-SCH-2023-03-12553</p>
+                
+                    <p>The purpose of this grant of £250,000 is to enable the Veterans’ Gateway to continue operating, at existing service levels, in order to support veterans and their families to get in touch with the organisation best ...</p>
+                       
+                    
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Scheme start date:</th>
+                          <td class="govuk-body-s">01-04-2016</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Scheme end date:</th>
+                          <td class="govuk-body-s">31-03-2018</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Total budgeted scheme value:</th>
+                          <td class="govuk-body-s">£250,000</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Scheme status:</th>
+                          <td class="govuk-body-s">In payment</td>
+                        </tr> 
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Managed by:</th>
+                          <td class="govuk-body-s">Cabinet Office</td>
+                        </tr>   
+                      </tbody>
+                    </table>
+                    
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#18" class="govuk-link">Veterans’ Gateway</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-SCH-2023-03-12553</p>
+                
+                    <p>The purpose of this grant of £250,000 is to enable the Veterans’ Gateway to continue operating, at existing service levels, in order to support veterans and their families to get in touch with the organisation best ...</p>
+                       
+                    
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Scheme start date:</th>
+                          <td class="govuk-body-s">01-04-2016</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Scheme end date:</th>
+                          <td class="govuk-body-s">31-03-2018</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Total budgeted scheme value:</th>
+                          <td class="govuk-body-s">£250,000</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Scheme status:</th>
+                          <td class="govuk-body-s">In payment</td>
+                        </tr> 
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Managed by:</th>
+                          <td class="govuk-body-s">Cabinet Office</td>
+                        </tr>   
+                      </tbody>
+                    </table>
+                    
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#18" class="govuk-link">Veterans’ Gateway</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-SCH-2023-03-12553</p>
+                
+                    <p>The purpose of this grant of £250,000 is to enable the Veterans’ Gateway to continue operating, at existing service levels, in order to support veterans and their families to get in touch with the organisation best ...</p>
+                       
+                    
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Scheme start date:</th>
+                          <td class="govuk-body-s">01-04-2016</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Scheme end date:</th>
+                          <td class="govuk-body-s">31-03-2018</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Total budgeted scheme value:</th>
+                          <td class="govuk-body-s">£250,000</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Scheme status:</th>
+                          <td class="govuk-body-s">In payment</td>
+                        </tr> 
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Managed by:</th>
+                          <td class="govuk-body-s">Cabinet Office</td>
+                        </tr>   
+                      </tbody>
+                    </table>
+                    
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#18" class="govuk-link">Veterans’ Gateway</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-SCH-2023-03-12553</p>
+                
+                    <p>The purpose of this grant of £250,000 is to enable the Veterans’ Gateway to continue operating, at existing service levels, in order to support veterans and their families to get in touch with the organisation best ...</p>
+                       
+                    
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Scheme start date:</th>
+                          <td class="govuk-body-s">01-04-2016</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Scheme end date:</th>
+                          <td class="govuk-body-s">31-03-2018</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Total budgeted scheme value:</th>
+                          <td class="govuk-body-s">£250,000</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Scheme status:</th>
+                          <td class="govuk-body-s">In payment</td>
+                        </tr> 
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Managed by:</th>
+                          <td class="govuk-body-s">Cabinet Office</td>
+                        </tr>   
+                      </tbody>
+                    </table>
+                    
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#18" class="govuk-link">Veterans’ Gateway</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-SCH-2023-03-12553</p>
+                
+                    <p>The purpose of this grant of £250,000 is to enable the Veterans’ Gateway to continue operating, at existing service levels, in order to support veterans and their families to get in touch with the organisation best ...</p>
+                       
+                    
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Scheme start date:</th>
+                          <td class="govuk-body-s">01-04-2016</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Scheme end date:</th>
+                          <td class="govuk-body-s">31-03-2018</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Total budgeted scheme value:</th>
+                          <td class="govuk-body-s">£250,000</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Scheme status:</th>
+                          <td class="govuk-body-s">In payment</td>
+                        </tr> 
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Managed by:</th>
+                          <td class="govuk-body-s">Cabinet Office</td>
+                        </tr>   
+                      </tbody>
+                    </table>
+                    
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#18" class="govuk-link">Veterans’ Gateway</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-SCH-2023-03-12553</p>
+                
+                    <p>The purpose of this grant of £250,000 is to enable the Veterans’ Gateway to continue operating, at existing service levels, in order to support veterans and their families to get in touch with the organisation best ...</p>
+                       
+                    
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Scheme start date:</th>
+                          <td class="govuk-body-s">01-04-2016</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Scheme end date:</th>
+                          <td class="govuk-body-s">31-03-2018</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Total budgeted scheme value:</th>
+                          <td class="govuk-body-s">£250,000</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Scheme status:</th>
+                          <td class="govuk-body-s">In payment</td>
+                        </tr> 
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Managed by:</th>
+                          <td class="govuk-body-s">Cabinet Office</td>
+                        </tr>   
+                      </tbody>
+                    </table>
+                    
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
             
               <li style="padding-top:16px;">
                 <div class="govuk-grid-row">
@@ -703,19 +1259,17 @@
           <tr class="govuk-table__row">
 
             <th scope="col" class="govuk-table__header govuk-body-s">Scheme name</th>
+              
+            <th scope="col" class="govuk-table__header govuk-body-s">Start date</th>
 
-            <th scope="col" class="govuk-table__header govuk-body-s">GGiS scheme ref</th>
+            <th scope="col" class="govuk-table__header govuk-body-s">End date</th>  
+
+            <th scope="col" class="govuk-table__header govuk-body-s">Total budgeted value</th>
 
             <th scope="col" class="govuk-table__header govuk-body-s">Scheme status</th>
               
             <th scope="col" class="govuk-table__header govuk-body-s">Managed by
               </th> 
-              
-            <th scope="col" class="govuk-table__header govuk-body-s">Scheme start date</th>
-
-            <th scope="col" class="govuk-table__header govuk-body-s">Scheme end date</th>
-              
-          <!--  <th scope="col" class="govuk-table__header">Total budgeted scheme value</th>  -->
 
           </tr>
         </thead>
@@ -726,15 +1280,15 @@
 
             <th scope="row" class="govuk-table__header"><a href="#1" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">EU Referendum voter registration</a></th>
 
-            <td class="govuk-table__cell govuk-body-s">G2-SCH-2021-03-2717</td>
-
-            <td class="govuk-table__cell govuk-body-s">In payment</td>
-            
-            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>  
-
             <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
 
             <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
+            
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
+
+            <td class="govuk-table__cell govuk-body-s">In payment</td>
+
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
               
           <!--  <td class="govuk-table__cell">£250,000.00</td> -->  
 
@@ -744,15 +1298,15 @@
 
             <th scope="row" class="govuk-table__header"><a href="#2" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Open Identity Exchange UK</a></th>
 
-            <td class="govuk-table__cell govuk-body-s">G2-SCH-2021-03-2376</td>
-
-            <td class="govuk-table__cell govuk-body-s">In payment</td>
-            
-            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td> 
-
             <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
 
-            <td class="govuk-table__cell govuk-body-s">31-03-2018</td>
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
+            
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
+
+            <td class="govuk-table__cell govuk-body-s">In payment</td>
+
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
 
           </tr>
 
@@ -760,15 +1314,15 @@
 
             <th scope="row" class="govuk-table__header"><a href="#3" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Veterans’ Gateway</a></th>
 
-            <td class="govuk-table__cell govuk-body-s">G2-SCH-2021-03-2377</td>
-
-            <td class="govuk-table__cell govuk-body-s">In payment</td>
-            
-            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td> 
-
             <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
 
-            <td class="govuk-table__cell govuk-body-s">31-03-2018</td>
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
+            
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
+
+            <td class="govuk-table__cell govuk-body-s">In payment</td>
+
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
 
           </tr>
 
@@ -776,15 +1330,15 @@
 
             <th scope="row" class="govuk-table__header"><a href="#4" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Cyber Security Skills</a></th>
               
-            <td class="govuk-table__cell govuk-body-s">G2-SCH-2021-03-2849</td>  
-
-            <td class="govuk-table__cell govuk-body-s">In payment</td>
-            
-            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td> 
-
             <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
 
-            <td class="govuk-table__cell govuk-body-s">31-03-2018</td>
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
+            
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
+
+            <td class="govuk-table__cell govuk-body-s">In payment</td>
+
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
 
           </tr>
             
@@ -792,15 +1346,15 @@
 
             <th scope="row" class="govuk-table__header"><a href="#5" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Cyber Security Challenge</a></th>
               
-            <td class="govuk-table__cell govuk-body-s">G2-SCH-2021-03-2868</td>  
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
 
-            <td class="govuk-table__cell govuk-body-s">Approved</td>
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
             
-            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td> 
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
 
-            <td class="govuk-table__cell govuk-body-s">01-04-2017</td>
+            <td class="govuk-table__cell govuk-body-s">In payment</td>
 
-            <td class="govuk-table__cell govuk-body-s">31-03-2018</td>
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
 
           </tr>
             
@@ -808,15 +1362,15 @@
 
             <th scope="row" class="govuk-table__header"><a href="#6" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">One Public Estate</a></th>
               
-            <td class="govuk-table__cell govuk-body-s">G2-SCH-2021-03-2704</td>  
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
+
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
+            
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
 
             <td class="govuk-table__cell govuk-body-s">In payment</td>
-            
-            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td> 
 
-            <td class="govuk-table__cell govuk-body-s">01-04-2017</td>
-
-            <td class="govuk-table__cell govuk-body-s">31-03-2018</td>
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
 
           </tr>
             
@@ -824,31 +1378,31 @@
 
             <th scope="row" class="govuk-table__header"><a href="#7" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Democracy Ambassadors Scheme</a></th>
               
-            <td class="govuk-table__cell govuk-body-s">G2-SCH-2023-05-12560</td>  
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
 
-            <td class="govuk-table__cell govuk-body-s">Approved</td>
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
             
-            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td> 
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
 
-            <td class="govuk-table__cell govuk-body-s">01-04-2017</td>
+            <td class="govuk-table__cell govuk-body-s">In payment</td>
 
-            <td class="govuk-table__cell govuk-body-s">31-03-2018</td>
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
 
           </tr>
             
         <tr class="govuk-table__row">
 
-            <th scope="row" class="govuk-table__header"><a href="#8" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Funding to Local Authorities in England and Wales covering the additional costs of Individual Electoral Registration (IER), including the 2017 Canvass Pilot programme.</a></th>
+            <th scope="row" class="govuk-table__header"><a href="#8" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Funding to Local Authorities in England and ...</a></th>
               
-            <td class="govuk-table__cell govuk-body-s">G2-SCH-2023-05-12321</td>  
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
 
-            <td class="govuk-table__cell govuk-body-s">Approved</td>
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
             
-            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td> 
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
 
-            <td class="govuk-table__cell govuk-body-s">01-04-2017</td>
+            <td class="govuk-table__cell govuk-body-s">In payment</td>
 
-            <td class="govuk-table__cell govuk-body-s">31-03-2018</td>
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
 
           </tr>
             
@@ -856,31 +1410,31 @@
 
             <th scope="row" class="govuk-table__header"><a href="#9" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Electoral Integrity Pilots 2017/18</a></th>
               
-            <td class="govuk-table__cell govuk-body-s">G2-SCH-2023-05-12555</td>  
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
 
-            <td class="govuk-table__cell govuk-body-s">Approved</td>
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
             
-            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td> 
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
 
-            <td class="govuk-table__cell govuk-body-s">01-04-2017</td>
+            <td class="govuk-table__cell govuk-body-s">In payment</td>
 
-            <td class="govuk-table__cell govuk-body-s">31-03-2018</td>
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
 
           </tr>
             
         <tr class="govuk-table__row">
 
-            <th scope="row" class="govuk-table__header"><a href="#10" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Suffrage Centenary Secondary School's Resource Project</a></th>
+            <th scope="row" class="govuk-table__header"><a href="#10" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Suffrage Centenary Secondary ...</a></th>
               
-            <td class="govuk-table__cell govuk-body-s">G2-SCH-2023-05-56453</td>  
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
 
-            <td class="govuk-table__cell govuk-body-s">Approved</td>
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
             
-            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td> 
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
 
-            <td class="govuk-table__cell govuk-body-s">01-04-2017</td>
+            <td class="govuk-table__cell govuk-body-s">In payment</td>
 
-            <td class="govuk-table__cell govuk-body-s">31-03-2018</td>
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
 
           </tr>   
             
@@ -888,15 +1442,15 @@
 
             <th scope="row" class="govuk-table__header"><a href="#10" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Suffrage Centenary Secondary School's Resource Project</a></th>
               
-            <td class="govuk-table__cell govuk-body-s">G2-SCH-2023-05-56453</td>  
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
 
-            <td class="govuk-table__cell govuk-body-s">Approved</td>
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
             
-            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td> 
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
 
-            <td class="govuk-table__cell govuk-body-s">01-04-2017</td>
+            <td class="govuk-table__cell govuk-body-s">In payment</td>
 
-            <td class="govuk-table__cell govuk-body-s">31-03-2018</td>
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
 
           </tr> 
             
@@ -904,15 +1458,15 @@
 
             <th scope="row" class="govuk-table__header"><a href="#10" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Suffrage Centenary Secondary School's Resource Project</a></th>
               
-            <td class="govuk-table__cell govuk-body-s">G2-SCH-2023-05-56453</td>  
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
 
-            <td class="govuk-table__cell govuk-body-s">Approved</td>
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
             
-            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td> 
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
 
-            <td class="govuk-table__cell govuk-body-s">01-04-2017</td>
+            <td class="govuk-table__cell govuk-body-s">In payment</td>
 
-            <td class="govuk-table__cell govuk-body-s">31-03-2018</td>
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
 
           </tr> 
             
@@ -920,15 +1474,15 @@
 
             <th scope="row" class="govuk-table__header"><a href="#10" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Suffrage Centenary Secondary School's Resource Project</a></th>
               
-            <td class="govuk-table__cell govuk-body-s">G2-SCH-2023-05-56453</td>  
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
 
-            <td class="govuk-table__cell govuk-body-s">Approved</td>
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
             
-            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td> 
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
 
-            <td class="govuk-table__cell govuk-body-s">01-04-2017</td>
+            <td class="govuk-table__cell govuk-body-s">In payment</td>
 
-            <td class="govuk-table__cell govuk-body-s">31-03-2018</td>
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
 
           </tr> 
             
@@ -936,15 +1490,15 @@
 
             <th scope="row" class="govuk-table__header"><a href="#10" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Suffrage Centenary Secondary School's Resource Project</a></th>
               
-            <td class="govuk-table__cell govuk-body-s">G2-SCH-2023-05-56453</td>  
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
 
-            <td class="govuk-table__cell govuk-body-s">Approved</td>
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
             
-            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td> 
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
 
-            <td class="govuk-table__cell govuk-body-s">01-04-2017</td>
+            <td class="govuk-table__cell govuk-body-s">In payment</td>
 
-            <td class="govuk-table__cell govuk-body-s">31-03-2018</td>
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
 
           </tr> 
             
@@ -952,15 +1506,15 @@
 
             <th scope="row" class="govuk-table__header"><a href="#10" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Suffrage Centenary Secondary School's Resource Project</a></th>
               
-            <td class="govuk-table__cell govuk-body-s">G2-SCH-2023-05-56453</td>  
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
 
-            <td class="govuk-table__cell govuk-body-s">Approved</td>
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
             
-            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td> 
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
 
-            <td class="govuk-table__cell govuk-body-s">01-04-2017</td>
+            <td class="govuk-table__cell govuk-body-s">In payment</td>
 
-            <td class="govuk-table__cell govuk-body-s">31-03-2018</td>
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
 
           </tr> 
             
@@ -968,15 +1522,15 @@
 
             <th scope="row" class="govuk-table__header"><a href="#10" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Suffrage Centenary Secondary School's Resource Project</a></th>
               
-            <td class="govuk-table__cell govuk-body-s">G2-SCH-2023-05-56453</td>  
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
 
-            <td class="govuk-table__cell govuk-body-s">Approved</td>
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
             
-            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td> 
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
 
-            <td class="govuk-table__cell govuk-body-s">01-04-2017</td>
+            <td class="govuk-table__cell govuk-body-s">In payment</td>
 
-            <td class="govuk-table__cell govuk-body-s">31-03-2018</td>
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
 
           </tr> 
             
@@ -984,15 +1538,15 @@
 
             <th scope="row" class="govuk-table__header"><a href="#10" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Suffrage Centenary Secondary School's Resource Project</a></th>
               
-            <td class="govuk-table__cell govuk-body-s">G2-SCH-2023-05-56453</td>  
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
 
-            <td class="govuk-table__cell govuk-body-s">Approved</td>
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
             
-            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td> 
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
 
-            <td class="govuk-table__cell govuk-body-s">01-04-2017</td>
+            <td class="govuk-table__cell govuk-body-s">In payment</td>
 
-            <td class="govuk-table__cell govuk-body-s">31-03-2018</td>
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
 
           </tr> 
             
@@ -1000,15 +1554,15 @@
 
             <th scope="row" class="govuk-table__header"><a href="#10" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Suffrage Centenary Secondary School's Resource Project</a></th>
               
-            <td class="govuk-table__cell govuk-body-s">G2-SCH-2023-05-56453</td>  
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
 
-            <td class="govuk-table__cell govuk-body-s">Approved</td>
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
             
-            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td> 
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
 
-            <td class="govuk-table__cell govuk-body-s">01-04-2017</td>
+            <td class="govuk-table__cell govuk-body-s">In payment</td>
 
-            <td class="govuk-table__cell govuk-body-s">31-03-2018</td>
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
 
           </tr> 
             
@@ -1016,15 +1570,15 @@
 
             <th scope="row" class="govuk-table__header"><a href="#10" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Suffrage Centenary Secondary School's Resource Project</a></th>
               
-            <td class="govuk-table__cell govuk-body-s">G2-SCH-2023-05-56453</td>  
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
 
-            <td class="govuk-table__cell govuk-body-s">Approved</td>
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
             
-            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td> 
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
 
-            <td class="govuk-table__cell govuk-body-s">01-04-2017</td>
+            <td class="govuk-table__cell govuk-body-s">In payment</td>
 
-            <td class="govuk-table__cell govuk-body-s">31-03-2018</td>
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
 
           </tr> 
             
@@ -1032,15 +1586,15 @@
 
             <th scope="row" class="govuk-table__header"><a href="#10" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Suffrage Centenary Secondary School's Resource Project</a></th>
               
-            <td class="govuk-table__cell govuk-body-s">G2-SCH-2023-05-56453</td>  
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
 
-            <td class="govuk-table__cell govuk-body-s">Approved</td>
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
             
-            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td> 
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
 
-            <td class="govuk-table__cell govuk-body-s">01-04-2017</td>
+            <td class="govuk-table__cell govuk-body-s">In payment</td>
 
-            <td class="govuk-table__cell govuk-body-s">31-03-2018</td>
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
 
           </tr>     
 
@@ -1087,17 +1641,7 @@
       <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="readiness-assessments">
         <h2 class="govuk-body govuk-!-font-size-27 govuk-!-font-weight-bold">View your organisation's readiness assessments</h2>
         
-        <div class="govuk-grid-row">
-        <div class="govuk-grid-column-three-quarters">  
-        <p>Explanation text here</p>
-        </div>
-        </div> 
-          
-        <div class="govuk-!-padding-bottom-6"></div>  
-        <h2 class="govuk-body govuk-!-font-size-27 govuk-!-font-weight-bold">Select a scheme</h2> 
-        <hr class="govuk-section-break govuk-section-break--visible">
-          
-          <div class="govuk-!-padding-bottom-6"></div>  
+          *******
         
       </div>
       <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="add-grant-in-aid">
