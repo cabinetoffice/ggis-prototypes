@@ -40,8 +40,8 @@
   <script>
     $(function() {
         $('#grid-toggle-2').click(function() {
-        $("#awardtable").toggleClass('hide')
-        $("#awardgrid").toggleClass('hide')
+        $("#aidtable").toggleClass('hide')
+        $("#aidgrid").toggleClass('hide')
         });
     })
   </script>
@@ -64,9 +64,6 @@
       {
         text: "Grant schemes",
         href: "/sprint_3/schemes.html"
-      },
-      {
-        text: "Current page"
       }
     ]
   }) }}
@@ -135,7 +132,7 @@
             <h2 class="govuk-body govuk-!-font-size-27 govuk-!-font-weight-bold">Grant scheme details</h2> 
             <hr class="govuk-section-break govuk-section-break--visible">
               
-          <div class="govuk-grid-row">
+        <!--  <div class="govuk-grid-row">
               <div class="govuk-grid-column-full">
 
                 <div data-module="appstepnav"id="step-by-step-navigation" class="app-step-nav js-hidden app-step-nav--large" data-show-text="Show" data-hide-text="Hide" data-show-all-text="Show all steps" data-hide-all-text="Hide all steps">
@@ -214,7 +211,7 @@
               </button>
 
               </div>
-            </div>  
+            </div>  -->
           </div>
           
           <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="view-grant-scheme">
@@ -291,7 +288,7 @@
                 
                 <div class="govuk-date-input govuk-!-padding-left-2" id="passport-issued">
                   <div class="govuk-body">
-                      Start date
+                      Scheme start date
                     </div>    
                   <div class="govuk-date-input__item">
                     <div class="govuk-form-group">
@@ -345,7 +342,7 @@
                 </div>
                 <div class="govuk-date-input govuk-!-padding-left-2" id="passport-issued">
                   <div class="govuk-body">
-                      End date
+                      Scheme end date
                     </div>    
                   <div class="govuk-date-input__item">
                     <div class="govuk-form-group">
@@ -557,7 +554,8 @@
               </div>
               <div class="govuk-grid-column-two-thirds govuk-!-padding-left-0">
                 <select class="govuk-select" id="sort" name="sort">
-                    <option value="name" selected>Scheme name A-Z</option>
+                    <option value="name" selected>Scheme name (A-Z)</option>
+                    <option value="name">Scheme name (Z-A)</option>
                     <option value="start">Start date</option>
                     <option value="end">End date</option>
                     <option value="value">Highest total bugeted value</option>
@@ -1821,8 +1819,6 @@
             
             <h2 class="govuk-body govuk-!-font-size-27 govuk-!-font-weight-bold">Grant in aid details</h2> 
             <hr class="govuk-section-break govuk-section-break--visible">
-          
-          <div class="govuk-!-padding-bottom-6"></div> 
               
           </div>
           
@@ -1834,12 +1830,6 @@
                     <p class="govuk-body"> **PLACEHOLDER <s>Here are all of your organisation's grants in aid. You can search by name and reference numbers or use the filters on the left side. Click the button to download an Excel spreadsheet of all your filtered results.</s></p>
                     
                 </div>    
-
-                <div class="govuk-grid-column-one-third" style="text-align: right;">
-                    <button class="govuk-button" data-module="govuk-button">
-                          Download results
-                    </button>
-                </div>
               </div> 
               
               <div class="govuk-grid-row govuk-!-padding-top-4 govuk-!-padding-bottom-4">
@@ -1867,25 +1857,24 @@
                   Financial year dates
                 </span>
               </summary>      
-              <div class="govuk-form-group govuk-!-padding-top-4 govuk-!-padding-left-2">     
-              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                          Current financial year
-                        </label>
-                      </div>
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
-                        <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
-                          Last financial year
-                        </label>
-                      </div>
-                  </div>
+                
+                <div class="govuk-form-group govuk-!-padding-top-4 govuk-!-padding-left-2 govuk-!-padding-right-2">
+                  <label class="govuk-label" for="year-sort">
+                    Financial years
+                  </label>    
+                  <select class="govuk-select govuk-!-width-full" id="year-sort" name="year-sort">
+                    <option value="Year 1" selected>Current financial year 22/23</option>
+                    <option value="Year 2">01/04/2021 - 31/03/2022</option>
+                    <option value="Year 3">01/04/2020 - 31/03/2021</option>
+                    <option value="Year 4">01/04/2019 - 31/03/2020</option>
+                    <option value="Year 5">01/04/2018 - 31/03/2019</option>
+                    <option value="Year 6">01/04/2017 - 31/03/2018</option>  
+                  </select>
                 </div>
+                
                 <div class="govuk-date-input govuk-!-padding-left-2" id="passport-issued">
                   <div class="govuk-body">
-                      Start date
+                      Grant in aid start date
                     </div>    
                   <div class="govuk-date-input__item">
                     <div class="govuk-form-group">
@@ -1911,10 +1900,35 @@
                       <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
                     </div>
                   </div>
+                    <p class="govuk-body">To</p>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                        Day
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" placeholder="31">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                        Month
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" placeholder="03">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                        Year
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+                    </div>
+                  </div>    
                 </div>
                 <div class="govuk-date-input govuk-!-padding-left-2" id="passport-issued">
                   <div class="govuk-body">
-                      End date
+                     Grant in aid end date
                     </div>    
                   <div class="govuk-date-input__item">
                     <div class="govuk-form-group">
@@ -1940,13 +1954,39 @@
                       <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
                     </div>
                   </div>
+                    <p class="govuk-body">To</p>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                        Day
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" placeholder="01">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                        Month
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" placeholder="04">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                        Year
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+                    </div>
+                  </div>    
                 </div>
+                
             </details>
             
             <details class="govuk-details govuk-section-break govuk-section-break--visible govuk-!-padding-bottom-2 govuk-!-margin-bottom-4" data-module="govuk-details">
               <summary class="govuk-details__summary ">
                 <span class="govuk-details__summary-text govuk-link--no-underline">
-                  Grant in aid value
+                  Grants in aid value
                 </span>
               </summary>      
               <div class="govuk-form-group govuk-!-padding-top-4 govuk-!-padding-left-2">
@@ -2020,7 +2060,7 @@
 
     </div>
         
-    <div class="govuk-grid-column-full govuk-!-padding-0" id="awardgrid">
+    <div class="govuk-grid-column-full govuk-!-padding-0" id="aidgrid">
         
          <hr class="govuk-section-break govuk-section-break--visible"> 
         
@@ -2034,12 +2074,14 @@
               </div>
               <div class="govuk-grid-column-two-thirds govuk-!-padding-left-0">
                 <select class="govuk-select" id="sort" name="sort">
-                    <option value="name" selected>Grant in aid name A-Z</option>
+                    <option value="name" selected>Grant in aid name (A-Z)</option>
+                    <option value="name" selected>Grant in aid name (Z-A)</option>
                     <option value="start">Grant in aid  start date</option>
                     <option value="end">Grant in aid  end date</option>
                     <option value="value">Highest total amount paid</option>
                     <option value="value">Lowest total amount paid</option>
-                    <option value="name">Recipient name A-Z</option>
+                    <option value="name">Recipient name (A-Z)</option>
+                    <option value="name">Recipient name (Z-A)</option>
                 </select>
               </div>
             </div>
@@ -2844,7 +2886,7 @@
         
     </div>    
             
-    <div id="awardtable" class="hide">   
+    <div id="aidtable" class="hide">   
             
       <table class="govuk-table">
 

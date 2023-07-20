@@ -27,6 +27,24 @@
     var $element = document.querySelector('#step-by-step-navigation')
     var stepByStepNavigation = new GOVUK.Modules.AppStepNav($element).init()
   </script>
+
+  <script>
+    $(function() {
+        $('#grid-toggle-3').click(function() {
+        $("#awardtable").toggleClass('hide')
+        $("#awardgrid").toggleClass('hide')
+        });
+    })
+  </script>
+
+  <script>
+    $(function() {
+        $('#grid-toggle-4').click(function() {
+        $("#recipienttable").toggleClass('hide')
+        $("#recipientgrid").toggleClass('hide')
+        });
+    })
+  </script>
 {% endblock %}
 
 {% block beforeContent %}
@@ -46,16 +64,8 @@
       {
         text: "Grant awards",
         href: "/sprint_3/awards.html"
-      },
-      {
-        text: "Current page"
       }
     ]
-  }) }}
-
-  {{ govukBackLink({
-    text: "Back",
-    href: "javascript:window.history.back()"
   }) }}
 {% endblock %}
 
@@ -67,196 +77,2528 @@
       <h1 class="govuk-heading-l">
         Grant awards
       </h1>
+
+      <p class="govuk-body">
+          ** PLACEHOLDER <s>This is a paragraph of text. It explains in more detail what has happened and wraps across several lines.</s>
+      </p>
+
+    </div>
+   </div>
+
+   <div class="govuk-!-padding-bottom-2"></div>
+
+   <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
         
+      <div class="govuk-tabs" data-module="govuk-tabs">
+          <h2 class="govuk-tabs__title">
+            Contents
+          </h2>
+          <ul class="govuk-tabs__list">
+            <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+              <a class="govuk-tabs__tab" href="#upload-edit-bulk" style="color: #1d70b8;">
+                Upload and edit in bulk
+              </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+              <a class="govuk-tabs__tab" href="#previous-upload" style="color: #1d70b8;">
+                Previous uploads
+              </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+              <a class="govuk-tabs__tab" href="#add-award" style="color: #1d70b8;">
+                Add an award
+              </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+              <a class="govuk-tabs__tab" href="#view-awards" style="color: #1d70b8;">
+                View your awards
+              </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+              <a class="govuk-tabs__tab" href="#view-recipients" style="color: #1d70b8;">
+                View recipients
+              </a>
+            </li>  
+          </ul>
+          
+          <div class="govuk-tabs__panel" id="upload-edit-bulk">
+            <h2 class="govuk-heading-l">Upload data</h2>
+
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-two-thirds">  
+                        <p class="govuk-body">** PLACEHOLDER <s>Check what you need to do to upload grants data in bulk.</s></p>
+                    </div>
+                </div>  
+          </div>
+          
+          <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="previous-upload">
+              <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds">   
+                    <h2 class="govuk-heading-l">View your previous uploads</h2>
+                    
+                    <p class="govuk-body"> **PLACEHOLDER <s>To edit and submit a previously uploaded grant award file, click 'Select' next to the relevant grant award.</s></p>
+                </div>    
+              </div>          
+          </div>
+          
+          <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="add-award">
+            <h2 class="govuk-heading-l">Add a grant award</h2>
+              
+            <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-two-thirds">  
+                    <p call="govuk-body"> **PLACEHOLDER <s>Select one of the following 'In payment' schemes for your award</s></p>
+                    </div>
+                </div>            
+          </div>
+          
+          <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="view-awards">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds">   
+                    <h2 class="govuk-heading-l">View your organisation's grant awards</h2>
+                    
+                    <p class="govuk-body"> **PLACEHOLDER <s>Here are all of your organisation's grant awards. You can search by name and reference numbers or use the filters on the left side. Click the button to download an Excel spreadsheet of all your filtered results.</s></p>
+                    
+                </div>    
+
+                <div class="govuk-grid-column-one-third" style="text-align: right;">
+                    <button class="govuk-button" data-module="govuk-button">
+                          Download results
+                    </button>
+                </div>
+              </div> 
+              
+              <div class="govuk-grid-row govuk-!-padding-top-4 govuk-!-padding-bottom-4">
+                  <div class="govuk-grid-column-one-half govuk-!-padding-right-0">
+                    <input class="govuk-input govuk-!-width-full govuk-!-padding-left-3" id="full" name="full" type="text" placeholder="Search award name or reference number">
+                  </div>
+                  <div class="govuk-grid-column-one-quarter govuk-!-padding-left-0">
+                    <button class="govuk-button" style="background-color:#1d70b8" data-module="govuk-button">
+                       Search
+                    </button>  
+                  </div>
+              </div>
+              
+              <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-third">
+            
+            <p class="govuk-body govuk-!-font-weight-bold">Filters</p>
+            
+            <hr class="govuk-section-break govuk-section-break--visible">
+    
+            <details class="govuk-details govuk-section-break govuk-section-break--visible govuk-!-padding-bottom-2 govuk-!-margin-bottom-4 govuk-!-padding-top-4" data-module="govuk-details">
+              
+                <summary class="govuk-details__summary ">
+                <span class="govuk-details__summary-text govuk-link--no-underline">
+                  Financial year dates
+                </span>
+              </summary>      
+            <!--  <div class="govuk-form-group govuk-!-padding-top-4 govuk-!-padding-left-2">     
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          Current financial year
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                          Last financial year
+                        </label>
+                      </div>
+                  </div>
+                </div> -->
+                
+                <div class="govuk-form-group govuk-!-padding-top-4 govuk-!-padding-left-2 govuk-!-padding-right-2">
+                  <label class="govuk-label" for="year-sort">
+                    Financial years
+                  </label>    
+                  <select class="govuk-select govuk-!-width-full" id="year-sort" name="year-sort">
+                    <option value="Year 1" selected>Current financial year 22/23</option>
+                    <option value="Year 2">01/04/2021 - 31/03/2022</option>
+                    <option value="Year 3">01/04/2020 - 31/03/2021</option>
+                    <option value="Year 4">01/04/2019 - 31/03/2020</option>
+                    <option value="Year 5">01/04/2018 - 31/03/2019</option>
+                    <option value="Year 6">01/04/2017 - 31/03/2018</option>  
+                  </select>
+                </div>
+                
+                <div class="govuk-date-input govuk-!-padding-left-2" id="passport-issued">
+                  <div class="govuk-body">
+                      Award start date
+                    </div>    
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                        Day
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" placeholder="01">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                        Month
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" placeholder="04">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                        Year
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+                    </div>
+                  </div>
+                    <p class="govuk-body">To</p>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                        Day
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" placeholder="31">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                        Month
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" placeholder="03">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                        Year
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+                    </div>
+                  </div>    
+                </div>
+                <div class="govuk-date-input govuk-!-padding-left-2" id="passport-issued">
+                  <div class="govuk-body">
+                      Award end date
+                    </div>    
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                        Day
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" placeholder="31">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                        Month
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" placeholder="03">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                        Year
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+                    </div>
+                  </div>
+                    <p class="govuk-body">To</p>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                        Day
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" placeholder="01">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                        Month
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" placeholder="04">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                        Year
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+                    </div>
+                  </div>    
+                </div>
+                
+            </details>
+            
+            <details class="govuk-details govuk-section-break govuk-section-break--visible govuk-!-padding-bottom-2 govuk-!-margin-bottom-4" data-module="govuk-details">
+              <summary class="govuk-details__summary ">
+                <span class="govuk-details__summary-text govuk-link--no-underline">
+                  Funding agreement value
+                </span>
+              </summary>      
+              <div class="govuk-form-group govuk-!-padding-top-4 govuk-!-padding-left-2">
+                  <div class="govuk-body">
+                  Agreement value
+                  </div>
+                  <div class="govuk-form-group govuk-!-padding-right-2">
+                    <label class="govuk-label" for="event-name">
+                        Greater than
+                    </label>
+                  <div class="govuk-input__wrapper">
+                    <div class="govuk-input__prefix" aria-hidden="true">£</div>
+                    <input class="govuk-input govuk-!-width-full" id="cost" name="cost" type="text" spellcheck="false">
+                  </div>
+                  <br>
+                  <div class="govuk-form-group">
+                      <label class="govuk-label" for="event-name">
+                        Less than
+                      </label>
+                      <div class="govuk-input__wrapper">
+                        <div class="govuk-input__prefix" aria-hidden="true">£</div>
+                        <input class="govuk-input govuk-!-width-full" id="cost" name="cost" type="text" spellcheck="false">
+                      </div>      
+                  </div>       
+                </div>
+              </div>     
+            </details>
+            
+            <details class="govuk-details govuk-section-break govuk-section-break--visible govuk-!-padding-bottom-2 govuk-!-margin-bottom-4" data-module="govuk-details">
+              <summary class="govuk-details__summary ">
+                <span class="govuk-details__summary-text govuk-link--no-underline">
+                  Authority act
+                </span>
+              </summary>      
+              <div class="govuk-form-group govuk-!-padding-top-4 govuk-!-padding-left-2 govuk-!-margin-bottom-2">     
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          Charities Act 2006
+                        </label>
+                      </div>
+                  </div>
+                </div>
+            </details>       
+        </div> 
+    
+    <div class="govuk-grid-column-two-thirds">  
+    
+    <div class="govuk-grid-column-one-half govuk-!-padding-left-0">     
+    <p class="govuk-body">Showing 1 - 20 of 200 results</p>
+    </div>
+    
+    <div class="govuk-grid-column-one-half govuk-!-padding-right-0" style="text-align: right;">     
+        
+        <a href="#/" class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" style="display: inline-flex; align-items: center;" id="grid-toggle-3">
+            <img src="/public/icons/table.svg" class="govuk-!-padding-right-2" alt="table icon" style="height: 20px;">
+            Show table view
+        </a>
+
+    </div>
+        
+    <div class="govuk-grid-column-full govuk-!-padding-0" id="awardgrid">
+        
+         <hr class="govuk-section-break govuk-section-break--visible"> 
+        
+        <div class="govuk-grid-row govuk-!-padding-top-4 govuk-!-padding-bottom-4">
+          <div class="govuk-grid-column-one-half ">  
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-one-third govuk-!-padding-right-0">
+                <label class="govuk-label govuk-!-padding-top-1" for="sort">
+                    Sort by
+                </label>
+              </div>
+              <div class="govuk-grid-column-two-thirds govuk-!-padding-left-0">
+                <select class="govuk-select" id="sort" name="sort">
+                    <option value="name" selected>Award name (A-Z)</option>
+                    <option value="name">Award name (Z-A)</option>
+                    <option value="start">Award start date</option>
+                    <option value="end">Award end date</option>
+                    <option value="value">Highest funding agreement value</option>
+                    <option value="value">Lowest funding agreement value</option>
+                    <option value="name">Recipient name (A-Z)</option>
+                    <option value="name">Recipient name (Z-A)</option>
+                    <option value="name">Grant scheme name (A-Z)</option>
+                    <option value="name">Grant scheme name (Z-A)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        <ul class="govuk-list">
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+            <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">LGBT Foundation</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-GA-2023051058060</p>
+      
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Award start date:</th>
+                          <td class="govuk-body-s">01-04-2023</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Award  end date:</th>
+                          <td class="govuk-body-s">31-03-2024</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Funding agreement value:</th>
+                          <td class="govuk-body-s">£1,500.00</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient name:</th>
+                          <td class="govuk-body-s">LGBT Foundation</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Grant scheme name:</th>
+                          <td class="govuk-body-s">LGBGT Veterans Independant review</td>
+                        </tr>  
+                      </tbody>
+                    </table>
+                    
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+            <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">LGBT Foundation</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-GA-2023051058060</p>
+      
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Award start date:</th>
+                          <td class="govuk-body-s">01-04-2023</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Award  end date:</th>
+                          <td class="govuk-body-s">31-03-2024</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Funding agreement value:</th>
+                          <td class="govuk-body-s">£1,500.00</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient name:</th>
+                          <td class="govuk-body-s">LGBT Foundation</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Grant scheme name:</th>
+                          <td class="govuk-body-s">LGBGT Veterans Independant review</td>
+                        </tr>  
+                      </tbody>
+                    </table>
+                    
+                </div>
+                </div>
+              </li>
+            
+              <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">LGBT Foundation</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-GA-2023051058060</p>
+      
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Award start date:</th>
+                          <td class="govuk-body-s">01-04-2023</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Award  end date:</th>
+                          <td class="govuk-body-s">31-03-2024</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Funding agreement value:</th>
+                          <td class="govuk-body-s">£1,500.00</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient name:</th>
+                          <td class="govuk-body-s">LGBT Foundation</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Grant scheme name:</th>
+                          <td class="govuk-body-s">LGBGT Veterans Independant review</td>
+                        </tr>  
+                      </tbody>
+                    </table>
+                    
+                </div>
+                </div>
+              </li>
+            
+              <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">LGBT Foundation</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-GA-2023051058060</p>
+      
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Award start date:</th>
+                          <td class="govuk-body-s">01-04-2023</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Award  end date:</th>
+                          <td class="govuk-body-s">31-03-2024</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Funding agreement value:</th>
+                          <td class="govuk-body-s">£1,500.00</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient name:</th>
+                          <td class="govuk-body-s">LGBT Foundation</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Grant scheme name:</th>
+                          <td class="govuk-body-s">LGBGT Veterans Independant review</td>
+                        </tr>  
+                      </tbody>
+                    </table>
+                    
+                </div>
+                </div>
+              </li>
+              
+              <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">LGBT Foundation</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-GA-2023051058060</p>
+      
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Award start date:</th>
+                          <td class="govuk-body-s">01-04-2023</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Award  end date:</th>
+                          <td class="govuk-body-s">31-03-2024</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Funding agreement value:</th>
+                          <td class="govuk-body-s">£1,500.00</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient name:</th>
+                          <td class="govuk-body-s">LGBT Foundation</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Grant scheme name:</th>
+                          <td class="govuk-body-s">LGBGT Veterans Independant review</td>
+                        </tr>  
+                      </tbody>
+                    </table>
+                    
+                </div>
+                </div>
+              </li>
+            
+              <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">LGBT Foundation</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-GA-2023051058060</p>
+      
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Award start date:</th>
+                          <td class="govuk-body-s">01-04-2023</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Award  end date:</th>
+                          <td class="govuk-body-s">31-03-2024</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Funding agreement value:</th>
+                          <td class="govuk-body-s">£1,500.00</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient name:</th>
+                          <td class="govuk-body-s">LGBT Foundation</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Grant scheme name:</th>
+                          <td class="govuk-body-s">LGBGT Veterans Independant review</td>
+                        </tr>  
+                      </tbody>
+                    </table>
+                    
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">LGBT Foundation</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-GA-2023051058060</p>
+      
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Award start date:</th>
+                          <td class="govuk-body-s">01-04-2023</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Award  end date:</th>
+                          <td class="govuk-body-s">31-03-2024</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Funding agreement value:</th>
+                          <td class="govuk-body-s">£1,500.00</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient name:</th>
+                          <td class="govuk-body-s">LGBT Foundation</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Grant scheme name:</th>
+                          <td class="govuk-body-s">LGBGT Veterans Independant review</td>
+                        </tr>  
+                      </tbody>
+                    </table>
+                    
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">LGBT Foundation</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-GA-2023051058060</p>
+      
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Award start date:</th>
+                          <td class="govuk-body-s">01-04-2023</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Award  end date:</th>
+                          <td class="govuk-body-s">31-03-2024</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Funding agreement value:</th>
+                          <td class="govuk-body-s">£1,500.00</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient name:</th>
+                          <td class="govuk-body-s">LGBT Foundation</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Grant scheme name:</th>
+                          <td class="govuk-body-s">LGBGT Veterans Independant review</td>
+                        </tr>  
+                      </tbody>
+                    </table>
+                    
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">LGBT Foundation</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-GA-2023051058060</p>
+      
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Award start date:</th>
+                          <td class="govuk-body-s">01-04-2023</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Award  end date:</th>
+                          <td class="govuk-body-s">31-03-2024</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Funding agreement value:</th>
+                          <td class="govuk-body-s">£1,500.00</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient name:</th>
+                          <td class="govuk-body-s">LGBT Foundation</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Grant scheme name:</th>
+                          <td class="govuk-body-s">LGBGT Veterans Independant review</td>
+                        </tr>  
+                      </tbody>
+                    </table>
+                    
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">LGBT Foundation</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-GA-2023051058060</p>
+      
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Award start date:</th>
+                          <td class="govuk-body-s">01-04-2023</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Award  end date:</th>
+                          <td class="govuk-body-s">31-03-2024</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Funding agreement value:</th>
+                          <td class="govuk-body-s">£1,500.00</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient name:</th>
+                          <td class="govuk-body-s">LGBT Foundation</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Grant scheme name:</th>
+                          <td class="govuk-body-s">LGBGT Veterans Independant review</td>
+                        </tr>  
+                      </tbody>
+                    </table>
+                    
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">LGBT Foundation</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-GA-2023051058060</p>
+      
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Award start date:</th>
+                          <td class="govuk-body-s">01-04-2023</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Award  end date:</th>
+                          <td class="govuk-body-s">31-03-2024</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Funding agreement value:</th>
+                          <td class="govuk-body-s">£1,500.00</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient name:</th>
+                          <td class="govuk-body-s">LGBT Foundation</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Grant scheme name:</th>
+                          <td class="govuk-body-s">LGBGT Veterans Independant review</td>
+                        </tr>  
+                      </tbody>
+                    </table>
+                    
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">LGBT Foundation</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-GA-2023051058060</p>
+      
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Award start date:</th>
+                          <td class="govuk-body-s">01-04-2023</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Award  end date:</th>
+                          <td class="govuk-body-s">31-03-2024</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Funding agreement value:</th>
+                          <td class="govuk-body-s">£1,500.00</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient name:</th>
+                          <td class="govuk-body-s">LGBT Foundation</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Grant scheme name:</th>
+                          <td class="govuk-body-s">LGBGT Veterans Independant review</td>
+                        </tr>  
+                      </tbody>
+                    </table>
+                    
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">LGBT Foundation</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-GA-2023051058060</p>
+      
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Award start date:</th>
+                          <td class="govuk-body-s">01-04-2023</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Award  end date:</th>
+                          <td class="govuk-body-s">31-03-2024</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Funding agreement value:</th>
+                          <td class="govuk-body-s">£1,500.00</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient name:</th>
+                          <td class="govuk-body-s">LGBT Foundation</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Grant scheme name:</th>
+                          <td class="govuk-body-s">LGBGT Veterans Independant review</td>
+                        </tr>  
+                      </tbody>
+                    </table>
+                    
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">LGBT Foundation</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-GA-2023051058060</p>
+      
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Award start date:</th>
+                          <td class="govuk-body-s">01-04-2023</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Award  end date:</th>
+                          <td class="govuk-body-s">31-03-2024</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Funding agreement value:</th>
+                          <td class="govuk-body-s">£1,500.00</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient name:</th>
+                          <td class="govuk-body-s">LGBT Foundation</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Grant scheme name:</th>
+                          <td class="govuk-body-s">LGBGT Veterans Independant review</td>
+                        </tr>  
+                      </tbody>
+                    </table>
+                    
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">LGBT Foundation</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-GA-2023051058060</p>
+      
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Award start date:</th>
+                          <td class="govuk-body-s">01-04-2023</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Award  end date:</th>
+                          <td class="govuk-body-s">31-03-2024</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Funding agreement value:</th>
+                          <td class="govuk-body-s">£1,500.00</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient name:</th>
+                          <td class="govuk-body-s">LGBT Foundation</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Grant scheme name:</th>
+                          <td class="govuk-body-s">LGBGT Veterans Independant review</td>
+                        </tr>  
+                      </tbody>
+                    </table>
+                    
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">LGBT Foundation</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-GA-2023051058060</p>
+      
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Award start date:</th>
+                          <td class="govuk-body-s">01-04-2023</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Award  end date:</th>
+                          <td class="govuk-body-s">31-03-2024</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Funding agreement value:</th>
+                          <td class="govuk-body-s">£1,500.00</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient name:</th>
+                          <td class="govuk-body-s">LGBT Foundation</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Grant scheme name:</th>
+                          <td class="govuk-body-s">LGBGT Veterans Independant review</td>
+                        </tr>  
+                      </tbody>
+                    </table>
+                    
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">LGBT Foundation</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-GA-2023051058060</p>
+      
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Award start date:</th>
+                          <td class="govuk-body-s">01-04-2023</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Award  end date:</th>
+                          <td class="govuk-body-s">31-03-2024</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Funding agreement value:</th>
+                          <td class="govuk-body-s">£1,500.00</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient name:</th>
+                          <td class="govuk-body-s">LGBT Foundation</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Grant scheme name:</th>
+                          <td class="govuk-body-s">LGBGT Veterans Independant review</td>
+                        </tr>  
+                      </tbody>
+                    </table>
+                    
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">LGBT Foundation</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-GA-2023051058060</p>
+      
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Award start date:</th>
+                          <td class="govuk-body-s">01-04-2023</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Award  end date:</th>
+                          <td class="govuk-body-s">31-03-2024</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Funding agreement value:</th>
+                          <td class="govuk-body-s">£1,500.00</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient name:</th>
+                          <td class="govuk-body-s">LGBT Foundation</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Grant scheme name:</th>
+                          <td class="govuk-body-s">LGBGT Veterans Independant review</td>
+                        </tr>  
+                      </tbody>
+                    </table>
+                    
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">LGBT Foundation</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-GA-2023051058060</p>
+      
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Award start date:</th>
+                          <td class="govuk-body-s">01-04-2023</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Award  end date:</th>
+                          <td class="govuk-body-s">31-03-2024</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Funding agreement value:</th>
+                          <td class="govuk-body-s">£1,500.00</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient name:</th>
+                          <td class="govuk-body-s">LGBT Foundation</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Grant scheme name:</th>
+                          <td class="govuk-body-s">LGBGT Veterans Independant review</td>
+                        </tr>  
+                      </tbody>
+                    </table>
+                    
+                </div>
+                </div>
+              </li>
+        </ul>
+        
+        <nav class="govuk-pagination" role="navigation" aria-label="results">
+              <div class="govuk-pagination__prev">
+                <a class="govuk-link govuk-pagination__link" href="#19" rel="prev">
+                  <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                    <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+                  </svg>
+                  <span class="govuk-pagination__link-title">Previous</span></a>
+              </div>
+              <ul class="govuk-pagination__list">
+                <li class="govuk-pagination__item govuk-pagination__item--current">
+                  <a class="govuk-link govuk-pagination__link" href="#20" aria-label="Page 1">
+                    1
+                  </a>
+                </li>
+                <li class="govuk-pagination__item">
+                  <a class="govuk-link govuk-pagination__link" href="#21" aria-label="Page 2" aria-current="page">
+                    2
+                  </a>
+                </li>
+                <li class="govuk-pagination__item">
+                  <a class="govuk-link govuk-pagination__link" href="#12" aria-label="Page 3">
+                    3
+                  </a>
+                </li>
+              </ul>
+              <div class="govuk-pagination__next">
+                <a class="govuk-link govuk-pagination__link" href="#23" rel="next"> <span class="govuk-pagination__link-title">Next</span> <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                    <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                  </svg></a>
+              </div>
+            </nav> 
+        
+    </div>    
+            
+    <div id="awardtable" class="hide">   
+            
+      <table class="govuk-table">
+
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+
+            <th scope="col" class="govuk-table__header govuk-body-s">
+                <a href="#sort1" class="govuk-link" style="display: inline-flex; align-items: center;">Grant in aid name
+                    <img src="/public/icons/sort.svg" class="govuk-!-padding-left-1" alt="arrow" style="height: 20px;">
+                </a>
+            </th>
+              
+            <th scope="col" class="govuk-table__header govuk-body-s">
+                <a href="#sort2" class="govuk-link" style="display: inline-flex; align-items: top;">Start date
+                    <img src="/public/icons/sort.svg" class="govuk-!-padding-left-0" alt="arrow" style="height: 20px;">
+                </a>
+            </th>
+            
+            <th scope="col" class="govuk-table__header govuk-body-s">
+                <a href="#sort3" class="govuk-link" style="display: inline-flex; align-items: top;">End date
+                    <img src="/public/icons/sort.svg" class="govuk-!-padding-left-0" alt="arrow" style="height: 20px;">
+                </a>
+            </th>
+            
+            <th scope="col" class="govuk-table__header govuk-body-s">
+                <a href="#sort4" class="govuk-link" style="display: inline-flex; align-items: top;">Total amount paid
+                    <img src="/public/icons/caret-up.svg" class="govuk-!-padding-left-0" alt="arrow" style="height: 10px;">
+                </a>
+            </th>   
+
+            <th scope="col" class="govuk-table__header govuk-body-s">
+                <a href="#sort5" class="govuk-link" style="display: inline-flex; align-items: top;">Recipient name
+                    <img src="/public/icons/sort.svg" class="govuk-!-padding-left-0" alt="arrow" style="height: 20px;">
+                </a>
+            </th>
+              
+            <th scope="col" class="govuk-table__header govuk-body-s">Managed by
+              </th> 
+
+          </tr>
+        </thead>
+
+        <tbody class="govuk-table__body">
+
+          <tr class="govuk-table__row">
+
+            <th scope="row" class="govuk-table__header"><a href="##1" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Charity for Civil Servants</a></th>
+
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
+
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
+            
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
+
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+
+          </tr>
+
+          <tr class="govuk-table__row">
+
+            <th scope="row" class="govuk-table__header"><a href="##1" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Charity for Civil Servants</a></th>
+
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
+
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
+            
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
+
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+
+          </tr>
+
+          <tr class="govuk-table__row">
+
+            <th scope="row" class="govuk-table__header"><a href="##1" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Charity for Civil Servants</a></th>
+
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
+
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
+            
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
+
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+
+          </tr>
+
+          <tr class="govuk-table__row">
+
+            <th scope="row" class="govuk-table__header"><a href="##1" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Charity for Civil Servants</a></th>
+
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
+
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
+            
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
+
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+
+          </tr>
+            
+        <tr class="govuk-table__row">
+
+            <th scope="row" class="govuk-table__header"><a href="##1" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Charity for Civil Servants</a></th>
+
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
+
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
+            
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
+
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+
+          </tr>
+            
+        <tr class="govuk-table__row">
+
+            <th scope="row" class="govuk-table__header"><a href="##1" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Charity for Civil Servants</a></th>
+
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
+
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
+            
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
+
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+
+          </tr>
+            
+        <tr class="govuk-table__row">
+
+            <th scope="row" class="govuk-table__header"><a href="##1" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Charity for Civil Servants</a></th>
+
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
+
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
+            
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
+
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+
+          </tr>
+            
+        <tr class="govuk-table__row">
+
+            <th scope="row" class="govuk-table__header"><a href="##1" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Charity for Civil Servants</a></th>
+
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
+
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
+            
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
+
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+
+          </tr>
+            
+        <tr class="govuk-table__row">
+
+            <th scope="row" class="govuk-table__header"><a href="##1" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Charity for Civil Servants</a></th>
+
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
+
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
+            
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
+
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+
+          </tr>
+            
+        <tr class="govuk-table__row">
+
+            <th scope="row" class="govuk-table__header"><a href="##1" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Charity for Civil Servants</a></th>
+
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
+
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
+            
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
+
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+
+          </tr>   
+            
+        <tr class="govuk-table__row">
+
+            <th scope="row" class="govuk-table__header"><a href="##1" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Charity for Civil Servants</a></th>
+
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
+
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
+            
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
+
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+
+          </tr> 
+            
+        <tr class="govuk-table__row">
+
+            <th scope="row" class="govuk-table__header"><a href="##1" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Charity for Civil Servants</a></th>
+
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
+
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
+            
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
+
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+
+          </tr> 
+            
+        <tr class="govuk-table__row">
+
+            <th scope="row" class="govuk-table__header"><a href="##1" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Charity for Civil Servants</a></th>
+
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
+
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
+            
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
+
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+
+          </tr> 
+            
+        <tr class="govuk-table__row">
+
+            <th scope="row" class="govuk-table__header"><a href="##1" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Charity for Civil Servants</a></th>
+
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
+
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
+            
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
+
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+
+          </tr> 
+            
+        <tr class="govuk-table__row">
+
+            <th scope="row" class="govuk-table__header"><a href="##1" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Charity for Civil Servants</a></th>
+
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
+
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
+            
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
+
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+
+          </tr> 
+            
+        <tr class="govuk-table__row">
+
+            <th scope="row" class="govuk-table__header"><a href="##1" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Charity for Civil Servants</a></th>
+
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
+
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
+            
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
+
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+
+          </tr> 
+            
+        <tr class="govuk-table__row">
+
+            <th scope="row" class="govuk-table__header"><a href="##1" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Charity for Civil Servants</a></th>
+
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
+
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
+            
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
+
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+
+          </tr> 
+            
+        <tr class="govuk-table__row">
+
+            <th scope="row" class="govuk-table__header"><a href="##1" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Charity for Civil Servants</a></th>
+
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
+
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
+            
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
+
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+
+          </tr> 
+            
+        <tr class="govuk-table__row">
+
+            <th scope="row" class="govuk-table__header"><a href="##1" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Charity for Civil Servants</a></th>
+
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
+
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
+            
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
+
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+
+          </tr> 
+            
+        <tr class="govuk-table__row">
+
+            <th scope="row" class="govuk-table__header"><a href="##1" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Charity for Civil Servants</a></th>
+
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
+
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
+            
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
+
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+
+          </tr>     
+
+        </tbody>
+      </table>
+        
+        <nav class="govuk-pagination" role="navigation" aria-label="results">
+              <div class="govuk-pagination__prev">
+                <a class="govuk-link govuk-pagination__link" href="#11" rel="prev">
+                  <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                    <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+                  </svg>
+                  <span class="govuk-pagination__link-title">Previous</span></a>
+              </div>
+              <ul class="govuk-pagination__list">
+                <li class="govuk-pagination__item govuk-pagination__item--current">
+                  <a class="govuk-link govuk-pagination__link" href="#12" aria-label="Page 1">
+                    1
+                  </a>
+                </li>
+                <li class="govuk-pagination__item">
+                  <a class="govuk-link govuk-pagination__link" href="#13" aria-label="Page 2" aria-current="page">
+                    2
+                  </a>
+                </li>
+                <li class="govuk-pagination__item">
+                  <a class="govuk-link govuk-pagination__link" href="#14" aria-label="Page 3">
+                    3
+                  </a>
+                </li>
+              </ul>
+              <div class="govuk-pagination__next">
+                <a class="govuk-link govuk-pagination__link" href="#15" rel="next"> <span class="govuk-pagination__link-title">Next</span> <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                    <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                  </svg></a>
+              </div>
+            </nav>   
+        
+    </div>
+    </div>
+    </div>     
+
+          </div>
+          
+          <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="view-recipients">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds">   
+                    <h2 class="govuk-heading-l">View your award recipients</h2>
+                    
+                    <p class="govuk-body"> **PLACEHOLDER <s>Here are all of your award recipients. You can search by name and reference numbers or use the filters on the left side. Click the button to download an Excel spreadsheet of all your filtered results.</s></p>
+                    
+                </div>    
+
+               <!-- <div class="govuk-grid-column-one-third" style="text-align: right;">
+                    <button class="govuk-button" data-module="govuk-button">
+                          Download results
+                    </button>
+                </div> -->
+              </div> 
+              
+              <div class="govuk-grid-row govuk-!-padding-top-4 govuk-!-padding-bottom-4">
+                  <div class="govuk-grid-column-one-half govuk-!-padding-right-0">
+                    <input class="govuk-input govuk-!-width-full govuk-!-padding-left-3" id="full" name="full" type="text" placeholder="Search recipient name or ID">
+                  </div>
+                  <div class="govuk-grid-column-one-quarter govuk-!-padding-left-0">
+                    <button class="govuk-button" style="background-color:#1d70b8" data-module="govuk-button">
+                       Search
+                    </button>  
+                  </div>
+              </div>
+              
+              <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-third">
+            
+            <p class="govuk-body govuk-!-font-weight-bold">Filters</p>
+            
+            <hr class="govuk-section-break govuk-section-break--visible">
+            
+            <details class="govuk-details govuk-section-break govuk-section-break--visible govuk-!-padding-bottom-2 govuk-!-margin-bottom-4 govuk-!-padding-top-4" data-module="govuk-details">
+              <summary class="govuk-details__summary ">
+                <span class="govuk-details__summary-text govuk-link--no-underline">
+                  Recipient category
+                </span>
+              </summary>      
+              <div class="govuk-form-group govuk-!-padding-top-4 govuk-!-padding-left-2 govuk-!-margin-bottom-2">     
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          UK company
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          UK charity
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          UK educational institution 
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          UK public body
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          International organisation 
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          Other
+                        </label>
+                      </div>
+                  </div>
+                </div>
+            </details>       
+        </div> 
+    
+    <div class="govuk-grid-column-two-thirds">  
+    
+    <div class="govuk-grid-column-one-half govuk-!-padding-left-0">     
+    <p class="govuk-body">Showing 1 - 20 of 200 results</p>
+    </div>
+    
+    <div class="govuk-grid-column-one-half govuk-!-padding-right-0" style="text-align: right;">     
+        
+        <a href="#/" class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" style="display: inline-flex; align-items: center;" id="grid-toggle-4">
+            <img src="/public/icons/table.svg" class="govuk-!-padding-right-2" alt="table icon" style="height: 20px;">
+            Show table view
+        </a>
+
+    </div>
+        
+    <div class="govuk-grid-column-full govuk-!-padding-0" id="recipientgrid">
+        
+         <hr class="govuk-section-break govuk-section-break--visible"> 
+        
+        <div class="govuk-grid-row govuk-!-padding-top-4 govuk-!-padding-bottom-4">
+          <div class="govuk-grid-column-one-half ">  
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-one-third govuk-!-padding-right-0">
+                <label class="govuk-label govuk-!-padding-top-1" for="sort">
+                    Sort by
+                </label>
+              </div>
+              <div class="govuk-grid-column-two-thirds govuk-!-padding-left-0">
+                <select class="govuk-select" id="sort" name="sort">
+                    <option value="name" selected>Recipient name A-Z</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        <ul class="govuk-list">
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+            <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">Peter Ashley Activity Centre Trust</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">ID: 12345678</p>
+                    
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient type:</th>
+                          <td class="govuk-body-s">UK charity</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Postcode:</th>
+                          <td class="govuk-body-s">PO6 1BJ</td>
+                        </tr>  
+                      </tbody>
+                    </table>      
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+            <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">Peter Ashley Activity Centre Trust</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">ID: 12345678</p>
+                    
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient type:</th>
+                          <td class="govuk-body-s">UK charity</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Postcode:</th>
+                          <td class="govuk-body-s">PO6 1BJ</td>
+                        </tr>  
+                      </tbody>
+                    </table>      
+                </div>
+                </div>
+              </li>
+            
+              <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">Peter Ashley Activity Centre Trust</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">ID: 12345678</p>
+                    
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient type:</th>
+                          <td class="govuk-body-s">UK charity</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Postcode:</th>
+                          <td class="govuk-body-s">PO6 1BJ</td>
+                        </tr>  
+                      </tbody>
+                    </table>      
+                </div>
+                </div>
+              </li>
+            
+              <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">Peter Ashley Activity Centre Trust</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">ID: 12345678</p>
+                    
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient type:</th>
+                          <td class="govuk-body-s">UK charity</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Postcode:</th>
+                          <td class="govuk-body-s">PO6 1BJ</td>
+                        </tr>  
+                      </tbody>
+                    </table>      
+                </div>
+                </div>
+              </li>
+              
+              <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">Peter Ashley Activity Centre Trust</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">ID: 12345678</p>
+                    
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient type:</th>
+                          <td class="govuk-body-s">UK charity</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Postcode:</th>
+                          <td class="govuk-body-s">PO6 1BJ</td>
+                        </tr>  
+                      </tbody>
+                    </table>      
+                </div>
+                </div>
+              </li>
+            
+              <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">Peter Ashley Activity Centre Trust</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">ID: 12345678</p>
+                    
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient type:</th>
+                          <td class="govuk-body-s">UK charity</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Postcode:</th>
+                          <td class="govuk-body-s">PO6 1BJ</td>
+                        </tr>  
+                      </tbody>
+                    </table>      
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">Peter Ashley Activity Centre Trust</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">ID: 12345678</p>
+                    
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient type:</th>
+                          <td class="govuk-body-s">UK charity</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Postcode:</th>
+                          <td class="govuk-body-s">PO6 1BJ</td>
+                        </tr>  
+                      </tbody>
+                    </table>      
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">Peter Ashley Activity Centre Trust</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">ID: 12345678</p>
+                    
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient type:</th>
+                          <td class="govuk-body-s">UK charity</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Postcode:</th>
+                          <td class="govuk-body-s">PO6 1BJ</td>
+                        </tr>  
+                      </tbody>
+                    </table>      
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">Peter Ashley Activity Centre Trust</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">ID: 12345678</p>
+                    
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient type:</th>
+                          <td class="govuk-body-s">UK charity</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Postcode:</th>
+                          <td class="govuk-body-s">PO6 1BJ</td>
+                        </tr>  
+                      </tbody>
+                    </table>      
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">Peter Ashley Activity Centre Trust</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">ID: 12345678</p>
+                    
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient type:</th>
+                          <td class="govuk-body-s">UK charity</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Postcode:</th>
+                          <td class="govuk-body-s">PO6 1BJ</td>
+                        </tr>  
+                      </tbody>
+                    </table>      
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">Peter Ashley Activity Centre Trust</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">ID: 12345678</p>
+                    
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient type:</th>
+                          <td class="govuk-body-s">UK charity</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Postcode:</th>
+                          <td class="govuk-body-s">PO6 1BJ</td>
+                        </tr>  
+                      </tbody>
+                    </table>      
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">Peter Ashley Activity Centre Trust</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">ID: 12345678</p>
+                    
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient type:</th>
+                          <td class="govuk-body-s">UK charity</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Postcode:</th>
+                          <td class="govuk-body-s">PO6 1BJ</td>
+                        </tr>  
+                      </tbody>
+                    </table>      
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">Peter Ashley Activity Centre Trust</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">ID: 12345678</p>
+                    
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient type:</th>
+                          <td class="govuk-body-s">UK charity</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Postcode:</th>
+                          <td class="govuk-body-s">PO6 1BJ</td>
+                        </tr>  
+                      </tbody>
+                    </table>      
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">Peter Ashley Activity Centre Trust</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">ID: 12345678</p>
+                    
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient type:</th>
+                          <td class="govuk-body-s">UK charity</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Postcode:</th>
+                          <td class="govuk-body-s">PO6 1BJ</td>
+                        </tr>  
+                      </tbody>
+                    </table>      
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">Peter Ashley Activity Centre Trust</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">ID: 12345678</p>
+                    
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient type:</th>
+                          <td class="govuk-body-s">UK charity</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Postcode:</th>
+                          <td class="govuk-body-s">PO6 1BJ</td>
+                        </tr>  
+                      </tbody>
+                    </table>      
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">Peter Ashley Activity Centre Trust</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">ID: 12345678</p>
+                    
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient type:</th>
+                          <td class="govuk-body-s">UK charity</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Postcode:</th>
+                          <td class="govuk-body-s">PO6 1BJ</td>
+                        </tr>  
+                      </tbody>
+                    </table>      
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">Peter Ashley Activity Centre Trust</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">ID: 12345678</p>
+                    
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient type:</th>
+                          <td class="govuk-body-s">UK charity</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Postcode:</th>
+                          <td class="govuk-body-s">PO6 1BJ</td>
+                        </tr>  
+                      </tbody>
+                    </table>      
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">Peter Ashley Activity Centre Trust</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">ID: 12345678</p>
+                    
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient type:</th>
+                          <td class="govuk-body-s">UK charity</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Postcode:</th>
+                          <td class="govuk-body-s">PO6 1BJ</td>
+                        </tr>  
+                      </tbody>
+                    </table>      
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">Peter Ashley Activity Centre Trust</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">ID: 12345678</p>
+                    
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient type:</th>
+                          <td class="govuk-body-s">UK charity</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Postcode:</th>
+                          <td class="govuk-body-s">PO6 1BJ</td>
+                        </tr>  
+                      </tbody>
+                    </table>      
+                </div>
+                </div>
+              </li>
+        </ul>
+        
+        <nav class="govuk-pagination" role="navigation" aria-label="results">
+              <div class="govuk-pagination__prev">
+                <a class="govuk-link govuk-pagination__link" href="#19" rel="prev">
+                  <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                    <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+                  </svg>
+                  <span class="govuk-pagination__link-title">Previous</span></a>
+              </div>
+              <ul class="govuk-pagination__list">
+                <li class="govuk-pagination__item govuk-pagination__item--current">
+                  <a class="govuk-link govuk-pagination__link" href="#20" aria-label="Page 1">
+                    1
+                  </a>
+                </li>
+                <li class="govuk-pagination__item">
+                  <a class="govuk-link govuk-pagination__link" href="#21" aria-label="Page 2" aria-current="page">
+                    2
+                  </a>
+                </li>
+                <li class="govuk-pagination__item">
+                  <a class="govuk-link govuk-pagination__link" href="#12" aria-label="Page 3">
+                    3
+                  </a>
+                </li>
+              </ul>
+              <div class="govuk-pagination__next">
+                <a class="govuk-link govuk-pagination__link" href="#23" rel="next"> <span class="govuk-pagination__link-title">Next</span> <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                    <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                  </svg></a>
+              </div>
+            </nav> 
+        
+    </div>    
+            
+    <div id="recipienttable" class="hide">   
+            
+      <table class="govuk-table">
+
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+
+            <th scope="col" class="govuk-table__header govuk-body-s">
+                <a href="#sort1" class="govuk-link" style="display: inline-flex; align-items: center;">Grant in aid name
+                    <img src="/public/icons/sort.svg" class="govuk-!-padding-left-1" alt="arrow" style="height: 20px;">
+                </a>
+            </th>
+              
+            <th scope="col" class="govuk-table__header govuk-body-s">
+                <a href="#sort2" class="govuk-link" style="display: inline-flex; align-items: top;">Start date
+                    <img src="/public/icons/sort.svg" class="govuk-!-padding-left-0" alt="arrow" style="height: 20px;">
+                </a>
+            </th>
+            
+            <th scope="col" class="govuk-table__header govuk-body-s">
+                <a href="#sort3" class="govuk-link" style="display: inline-flex; align-items: top;">End date
+                    <img src="/public/icons/sort.svg" class="govuk-!-padding-left-0" alt="arrow" style="height: 20px;">
+                </a>
+            </th>
+            
+            <th scope="col" class="govuk-table__header govuk-body-s">
+                <a href="#sort4" class="govuk-link" style="display: inline-flex; align-items: top;">Total amount paid
+                    <img src="/public/icons/caret-up.svg" class="govuk-!-padding-left-0" alt="arrow" style="height: 10px;">
+                </a>
+            </th>   
+
+            <th scope="col" class="govuk-table__header govuk-body-s">
+                <a href="#sort5" class="govuk-link" style="display: inline-flex; align-items: top;">Recipient name
+                    <img src="/public/icons/sort.svg" class="govuk-!-padding-left-0" alt="arrow" style="height: 20px;">
+                </a>
+            </th>
+              
+            <th scope="col" class="govuk-table__header govuk-body-s">Managed by
+              </th> 
+
+          </tr>
+        </thead>
+
+        <tbody class="govuk-table__body">
+
+          <tr class="govuk-table__row">
+
+            <th scope="row" class="govuk-table__header"><a href="##1" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Charity for Civil Servants</a></th>
+
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
+
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
+            
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
+
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+
+          </tr>
+
+          <tr class="govuk-table__row">
+
+            <th scope="row" class="govuk-table__header"><a href="##1" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Charity for Civil Servants</a></th>
+
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
+
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
+            
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
+
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+
+          </tr>
+
+          <tr class="govuk-table__row">
+
+            <th scope="row" class="govuk-table__header"><a href="##1" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Charity for Civil Servants</a></th>
+
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
+
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
+            
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
+
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+
+          </tr>
+
+          <tr class="govuk-table__row">
+
+            <th scope="row" class="govuk-table__header"><a href="##1" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Charity for Civil Servants</a></th>
+
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
+
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
+            
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
+
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+
+          </tr>
+            
+        <tr class="govuk-table__row">
+
+            <th scope="row" class="govuk-table__header"><a href="##1" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Charity for Civil Servants</a></th>
+
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
+
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
+            
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
+
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+
+          </tr>
+            
+        <tr class="govuk-table__row">
+
+            <th scope="row" class="govuk-table__header"><a href="##1" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Charity for Civil Servants</a></th>
+
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
+
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
+            
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
+
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+
+          </tr>
+            
+        <tr class="govuk-table__row">
+
+            <th scope="row" class="govuk-table__header"><a href="##1" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Charity for Civil Servants</a></th>
+
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
+
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
+            
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
+
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+
+          </tr>
+            
+        <tr class="govuk-table__row">
+
+            <th scope="row" class="govuk-table__header"><a href="##1" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Charity for Civil Servants</a></th>
+
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
+
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
+            
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
+
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+
+          </tr>
+            
+        <tr class="govuk-table__row">
+
+            <th scope="row" class="govuk-table__header"><a href="##1" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Charity for Civil Servants</a></th>
+
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
+
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
+            
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
+
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+
+          </tr>
+            
+        <tr class="govuk-table__row">
+
+            <th scope="row" class="govuk-table__header"><a href="##1" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Charity for Civil Servants</a></th>
+
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
+
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
+            
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
+
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+
+          </tr>   
+            
+        <tr class="govuk-table__row">
+
+            <th scope="row" class="govuk-table__header"><a href="##1" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Charity for Civil Servants</a></th>
+
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
+
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
+            
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
+
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+
+          </tr> 
+            
+        <tr class="govuk-table__row">
+
+            <th scope="row" class="govuk-table__header"><a href="##1" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Charity for Civil Servants</a></th>
+
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
+
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
+            
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
+
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+
+          </tr> 
+            
+        <tr class="govuk-table__row">
+
+            <th scope="row" class="govuk-table__header"><a href="##1" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Charity for Civil Servants</a></th>
+
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
+
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
+            
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
+
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+
+          </tr> 
+            
+        <tr class="govuk-table__row">
+
+            <th scope="row" class="govuk-table__header"><a href="##1" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Charity for Civil Servants</a></th>
+
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
+
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
+            
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
+
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+
+          </tr> 
+            
+        <tr class="govuk-table__row">
+
+            <th scope="row" class="govuk-table__header"><a href="##1" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Charity for Civil Servants</a></th>
+
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
+
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
+            
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
+
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+
+          </tr> 
+            
+        <tr class="govuk-table__row">
+
+            <th scope="row" class="govuk-table__header"><a href="##1" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Charity for Civil Servants</a></th>
+
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
+
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
+            
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
+
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+
+          </tr> 
+            
+        <tr class="govuk-table__row">
+
+            <th scope="row" class="govuk-table__header"><a href="##1" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Charity for Civil Servants</a></th>
+
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
+
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
+            
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
+
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+
+          </tr> 
+            
+        <tr class="govuk-table__row">
+
+            <th scope="row" class="govuk-table__header"><a href="##1" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Charity for Civil Servants</a></th>
+
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
+
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
+            
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
+
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+
+          </tr> 
+            
+        <tr class="govuk-table__row">
+
+            <th scope="row" class="govuk-table__header"><a href="##1" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Charity for Civil Servants</a></th>
+
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
+
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
+            
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
+
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+
+          </tr> 
+            
+        <tr class="govuk-table__row">
+
+            <th scope="row" class="govuk-table__header"><a href="##1" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">Charity for Civil Servants</a></th>
+
+            <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
+
+            <td class="govuk-table__cell govuk-body-s">31-03-2017</td>
+            
+            <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
+
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+
+            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+
+          </tr>     
+
+        </tbody>
+      </table>
+        
+        <nav class="govuk-pagination" role="navigation" aria-label="results">
+              <div class="govuk-pagination__prev">
+                <a class="govuk-link govuk-pagination__link" href="#11" rel="prev">
+                  <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                    <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+                  </svg>
+                  <span class="govuk-pagination__link-title">Previous</span></a>
+              </div>
+              <ul class="govuk-pagination__list">
+                <li class="govuk-pagination__item govuk-pagination__item--current">
+                  <a class="govuk-link govuk-pagination__link" href="#12" aria-label="Page 1">
+                    1
+                  </a>
+                </li>
+                <li class="govuk-pagination__item">
+                  <a class="govuk-link govuk-pagination__link" href="#13" aria-label="Page 2" aria-current="page">
+                    2
+                  </a>
+                </li>
+                <li class="govuk-pagination__item">
+                  <a class="govuk-link govuk-pagination__link" href="#14" aria-label="Page 3">
+                    3
+                  </a>
+                </li>
+              </ul>
+              <div class="govuk-pagination__next">
+                <a class="govuk-link govuk-pagination__link" href="#15" rel="next"> <span class="govuk-pagination__link-title">Next</span> <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                    <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                  </svg></a>
+              </div>
+            </nav>   
+        
+    </div>
+    </div>
+    </div>     
+
+          </div>
+        </div>    
+
     </div>
   </div>
-
-    <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
-
-        <div class="govuk-tabs" data-module="govuk-tabs">
-      <h2 class="govuk-tabs__title">
-        Contents
-      </h2>
-      <ul class="govuk-tabs__list">
-        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-          <a class="govuk-tabs__tab govuk-body govuk-!-font-size-16" href="#add-grant-scheme" style="color: #1d70b8;">
-            Upload and edit awards in bulk
-          </a>
-        </li>
-        <li class="govuk-tabs__list-item">
-          <a class="govuk-tabs__tab govuk-body govuk-!-font-size-16" href="#view-grant-scheme" style="color: #1d70b8;">
-            Previous uploads
-          </a>
-        </li>
-        <li class="govuk-tabs__list-item">
-          <a class="govuk-tabs__tab govuk-body govuk-!-font-size-16" href="#readiness-assessments" style="color: #1d70b8;">
-            Add an award 
-          </a>
-        </li>
-        <li class="govuk-tabs__list-item">
-          <a class="govuk-tabs__tab govuk-body govuk-!-font-size-16" href="#add-grant-in-aid" style="color: #1d70b8;">
-            View your awards
-          </a>
-        </li>
-        <li class="govuk-tabs__list-item">
-          <a class="govuk-tabs__tab govuk-body govuk-!-font-size-16" href="#view-grants-in-aid" style="color: #1d70b8;">
-            View recipients
-          </a>
-        </li>  
-      </ul>
-      <div class="govuk-tabs__panel" id="add-grant-scheme">
-        <h2 class="govuk-body govuk-!-font-size-27 govuk-!-font-weight-bold">Upload data</h2>
-        <p>Check what you need to do to upload grants data in bulk.</p>
-          
-      </div>
-      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="view-grant-scheme">
-        <h2 class="govuk-body govuk-!-font-size-27 govuk-!-font-weight-bold">View your previous uploads</h2>
-        
-        <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">  
-        <p>To edit and submit a previously uploaded grant award file, click 'Select' next to the relevant grant award.</p>
-        </div>
-        </div> 
-       
-          
-          <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
-            <div class="govuk-date-input" id="passport-issued">
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-                    Search uploads by name
-                  </label>
-                  <input class="govuk-input govuk-!-width-full" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
-                </div>
-              </div>
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-                      <label class="govuk-label" for="sort">
-                        Filter uploads by:
-                      </label>
-                      <select class="govuk-select" id="sort" name="sort">
-                        <option value="published">Recently published</option>
-                        <option value="updated" selected>Recently updated</option>
-                        <option value="views">Most views</option>
-                        <option value="comments">Most comments</option>
-                      </select>
-                    </div>
-              </div>
-            </div>
-          </fieldset>
-        </div>
-
-      </div>
-      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="readiness-assessments">
-        <h2 class="govuk-body govuk-!-font-size-27 govuk-!-font-weight-bold">Add a grant award</h2>
-        
-        <div class="govuk-grid-row">
-        <div class="govuk-grid-column-three-quarters">  
-        <p>Select one of the following 'In payment' schemes for your award</p>
-        </div>
-        </div> 
-        
-        <div class="govuk-!-padding-bottom-6"></div>  
-        <h2 class="govuk-body govuk-!-font-size-27 govuk-!-font-weight-bold">Select a scheme</h2> 
-        <hr class="govuk-section-break govuk-section-break--visible">
-          
-          <div class="govuk-!-padding-bottom-6"></div>
-          <div class="govuk-input__item">
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="one-half">
-                    Search schemes by name
-                  </label>
-                  <input class="govuk-input govuk-!-width-one-half" id="one-half" name="one-half" type="text">
-                </div>
-          
-           </div>
-          </div>  
-            
-      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="add-grant-in-aid">
-        <h2 class="govuk-body govuk-!-font-size-27 govuk-!-font-weight-bold">View your organisation's grant awards</h2>
-        
-        <div class="govuk-grid-row">
-        <div class="govuk-grid-column-three-quarters">  
-        <p>Here are all of your organisation's grant awards. To narrow your selection, select a filter from the dropdown menu or use the search bar. You can apply the filter and search bar together to narrow your selection. Note that if you then decide to change the filter selected, you will need to press enter on the search bar again to generate your new results.</p>
-        </div>
-        </div> 
-       
-          <div class="govuk-!-padding-bottom-6"></div>  
-        <h2 class="govuk-body govuk-!-font-size-27 govuk-!-font-weight-bold">Select an award</h2> 
-        <hr class="govuk-section-break govuk-section-break--visible">
-          
-          <div class="govuk-!-padding-bottom-6"></div>
-          
-          <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
-            <div class="govuk-date-input" id="passport-issued">
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-                    Search organisations by name
-                  </label>
-                  <input class="govuk-input govuk-!-width-full" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
-                </div>
-              </div>
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-                      <label class="govuk-label" for="sort">
-                        Filter organisations by:
-                      </label>
-                      <select class="govuk-select" id="sort" name="sort">
-                        <option value="published">Recently published</option>
-                        <option value="updated" selected>Recently updated</option>
-                        <option value="views">Most views</option>
-                        <option value="comments">Most comments</option>
-                      </select>
-                    </div>
-              </div>
-            </div>
-          </fieldset>
-        </div>
-      </div>
-      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="view-grants-in-aid">
-        <h2 class="govuk-body govuk-!-font-size-27 govuk-!-font-weight-bold">View organisations</h2>
-        
-        <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">  
-        <p>Here are all of the award recipients. To narrow your selection, select a filter from the dropdown menu or use the search bar. You can apply the filter and search bar together to narrow your selection. Note that if you then decide to change the filter selected, you will need to press enter on the search bar again to generate your new results.</p>
-        </div>
-        </div> 
-       
-          
-          <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
-            <div class="govuk-date-input" id="passport-issued">
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-                    Search organisations by name
-                  </label>
-                  <input class="govuk-input govuk-!-width-full" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
-                </div>
-              </div>
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-                      <label class="govuk-label" for="sort">
-                        Filter organisations by:
-                      </label>
-                      <select class="govuk-select" id="sort" name="sort">
-                        <option value="published">Recently published</option>
-                        <option value="updated" selected>Recently updated</option>
-                        <option value="views">Most views</option>
-                        <option value="comments">Most comments</option>
-                      </select>
-                    </div>
-              </div>
-            </div>
-          </fieldset>
-        </div>
-      </div>        
-    </div>
-    </div>
-    </div>
 
 {% endblock %}
