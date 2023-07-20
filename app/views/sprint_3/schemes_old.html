@@ -29,17 +29,18 @@
   </script>
 
   <script>
-    $(function() {
-        $('#map-toggle').click(function() {
-        $("#restaurant").toggleClass('hide')
-        $("#map").toggleClass('hide')
-        });
-    })
-  </script>
+      $(function() {
+    $('#map-toggle').click(function() {
+      $("#restaurant").toggleClass('hide')
+      $("#map").toggleClass('hide')
+    });
+  })
+    </script>
+
 {% endblock %}
 
 {% block beforeContent %}
-  {{ govukPhaseBanner({
+{{ govukPhaseBanner({
   tag: {
     text: "prototype"
   },
@@ -66,182 +67,106 @@
 
 {% block content %}
 
-  <div class="govuk-grid-row">
+<div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-l">
         Grant schemes
       </h1>
-
-      <p class="govuk-body">
-          ** PLACEHOLDER <s>This is a paragraph of text. It explains in more detail what has happened and wraps across several lines.</s>
-      </p>
-
-    </div>
-   </div>
-
-   <div class="govuk-!-padding-bottom-2"></div>
-
-   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
         
-      <div class="govuk-tabs" data-module="govuk-tabs">
-          <h2 class="govuk-tabs__title">
-            Contents
-          </h2>
-          <ul class="govuk-tabs__list">
-            <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-              <a class="govuk-tabs__tab" href="#add-grant-scheme" style="color: #1d70b8;">
-                Add a grant scheme
-              </a>
-            </li>
-            <li class="govuk-tabs__list-item">
-              <a class="govuk-tabs__tab" href="#view-grant-scheme" style="color: #1d70b8;">
-                View grant schemes
-              </a>
-            </li>
-            <li class="govuk-tabs__list-item">
-              <a class="govuk-tabs__tab" href="#add-grant-in-aid" style="color: #1d70b8;">
-                Add a grant in aid
-              </a>
-            </li>
-            <li class="govuk-tabs__list-item">
-              <a class="govuk-tabs__tab" href="#view-grants-in-aid" style="color: #1d70b8;">
-                View grants in aid
-              </a>
-            </li>
-          </ul>
-          
-          <div class="govuk-tabs__panel" id="add-grant-scheme">
-            <h2 class="govuk-heading-l">Add a grant scheme</h2>
+    </div>
+  </div>
 
-                <div class="govuk-grid-row">
-                    <div class="govuk-grid-column-two-thirds">  
-                    <p>To create a new grant scheme in GGIS, you need to provide the following details.</p>
-                    </div>
-                </div> 
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
 
-            <div class="govuk-!-padding-bottom-6"></div>  
+        <div class="govuk-tabs" data-module="govuk-tabs">
+      <h2 class="govuk-tabs__title">
+        Contents
+      </h2>
+      <ul class="govuk-tabs__list">
+        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+          <a class="govuk-tabs__tab govuk-body govuk-!-font-size-16" href="#add-grant-scheme" style="color: #1d70b8;">
+            Add a grant scheme
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab govuk-body govuk-!-font-size-16" href="#view-grant-scheme" style="color: #1d70b8;">
+            View grant scheme
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab govuk-body govuk-!-font-size-16" href="#add-grant-in-aid" style="color: #1d70b8;">
+            Add a grant in aid
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab govuk-body govuk-!-font-size-16" href="#view-grants-in-aid" style="color: #1d70b8;">
+            View grants in aid
+          </a>
+        </li>  
+      </ul>
+      
+      <div class="govuk-tabs__panel" id="add-grant-scheme">
+        <h2 class="govuk-body govuk-!-font-size-27 govuk-!-font-weight-bold">Add a grant scheme</h2>
+            <p>To create a new grant scheme in GGIS, you need to provide the following details.</p>
+        <div class="govuk-!-padding-bottom-6"></div>
+            <h3 class="govuk-heading-m">Grant scheme details</h3>   
+      </div>
             
-            <h2 class="govuk-body govuk-!-font-size-27 govuk-!-font-weight-bold">Grant scheme details</h2> 
-            <hr class="govuk-section-break govuk-section-break--visible">
-              
-          <div class="govuk-grid-row">
-              <div class="govuk-grid-column-full">
-
-                <div data-module="appstepnav"id="step-by-step-navigation" class="app-step-nav js-hidden app-step-nav--large" data-show-text="Show" data-hide-text="Hide" data-show-all-text="Show all steps" data-hide-all-text="Hide all steps">
-                  <ol class="app-step-nav__steps">
-                    <li class="app-step-nav__step js-step" id="check-you-re-allowed-to-drive">
-                      <div class="app-step-nav__header js-toggle-panel" data-position="1">
-                        <h2 class="app-step-nav__title">
-                          <span class="app-step-nav__circle app-step-nav__circle--number">
-                            <span class="app-step-nav__circle-inner">
-                              <span class="app-step-nav__circle-background">
-                                <span class="govuk-visually-hidden govuk-!-display-none-print">Step</span> 1<span class="govuk-visually-hidden govuk-!-display-none-print" aria-hidden="true">:</span>
-                              </span>
-                            </span>
-                          </span>
-
-                          <span class="js-step-title">
-                            Grant scheme reference details
-                          </span>
-                        </h2>
-                      </div>
-
-                      <div class="app-step-nav__panel js-panel" id="step-panel-check-you-re-allowed-to-drive-1">
-                      </div>
-
-                    </li>
-
-                    <li class="app-step-nav__step js-step" id="get-a-provisional-licence">
-                      <div class="app-step-nav__header js-toggle-panel" data-position="2">
-                        <h2 class="app-step-nav__title">
-                          <span class="app-step-nav__circle app-step-nav__circle--number">
-                            <span class="app-step-nav__circle-inner">
-                              <span class="app-step-nav__circle-background">
-                                <span class="govuk-visually-hidden govuk-!-display-none-print">Step</span> 2<span class="govuk-visually-hidden govuk-!-display-none-print" aria-hidden="true">:</span>
-                              </span>
-                            </span>
-                          </span>
-
-                          <span class="js-step-title">
-                            Funder and source details
-                          </span>
-                        </h2>
-                      </div>
-
-                      <div class="app-step-nav__panel js-panel" id="step-panel-get-a-provisional-licence-2">
-                      </div>
-
-                    </li>
-
-                    <li class="app-step-nav__step js-step" id="driving-lessons-and-practice">
-                      <div class="app-step-nav__header js-toggle-panel" data-position="3">
-                        <h2 class="app-step-nav__title">
-                          <span class="app-step-nav__circle app-step-nav__circle--number">
-                            <span class="app-step-nav__circle-inner">
-                              <span class="app-step-nav__circle-background">
-                                  <span class="govuk-visually-hidden govuk-!-display-none-print">Step</span> 3<span class="govuk-visually-hidden govuk-!-display-none-print" aria-hidden="true">:</span>
-                              </span>
-                            </span>
-                          </span>
-
-                          <span class="js-step-title">
-                            Grant scheme details
-                          </span>
-                        </h2>
-                      </div>
-
-                      <div class="app-step-nav__panel js-panel" id="step-panel-driving-lessons-and-practice-3">
-                      </div>
-
-                    </li>
-
-                  </ol>
-                </div>
-                  
-              <button class="govuk-button" data-module="govuk-button">
-                Save scheme
-              </button>
-
-              </div>
-            </div>  
-          </div>
+      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="view-grant-scheme">
           
-          <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="view-grant-scheme">
-              <div class="govuk-grid-row">
-                <div class="govuk-grid-column-two-thirds">   
-                    <h2 class="govuk-heading-l">View your organisation's grant schemes</h2>
-                    
-                    <p>Here are all of your organisation's grant schemes. You can search by name and reference numbers or use the filters on the left side. Click the button to download an Excel spreadsheet of all your filtered results.</p>
-                </div>    
-
-                <div class="govuk-grid-column-one-third" style="text-align: right;">
-                    <button class="govuk-button" data-module="govuk-button">
-                          Download results
-                    </button>
-                </div>
-              </div> 
-              
-          <div class="govuk-grid-row govuk-!-padding-top-4 govuk-!-padding-bottom-4">
+        <div class="govuk-grid-row">
+        <div class="govuk-grid-column-three-quarters">   
+        <h2 class="govuk-body govuk-!-font-size-27 govuk-!-font-weight-bold">View your organisation's grant schemes</h2>
+        </div>    
+          
+          <div class="govuk-grid-column-one-quarter" style="text-align: right;">
+                <button class="govuk-button" data-module="govuk-button">
+                      Download results
+                  </button>
+              </div></div> 
+        
+        <div class="govuk-grid-row">
+        <div class="govuk-grid-column-three-quarters">  
+        <p>Here are all of your organisation's grant schemes. You can search by name and reference numbers or use the filters on the left side. Click the button to download an Excel spreadsheet of all your filtered results.</p>
+        </div>
+        
+        <!--    <div class="govuk-grid-column-one-quarter" style="text-align: right;">
+                <button class="govuk-button" data-module="govuk-button">
+                      Download results
+                  </button>
+              </div> -->
+        </div> 
+        
+        <div class="govuk-!-padding-bottom-2"></div>  
+        
+           
+          <div class="govuk-grid-row">
               <div class="govuk-grid-column-one-half govuk-!-padding-right-0">
                 <input class="govuk-input govuk-!-width-full govuk-!-padding-left-3" id="full" name="full" type="text" placeholder="Search scheme name or reference number">
-              </div>
-              <div class="govuk-grid-column-one-quarter govuk-!-padding-left-0">
-                <button class="govuk-button" style="background-color:#1d70b8" data-module="govuk-button">
-                   Search
-                </button>
-                <!-- <button class="btn"><img src="/public/images/search.png" alt="Scheme icon"></button> -->   
-              </div>
-          </div>
-              
-          <div class="govuk-grid-row">
+           </div>
+                <div class="govuk-grid-column-one-quarter govuk-!-padding-left-0">
+                    <button class="govuk-button" style="background-color:#1d70b8" data-module="govuk-button">
+                      Search
+                    </button>
+                   <!-- <button class="btn"><img src="/public/images/search.png" alt="Scheme icon"></button> -->   
+            </div>
+            </div>
+      
+<div class="govuk-!-padding-bottom-2"></div>
+          
+<div class="govuk-grid-row">
         <div class="govuk-grid-column-one-third">
+            
+                
+     <!-- <h2 class="govuk-heading-m">Filters</h2> -->
             
             <p class="govuk-body govuk-!-font-weight-bold">Filters</p>
             
             <hr class="govuk-section-break govuk-section-break--visible">
     
+            
             <details class="govuk-details govuk-section-break govuk-section-break--visible govuk-!-padding-bottom-2 govuk-!-margin-bottom-4 govuk-!-padding-top-4" data-module="govuk-details">
               
                 <summary class="govuk-details__summary ">
@@ -470,29 +395,19 @@
         
     <div class="govuk-grid-column-full govuk-!-padding-0" id="map">
         
-         <hr class="govuk-section-break govuk-section-break--visible"> 
+         <!-- <hr class="govuk-section-break govuk-section-break--visible"> 
         
-        <div class="govuk-grid-row govuk-!-padding-top-4 govuk-!-padding-bottom-4">
-          <div class="govuk-grid-column-one-half ">  
-            <div class="govuk-grid-row">
-              <div class="govuk-grid-column-one-third govuk-!-padding-right-0">
-                <label class="govuk-label govuk-!-padding-top-1" for="sort">
-                    Sort by
-                </label>
-              </div>
-              <div class="govuk-grid-column-two-thirds govuk-!-padding-left-0">
-                <select class="govuk-select" id="sort" name="sort">
-                    <option value="name" selected>Scheme name A-Z</option>
-                    <option value="start">Start date</option>
-                    <option value="end">End date</option>
-                    <option value="value">Highest total bugeted value</option>
-                    <option value="value">Lowest total bugeted value</option>
-                </select>
-              </div>
-            </div>
-          </div>
-        </div>
-
+        <div class="govuk-form-group govuk-!-padding-top-4">
+          <label class="govuk-label" for="sort">
+            Sort by
+          </label>
+          <select class="govuk-select" id="sort" name="sort">
+            <option value="published">Recently published</option>
+            <option value="updated" selected>Recently updated</option>
+            <option value="views">Most views</option>
+            <option value="comments">Most comments</option>
+          </select>
+        </div> -->
         
         <ul class="govuk-list">
             
@@ -1338,29 +1253,13 @@
         <thead class="govuk-table__head">
           <tr class="govuk-table__row">
 
-            <th scope="col" class="govuk-table__header govuk-body-s">
-                <a href="#sort1" class="govuk-link" style="display: inline-flex; align-items: center;">Scheme name
-                    <img src="/public/icons/sort.svg" class="govuk-!-padding-left-1" alt="arrow" style="height: 20px;">
-                </a>
-            </th>
+            <th scope="col" class="govuk-table__header govuk-body-s">Scheme name</th>
               
-            <th scope="col" class="govuk-table__header govuk-body-s">
-                <a href="#sort2" class="govuk-link" style="display: inline-flex; align-items: top;">Start date
-                    <img src="/public/icons/sort.svg" class="govuk-!-padding-left-0" alt="arrow" style="height: 20px;">
-                </a>
-            </th>
-            
-            <th scope="col" class="govuk-table__header govuk-body-s">
-                <a href="#sort3" class="govuk-link" style="display: inline-flex; align-items: top;">End date
-                    <img src="/public/icons/sort.svg" class="govuk-!-padding-left-0" alt="arrow" style="height: 20px;">
-                </a>
-            </th>
-            
-            <th scope="col" class="govuk-table__header govuk-body-s">
-                <a href="#sort4" class="govuk-link" style="display: inline-flex; align-items: top;">Total budgeted value
-                    <img src="/public/icons/caret-up.svg" class="govuk-!-padding-left-0" alt="arrow" style="height: 10px;">
-                </a>
-            </th>   
+            <th scope="col" class="govuk-table__header govuk-body-s">Start date</th>
+
+            <th scope="col" class="govuk-table__header govuk-body-s">End date</th>  
+
+            <th scope="col" class="govuk-table__header govuk-body-s">Total budgeted value</th>
 
             <th scope="col" class="govuk-table__header govuk-body-s">Scheme status</th>
               
@@ -1374,7 +1273,7 @@
 
           <tr class="govuk-table__row">
 
-            <th scope="row" class="govuk-table__header"><a href="##1" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">EU Referendum voter registration</a></th>
+            <th scope="row" class="govuk-table__header"><a href="#1" class="govuk-link govuk-body govuk-!-font-size-16 govuk-!-font-weight-bold">EU Referendum voter registration</a></th>
 
             <td class="govuk-table__cell govuk-body-s">01-04-2016</td>
 
@@ -1385,6 +1284,8 @@
             <td class="govuk-table__cell govuk-body-s">In payment</td>
 
             <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+              
+          <!--  <td class="govuk-table__cell">£250,000.00</td> -->  
 
           </tr>
 
@@ -1729,47 +1630,70 @@
         
     </div>
     </div>
-    </div>     
-              
-          </div>
-          
-          <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="add-grant-in-aid">
-            <h2 class="govuk-heading-l">Add a grant in aid award</h2>
-              
-            <div class="govuk-grid-row">
-                    <div class="govuk-grid-column-two-thirds">  
-                    <p>To create a new grant in aid award in GGIS, you need to provide the following details.</p>
-                    </div>
-                </div> 
-
-            <div class="govuk-!-padding-bottom-6"></div>  
+    </div>
+    </div>
             
-            <h2 class="govuk-body govuk-!-font-size-27 govuk-!-font-weight-bold">Grant in aid details</h2> 
-            <hr class="govuk-section-break govuk-section-break--visible">
+      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="add-grant-in-aid">
+        <h2 class="govuk-body govuk-!-font-size-27 govuk-!-font-weight-bold">Add a grant in aid</h2>
+        
+        <div class="govuk-grid-row">
+        <div class="govuk-grid-column-three-quarters">  
+        <p>To create a new grant-in-aid award in GGIS, you need to provide the following details.</p>
+        </div>
+        </div> 
+          
+        <div class="govuk-!-padding-bottom-6"></div>  
+        <h2 class="govuk-body govuk-!-font-size-27 govuk-!-font-weight-bold">Grant in aid details</h2> 
+        <hr class="govuk-section-break govuk-section-break--visible">
           
           <div class="govuk-!-padding-bottom-6"></div> 
-              
-          </div>
+      </div>
+      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="view-grants-in-aid">
+        <h2 class="govuk-body govuk-!-font-size-27 govuk-!-font-weight-bold">View your organisation's grants-in-aid</h2>
+        
+        <div class="govuk-grid-row">
+        <div class="govuk-grid-column-three-quarters">  
+        <p>Here are all of your organisation's grants-in-aid. To narrow your selection, select a filter from the dropdown menu or use the search bar. You can apply the filter and search bar together to narrow your selection. Note that if you then decide to change the filter selected, you will need to press enter on the search bar again to generate your new results.</p>
+        </div>
+        </div> 
+        
+        <div class="govuk-!-padding-bottom-6"></div>  
+        <h2 class="govuk-body govuk-!-font-size-27 govuk-!-font-weight-bold">Select an award</h2> 
+        <hr class="govuk-section-break govuk-section-break--visible">
           
-          <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="view-grants-in-aid">
-            <div class="govuk-grid-row">
-                <div class="govuk-grid-column-two-thirds">   
-                    <h2 class="govuk-heading-l">View your organisation's grants-in-aid</h2>
-                </div>    
-
-                <div class="govuk-grid-column-one-third" style="text-align: right;">
-                    <button class="govuk-button" data-module="govuk-button">
-                          Download results
-                    </button>
+          <div class="govuk-!-padding-bottom-6"></div>
+          
+          <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+            <div class="govuk-date-input" id="passport-issued">
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                    Search awards by name
+                  </label>
+                  <input class="govuk-input govuk-!-width-full" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
                 </div>
-              </div> 
-              
-              ******
-
-          </div>
-        </div>    
-
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                      <label class="govuk-label" for="sort">
+                        Filter grant awards by:
+                      </label>
+                      <select class="govuk-select" id="sort" name="sort">
+                        <option value="published">Recently published</option>
+                        <option value="updated" selected>Recently updated</option>
+                        <option value="views">Most views</option>
+                        <option value="comments">Most comments</option>
+                      </select>
+                    </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+          
+      </div>        
     </div>
-  </div>
+    </div>
+    </div>
 
 {% endblock %}
