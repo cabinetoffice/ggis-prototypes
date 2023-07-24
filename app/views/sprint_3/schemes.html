@@ -217,7 +217,10 @@
                 <div class="govuk-grid-column-two-thirds">   
                     <h2 class="govuk-heading-l">View your organisation's grant schemes</h2>
                     
-                    <p class="govuk-body"> **PLACEHOLDER <s>Here are all of your organisation's grant schemes. You can search by name and reference numbers or use the filters on the left side. Click the button to download an Excel spreadsheet of all your filtered results.</s></p>
+                    <p class="govuk-body">You can search using grant scheme name, your organisation’s scheme reference or the GGIS reference.</p>
+
+                    <p class="govuk-body">You can download a spreadsheet of all your results. The download contains all data on GGIS about these grant schemes.
+                    </p>
                 </div>    
 
                 <div class="govuk-grid-column-one-third" style="text-align: right;">
@@ -253,7 +256,7 @@
                   Financial year dates
                 </span>
               </summary>      
-            <!--  <div class="govuk-form-group govuk-!-padding-top-4 govuk-!-padding-left-2">     
+              <div class="govuk-form-group govuk-!-padding-top-4 govuk-!-padding-left-2">     
               <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
                       <div class="govuk-checkboxes__item">
                         <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
@@ -268,9 +271,37 @@
                         </label>
                       </div>
                   </div>
-                </div> -->
+                </div> 
                 
-                <div class="govuk-form-group govuk-!-padding-top-4 govuk-!-padding-left-2 govuk-!-padding-right-2">
+                <div class="govuk-form-group">
+                    <label class="govuk-label govuk-!-padding-bottom-3" for="event-name">
+                        Scheme start date
+                    </label>
+                  <div class="govuk-input__wrapper govuk-grid-column-one-half govuk-!-padding-left-0">
+                    <div class="govuk-input__prefix" aria-hidden="true">01/04</div>
+                    <input class="govuk-input govuk-!-width-half" id="cost" name="cost" type="text" spellcheck="false">
+                  </div>      
+                  <div class="govuk-input__wrapper govuk-grid-column-one-half govuk-!-padding-left-0">
+                    <div class="govuk-input__prefix" aria-hidden="true">31/03</div>
+                    <input class="govuk-input govuk-!-width-half" id="cost" name="cost" type="text" spellcheck="false">
+                  </div>                 
+                </div>
+                
+                <div class="govuk-form-group">
+                    <label class="govuk-label govuk-!-padding-bottom-3" for="event-name">
+                        Scheme end date
+                    </label>
+                  <div class="govuk-input__wrapper govuk-grid-column-one-half govuk-!-padding-left-0">
+                    <div class="govuk-input__prefix" aria-hidden="true">01/04</div>
+                    <input class="govuk-input govuk-!-width-half" id="cost" name="cost" type="text" spellcheck="false">
+                  </div>      
+                  <div class="govuk-input__wrapper govuk-grid-column-one-half govuk-!-padding-left-0">
+                    <div class="govuk-input__prefix" aria-hidden="true">31/03</div>
+                    <input class="govuk-input govuk-!-width-half" id="cost" name="cost" type="text" spellcheck="false">
+                  </div>                 
+                </div>
+                
+              <!--  <div class="govuk-form-group govuk-!-padding-top-4 govuk-!-padding-left-2 govuk-!-padding-right-2">
                   <label class="govuk-label" for="year-sort">
                     Financial years
                   </label>    
@@ -282,116 +313,7 @@
                     <option value="Year 5">01/04/2018 - 31/03/2019</option>
                     <option value="Year 6">01/04/2017 - 31/03/2018</option>  
                   </select>
-                </div>
-                
-                <div class="govuk-date-input govuk-!-padding-left-2" id="passport-issued">
-                  <div class="govuk-body">
-                      Scheme start date
-                    </div>    
-                  <div class="govuk-date-input__item">
-                    <div class="govuk-form-group">
-                      <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-                        Day
-                      </label>
-                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" placeholder="01">
-                    </div>
-                  </div>
-                  <div class="govuk-date-input__item">
-                    <div class="govuk-form-group">
-                      <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-                        Month
-                      </label>
-                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" placeholder="04">
-                    </div>
-                  </div>
-                  <div class="govuk-date-input__item">
-                    <div class="govuk-form-group">
-                      <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-                        Year
-                      </label>
-                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
-                    </div>
-                  </div>
-                    <p class="govuk-body">To</p>
-                  <div class="govuk-date-input__item">
-                    <div class="govuk-form-group">
-                      <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-                        Day
-                      </label>
-                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" placeholder="31">
-                    </div>
-                  </div>
-                  <div class="govuk-date-input__item">
-                    <div class="govuk-form-group">
-                      <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-                        Month
-                      </label>
-                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" placeholder="03">
-                    </div>
-                  </div>
-                  <div class="govuk-date-input__item">
-                    <div class="govuk-form-group">
-                      <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-                        Year
-                      </label>
-                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
-                    </div>
-                  </div>    
-                </div>
-                <div class="govuk-date-input govuk-!-padding-left-2" id="passport-issued">
-                  <div class="govuk-body">
-                      Scheme end date
-                    </div>    
-                  <div class="govuk-date-input__item">
-                    <div class="govuk-form-group">
-                      <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-                        Day
-                      </label>
-                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" placeholder="31">
-                    </div>
-                  </div>
-                  <div class="govuk-date-input__item">
-                    <div class="govuk-form-group">
-                      <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-                        Month
-                      </label>
-                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" placeholder="03">
-                    </div>
-                  </div>
-                  <div class="govuk-date-input__item">
-                    <div class="govuk-form-group">
-                      <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-                        Year
-                      </label>
-                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
-                    </div>
-                  </div>
-                    <p class="govuk-body">To</p>
-                  <div class="govuk-date-input__item">
-                    <div class="govuk-form-group">
-                      <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-                        Day
-                      </label>
-                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" placeholder="01">
-                    </div>
-                  </div>
-                  <div class="govuk-date-input__item">
-                    <div class="govuk-form-group">
-                      <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-                        Month
-                      </label>
-                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" placeholder="04">
-                    </div>
-                  </div>
-                  <div class="govuk-date-input__item">
-                    <div class="govuk-form-group">
-                      <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-                        Year
-                      </label>
-                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
-                    </div>
-                  </div>    
-                </div>
+                </div> -->
                 
             </details>
             
@@ -493,13 +415,13 @@
               </div>     
             </details>
             
-            <details class="govuk-details govuk-section-break govuk-section-break--visible govuk-!-padding-bottom-2 govuk-!-margin-bottom-4" data-module="govuk-details">
+            <details class="govuk-details govuk-!-padding-bottom-2 govuk-!-margin-bottom-4" data-module="govuk-details">
               <summary class="govuk-details__summary ">
                 <span class="govuk-details__summary-text govuk-link--no-underline">
                   Managed by
                 </span>
               </summary>      
-              <div class="govuk-form-group govuk-!-padding-top-4 govuk-!-padding-left-2 govuk-!-margin-bottom-2">     
+              <div class="govuk-form-group govuk-!-padding-top-4 govuk-!-padding-left-2 govuk-!-margin-bottom-4">     
               <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
                       <div class="govuk-checkboxes__item">
                         <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
@@ -509,17 +431,39 @@
                       </div>
                   </div>
                 </div>
-                <div class="govuk-form-group govuk-!-padding-left-2 govuk-!-padding-right-2">
-                  <label class="govuk-label" for="sort">
-                    ALB's
-                  </label>    
-                  <select class="govuk-select govuk-!-width-full" id="sort" name="sort">
-                    <option value="ALB 1" selected>ALB 1</option>
-                    <option value="ALB 2">ALB 2</option>
-                    <option value="ALB 3">ALB 3</option>
-                    <option value="ALB 4">ALB 4</option>
-                  </select>
-                </div>
+                <details class="govuk-details" data-module="govuk-details">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      Arm's-length bodies (ALBs)
+                    </span>
+                  </summary>
+                  <div class="govuk-checkboxes govuk-checkboxes--small govuk-!-padding-top-4 govuk-!-padding-left-2" data-module="govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="alb" name="alb" type="checkbox" value="alb">
+                        <label class="govuk-label govuk-checkboxes__label" for="alb">
+                          ALB 1
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="alb-2" name="alb-2" type="checkbox" value="alb-2">
+                        <label class="govuk-label govuk-checkboxes__label" for="alb-2">
+                          ALB 2
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="alb-3" name="alb-3" type="checkbox" value="alb-3">
+                        <label class="govuk-label govuk-checkboxes__label" for="alb-3">
+                          ALB 3
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="alb-4" name="alb-4" type="checkbox" value="alb-4">
+                        <label class="govuk-label govuk-checkboxes__label" for="alb-4">
+                          ALB 4
+                        </label>
+                      </div>
+                  </div>
+                </details>
             </details>       
         </div> 
     
@@ -554,8 +498,8 @@
                 <select class="govuk-select" id="sort" name="sort">
                     <option value="name" selected>Scheme name (A-Z)</option>
                     <option value="name">Scheme name (Z-A)</option>
-                    <option value="start">Start date</option>
-                    <option value="end">End date</option>
+                    <option value="start">Scheme start date</option>
+                    <option value="end">Scheme end date</option>
                     <option value="value">Highest total bugeted value</option>
                     <option value="value">Lowest total bugeted value</option>
                 </select>
@@ -1825,14 +1769,22 @@
                 <div class="govuk-grid-column-two-thirds">   
                     <h2 class="govuk-heading-l">View your organisation's grants in aid</h2>
                     
-                    <p class="govuk-body"> **PLACEHOLDER <s>Here are all of your organisation's grants in aid. You can search by name and reference numbers or use the filters on the left side. Click the button to download an Excel spreadsheet of all your filtered results.</s></p>
+                    <p class="govuk-body">You can search using grant in aid name, recipient name, your organisation’s scheme reference or the GGIS reference.</p>
+
+                    <p class="govuk-body">You can download a spreadsheet of all your results. The download contains all data on GGIS about these grants in aid.
+                    </p>
                     
-                </div>    
+                </div>
+                <div class="govuk-grid-column-one-third" style="text-align: right;">
+                    <button class="govuk-button" data-module="govuk-button">
+                          Download results (CSV)
+                    </button>
+                </div>
               </div> 
               
               <div class="govuk-grid-row govuk-!-padding-top-4 govuk-!-padding-bottom-4">
                   <div class="govuk-grid-column-one-half govuk-!-padding-right-0">
-                    <input class="govuk-input govuk-!-width-full govuk-!-padding-left-3" id="full" name="full" type="text" placeholder="Search grant in aid name or reference number">
+                    <input class="govuk-input govuk-!-width-full govuk-!-padding-left-3" id="full" name="full" type="text" placeholder="Search grant in aid, recipient name or reference number">
                   </div>
                   <div class="govuk-grid-column-one-quarter govuk-!-padding-left-0">
                     <button class="govuk-button" style="background-color:#1d70b8" data-module="govuk-button">
@@ -1854,21 +1806,26 @@
                 <span class="govuk-details__summary-text govuk-link--no-underline">
                   Financial year dates
                 </span>
-              </summary>      
+              </summary> 
                 
-                <div class="govuk-form-group govuk-!-padding-top-4 govuk-!-padding-left-2 govuk-!-padding-right-2">
-                  <label class="govuk-label" for="year-sort">
-                    Financial years
-                  </label>    
-                  <select class="govuk-select govuk-!-width-full" id="year-sort" name="year-sort">
-                    <option value="Year 1" selected>Current financial year 22/23</option>
-                    <option value="Year 2">01/04/2021 - 31/03/2022</option>
-                    <option value="Year 3">01/04/2020 - 31/03/2021</option>
-                    <option value="Year 4">01/04/2019 - 31/03/2020</option>
-                    <option value="Year 5">01/04/2018 - 31/03/2019</option>
-                    <option value="Year 6">01/04/2017 - 31/03/2018</option>  
-                  </select>
-                </div>
+                <div class="govuk-form-group govuk-!-padding-top-4 govuk-!-padding-left-2">     
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          Current financial year
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                          Last financial year
+                        </label>
+                      </div>
+                  </div>
+                </div> 
+                
+                
                 
                 <div class="govuk-date-input govuk-!-padding-left-2" id="passport-issued">
                   <div class="govuk-body">
@@ -2010,10 +1967,35 @@
                       </div>      
                   </div>       
                 </div>
+              </div>  
+                
+              <div class="govuk-form-group govuk-!-padding-top-4 govuk-!-padding-left-2">
+                  <div class="govuk-body">
+                  Actual amount paid
+                  </div>
+                  <div class="govuk-form-group govuk-!-padding-right-2">
+                    <label class="govuk-label" for="event-name">
+                        Greater than
+                    </label>
+                  <div class="govuk-input__wrapper">
+                    <div class="govuk-input__prefix" aria-hidden="true">£</div>
+                    <input class="govuk-input govuk-!-width-full" id="cost" name="cost" type="text" spellcheck="false">
+                  </div>
+                  <br>
+                  <div class="govuk-form-group">
+                      <label class="govuk-label" for="event-name">
+                        Less than
+                      </label>
+                      <div class="govuk-input__wrapper">
+                        <div class="govuk-input__prefix" aria-hidden="true">£</div>
+                        <input class="govuk-input govuk-!-width-full" id="cost" name="cost" type="text" spellcheck="false">
+                      </div>      
+                  </div>       
+                </div>
               </div>     
             </details>
             
-            <details class="govuk-details govuk-section-break govuk-section-break--visible govuk-!-padding-bottom-2 govuk-!-margin-bottom-4" data-module="govuk-details">
+           <!-- <details class="govuk-details govuk-section-break govuk-section-break--visible govuk-!-padding-bottom-2 govuk-!-margin-bottom-4" data-module="govuk-details">
               <summary class="govuk-details__summary ">
                 <span class="govuk-details__summary-text govuk-link--no-underline">
                   Managed by
@@ -2040,7 +2022,7 @@
                     <option value="ALB 4">ALB 4</option>
                   </select>
                 </div>
-            </details>       
+            </details> -->      
         </div> 
     
     <div class="govuk-grid-column-two-thirds">  
@@ -2073,11 +2055,13 @@
               <div class="govuk-grid-column-two-thirds govuk-!-padding-left-0">
                 <select class="govuk-select" id="sort" name="sort">
                     <option value="name" selected>Grant in aid name (A-Z)</option>
-                    <option value="name" selected>Grant in aid name (Z-A)</option>
+                    <option value="name">Grant in aid name (Z-A)</option>
                     <option value="start">Grant in aid  start date</option>
                     <option value="end">Grant in aid  end date</option>
                     <option value="value">Highest total amount paid</option>
                     <option value="value">Lowest total amount paid</option>
+                    <option value="value">Highest actual amount paid</option>
+                    <option value="value">Lowest actual amount paid</option>
                     <option value="name">Recipient name (A-Z)</option>
                     <option value="name">Recipient name (Z-A)</option>
                 </select>
@@ -2115,13 +2099,13 @@
                           <td class="govuk-body-s">£250,000.00</td>
                         </tr>
                         <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Actual amount paid:</th>
+                          <td class="govuk-body-s">£150,000.00</td>
+                        </tr>   
+                        <tr class="govuk-table__row">
                           <th scope="row" class="govuk-body-s">Recipient name:</th>
                           <td class="govuk-body-s">The Charity for Civil Servants</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Managed by:</th>
-                          <td class="govuk-body-s">Cabinet Office</td>
-                        </tr>  
+                        </tr> 
                       </tbody>
                     </table>
                     
@@ -2155,13 +2139,13 @@
                           <td class="govuk-body-s">£250,000.00</td>
                         </tr>
                         <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Actual amount paid:</th>
+                          <td class="govuk-body-s">£150,000.00</td>
+                        </tr>  
+                        <tr class="govuk-table__row">
                           <th scope="row" class="govuk-body-s">Recipient name:</th>
                           <td class="govuk-body-s">The Charity for Civil Servants</td>
                         </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Managed by:</th>
-                          <td class="govuk-body-s">Cabinet Office</td>
-                        </tr>  
                       </tbody>
                     </table>
                     
@@ -2195,13 +2179,13 @@
                           <td class="govuk-body-s">£250,000.00</td>
                         </tr>
                         <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Actual amount paid:</th>
+                          <td class="govuk-body-s">£150,000.00</td>
+                        </tr>  
+                        <tr class="govuk-table__row">
                           <th scope="row" class="govuk-body-s">Recipient name:</th>
                           <td class="govuk-body-s">The Charity for Civil Servants</td>
                         </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Managed by:</th>
-                          <td class="govuk-body-s">Cabinet Office</td>
-                        </tr>  
                       </tbody>
                     </table>
                     
@@ -2235,13 +2219,13 @@
                           <td class="govuk-body-s">£250,000.00</td>
                         </tr>
                         <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Actual amount paid:</th>
+                          <td class="govuk-body-s">£150,000.00</td>
+                        </tr>  
+                        <tr class="govuk-table__row">
                           <th scope="row" class="govuk-body-s">Recipient name:</th>
                           <td class="govuk-body-s">The Charity for Civil Servants</td>
                         </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Managed by:</th>
-                          <td class="govuk-body-s">Cabinet Office</td>
-                        </tr>  
                       </tbody>
                     </table>
                     
@@ -2275,13 +2259,13 @@
                           <td class="govuk-body-s">£250,000.00</td>
                         </tr>
                         <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Actual amount paid:</th>
+                          <td class="govuk-body-s">£150,000.00</td>
+                        </tr>  
+                        <tr class="govuk-table__row">
                           <th scope="row" class="govuk-body-s">Recipient name:</th>
                           <td class="govuk-body-s">The Charity for Civil Servants</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Managed by:</th>
-                          <td class="govuk-body-s">Cabinet Office</td>
-                        </tr>  
+                        </tr> 
                       </tbody>
                     </table>
                     
@@ -2315,12 +2299,492 @@
                           <td class="govuk-body-s">£250,000.00</td>
                         </tr>
                         <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Actual amount paid:</th>
+                          <td class="govuk-body-s">£150,000.00</td>
+                        </tr>  
+                        <tr class="govuk-table__row">
                           <th scope="row" class="govuk-body-s">Recipient name:</th>
                           <td class="govuk-body-s">The Charity for Civil Servants</td>
                         </tr>
+                      </tbody>
+                    </table>
+                    
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">Charity for Civil Servants</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-SCH-2021-03-2717</p>
+                
+                    <p>This is to help support the running of the charity for civil servants.</p>
+                       
+                    
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
                         <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Managed by:</th>
-                          <td class="govuk-body-s">Cabinet Office</td>
+                          <th scope="row" class="govuk-body-s">Grant in aid start date:</th>
+                          <td class="govuk-body-s">01-04-2016</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Grant in aid end date:</th>
+                          <td class="govuk-body-s">31-03-2018</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Total amount paid:</th>
+                          <td class="govuk-body-s">£250,000.00</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Actual amount paid:</th>
+                          <td class="govuk-body-s">£150,000.00</td>
+                        </tr>  
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient name:</th>
+                          <td class="govuk-body-s">The Charity for Civil Servants</td>
+                        </tr> 
+                      </tbody>
+                    </table>
+                    
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">Charity for Civil Servants</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-SCH-2021-03-2717</p>
+                
+                    <p>This is to help support the running of the charity for civil servants.</p>
+                       
+                    
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Grant in aid start date:</th>
+                          <td class="govuk-body-s">01-04-2016</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Grant in aid end date:</th>
+                          <td class="govuk-body-s">31-03-2018</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Total amount paid:</th>
+                          <td class="govuk-body-s">£250,000.00</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Actual amount paid:</th>
+                          <td class="govuk-body-s">£150,000.00</td>
+                        </tr>  
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient name:</th>
+                          <td class="govuk-body-s">The Charity for Civil Servants</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">Charity for Civil Servants</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-SCH-2021-03-2717</p>
+                
+                    <p>This is to help support the running of the charity for civil servants.</p>
+                       
+                    
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Grant in aid start date:</th>
+                          <td class="govuk-body-s">01-04-2016</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Grant in aid end date:</th>
+                          <td class="govuk-body-s">31-03-2018</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Total amount paid:</th>
+                          <td class="govuk-body-s">£250,000.00</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Actual amount paid:</th>
+                          <td class="govuk-body-s">£150,000.00</td>
+                        </tr>  
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient name:</th>
+                          <td class="govuk-body-s">The Charity for Civil Servants</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">Charity for Civil Servants</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-SCH-2021-03-2717</p>
+                
+                    <p>This is to help support the running of the charity for civil servants.</p>
+                       
+                    
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Grant in aid start date:</th>
+                          <td class="govuk-body-s">01-04-2016</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Grant in aid end date:</th>
+                          <td class="govuk-body-s">31-03-2018</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Total amount paid:</th>
+                          <td class="govuk-body-s">£250,000.00</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Actual amount paid:</th>
+                          <td class="govuk-body-s">£150,000.00</td>
+                        </tr>  
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient name:</th>
+                          <td class="govuk-body-s">The Charity for Civil Servants</td>
+                        </tr> 
+                      </tbody>
+                    </table>
+                    
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">Charity for Civil Servants</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-SCH-2021-03-2717</p>
+                
+                    <p>This is to help support the running of the charity for civil servants.</p>
+                       
+                    
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Grant in aid start date:</th>
+                          <td class="govuk-body-s">01-04-2016</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Grant in aid end date:</th>
+                          <td class="govuk-body-s">31-03-2018</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Total amount paid:</th>
+                          <td class="govuk-body-s">£250,000.00</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Actual amount paid:</th>
+                          <td class="govuk-body-s">£150,000.00</td>
+                        </tr>  
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient name:</th>
+                          <td class="govuk-body-s">The Charity for Civil Servants</td>
+                        </tr> 
+                      </tbody>
+                    </table>
+                    
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">Charity for Civil Servants</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-SCH-2021-03-2717</p>
+                
+                    <p>This is to help support the running of the charity for civil servants.</p>
+                       
+                    
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Grant in aid start date:</th>
+                          <td class="govuk-body-s">01-04-2016</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Grant in aid end date:</th>
+                          <td class="govuk-body-s">31-03-2018</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Total amount paid:</th>
+                          <td class="govuk-body-s">£250,000.00</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Actual amount paid:</th>
+                          <td class="govuk-body-s">£150,000.00</td>
+                        </tr>  
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient name:</th>
+                          <td class="govuk-body-s">The Charity for Civil Servants</td>
+                        </tr> 
+                      </tbody>
+                    </table>
+                    
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">Charity for Civil Servants</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-SCH-2021-03-2717</p>
+                
+                    <p>This is to help support the running of the charity for civil servants.</p>
+                       
+                    
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Grant in aid start date:</th>
+                          <td class="govuk-body-s">01-04-2016</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Grant in aid end date:</th>
+                          <td class="govuk-body-s">31-03-2018</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Total amount paid:</th>
+                          <td class="govuk-body-s">£250,000.00</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Actual amount paid:</th>
+                          <td class="govuk-body-s">£150,000.00</td>
+                        </tr>  
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient name:</th>
+                          <td class="govuk-body-s">The Charity for Civil Servants</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">Charity for Civil Servants</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-SCH-2021-03-2717</p>
+                
+                    <p>This is to help support the running of the charity for civil servants.</p>
+                       
+                    
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Grant in aid start date:</th>
+                          <td class="govuk-body-s">01-04-2016</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Grant in aid end date:</th>
+                          <td class="govuk-body-s">31-03-2018</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Total amount paid:</th>
+                          <td class="govuk-body-s">£250,000.00</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Actual amount paid:</th>
+                          <td class="govuk-body-s">£150,000.00</td>
+                        </tr>  
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient name:</th>
+                          <td class="govuk-body-s">The Charity for Civil Servants</td>
+                        </tr> 
+                      </tbody>
+                    </table>
+                    
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">Charity for Civil Servants</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-SCH-2021-03-2717</p>
+                
+                    <p>This is to help support the running of the charity for civil servants.</p>
+                       
+                    
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Grant in aid start date:</th>
+                          <td class="govuk-body-s">01-04-2016</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Grant in aid end date:</th>
+                          <td class="govuk-body-s">31-03-2018</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Total amount paid:</th>
+                          <td class="govuk-body-s">£250,000.00</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Actual amount paid:</th>
+                          <td class="govuk-body-s">£150,000.00</td>
+                        </tr>  
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient name:</th>
+                          <td class="govuk-body-s">The Charity for Civil Servants</td>
+                        </tr> 
+                      </tbody>
+                    </table>
+                    
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">Charity for Civil Servants</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-SCH-2021-03-2717</p>
+                
+                    <p>This is to help support the running of the charity for civil servants.</p>
+                       
+                    
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Grant in aid start date:</th>
+                          <td class="govuk-body-s">01-04-2016</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Grant in aid end date:</th>
+                          <td class="govuk-body-s">31-03-2018</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Total amount paid:</th>
+                          <td class="govuk-body-s">£250,000.00</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Actual amount paid:</th>
+                          <td class="govuk-body-s">£150,000.00</td>
+                        </tr>  
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient name:</th>
+                          <td class="govuk-body-s">The Charity for Civil Servants</td>
+                        </tr> 
+                      </tbody>
+                    </table>
+                    
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">Charity for Civil Servants</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-SCH-2021-03-2717</p>
+                
+                    <p>This is to help support the running of the charity for civil servants.</p>
+                       
+                    
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Grant in aid start date:</th>
+                          <td class="govuk-body-s">01-04-2016</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Grant in aid end date:</th>
+                          <td class="govuk-body-s">31-03-2018</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Total amount paid:</th>
+                          <td class="govuk-body-s">£250,000.00</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Actual amount paid:</th>
+                          <td class="govuk-body-s">£150,000.00</td>
+                        </tr>  
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient name:</th>
+                          <td class="govuk-body-s">The Charity for Civil Servants</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    
+                </div>
+                </div>
+              </li>
+            
+            <hr class="govuk-section-break govuk-section-break--visible"> 
+            
+              <li style="padding-top:16px;">
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-full">
+                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">Charity for Civil Servants</a> </h3>
+                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-SCH-2021-03-2717</p>
+                
+                    <p>This is to help support the running of the charity for civil servants.</p>
+                       
+                    
+                    <table class="govuk-table govuk-!-margin-bottom-3">
+                      <tbody class="govuk-table__body">    
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Grant in aid start date:</th>
+                          <td class="govuk-body-s">01-04-2016</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Grant in aid end date:</th>
+                          <td class="govuk-body-s">31-03-2018</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Total amount paid:</th>
+                          <td class="govuk-body-s">£250,000.00</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Actual amount paid:</th>
+                          <td class="govuk-body-s">£150,000.00</td>
+                        </tr>  
+                        <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-body-s">Recipient name:</th>
+                          <td class="govuk-body-s">The Charity for Civil Servants</td>
                         </tr>  
                       </tbody>
                     </table>
@@ -2355,493 +2819,13 @@
                           <td class="govuk-body-s">£250,000.00</td>
                         </tr>
                         <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Recipient name:</th>
-                          <td class="govuk-body-s">The Charity for Civil Servants</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Managed by:</th>
-                          <td class="govuk-body-s">Cabinet Office</td>
+                          <th scope="row" class="govuk-body-s">Actual amount paid:</th>
+                          <td class="govuk-body-s">£150,000.00</td>
                         </tr>  
-                      </tbody>
-                    </table>
-                    
-                </div>
-                </div>
-              </li>
-            
-            <hr class="govuk-section-break govuk-section-break--visible"> 
-            
-              <li style="padding-top:16px;">
-                <div class="govuk-grid-row">
-                <div class="govuk-grid-column-full">
-                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">Charity for Civil Servants</a> </h3>
-                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-SCH-2021-03-2717</p>
-                
-                    <p>This is to help support the running of the charity for civil servants.</p>
-                       
-                    
-                    <table class="govuk-table govuk-!-margin-bottom-3">
-                      <tbody class="govuk-table__body">    
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Grant in aid start date:</th>
-                          <td class="govuk-body-s">01-04-2016</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Grant in aid end date:</th>
-                          <td class="govuk-body-s">31-03-2018</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Total amount paid:</th>
-                          <td class="govuk-body-s">£250,000.00</td>
-                        </tr>
                         <tr class="govuk-table__row">
                           <th scope="row" class="govuk-body-s">Recipient name:</th>
                           <td class="govuk-body-s">The Charity for Civil Servants</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Managed by:</th>
-                          <td class="govuk-body-s">Cabinet Office</td>
-                        </tr>  
-                      </tbody>
-                    </table>
-                    
-                </div>
-                </div>
-              </li>
-            
-            <hr class="govuk-section-break govuk-section-break--visible"> 
-            
-              <li style="padding-top:16px;">
-                <div class="govuk-grid-row">
-                <div class="govuk-grid-column-full">
-                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">Charity for Civil Servants</a> </h3>
-                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-SCH-2021-03-2717</p>
-                
-                    <p>This is to help support the running of the charity for civil servants.</p>
-                       
-                    
-                    <table class="govuk-table govuk-!-margin-bottom-3">
-                      <tbody class="govuk-table__body">    
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Grant in aid start date:</th>
-                          <td class="govuk-body-s">01-04-2016</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Grant in aid end date:</th>
-                          <td class="govuk-body-s">31-03-2018</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Total amount paid:</th>
-                          <td class="govuk-body-s">£250,000.00</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Recipient name:</th>
-                          <td class="govuk-body-s">The Charity for Civil Servants</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Managed by:</th>
-                          <td class="govuk-body-s">Cabinet Office</td>
-                        </tr>  
-                      </tbody>
-                    </table>
-                    
-                </div>
-                </div>
-              </li>
-            
-            <hr class="govuk-section-break govuk-section-break--visible"> 
-            
-              <li style="padding-top:16px;">
-                <div class="govuk-grid-row">
-                <div class="govuk-grid-column-full">
-                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">Charity for Civil Servants</a> </h3>
-                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-SCH-2021-03-2717</p>
-                
-                    <p>This is to help support the running of the charity for civil servants.</p>
-                       
-                    
-                    <table class="govuk-table govuk-!-margin-bottom-3">
-                      <tbody class="govuk-table__body">    
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Grant in aid start date:</th>
-                          <td class="govuk-body-s">01-04-2016</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Grant in aid end date:</th>
-                          <td class="govuk-body-s">31-03-2018</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Total amount paid:</th>
-                          <td class="govuk-body-s">£250,000.00</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Recipient name:</th>
-                          <td class="govuk-body-s">The Charity for Civil Servants</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Managed by:</th>
-                          <td class="govuk-body-s">Cabinet Office</td>
-                        </tr>  
-                      </tbody>
-                    </table>
-                    
-                </div>
-                </div>
-              </li>
-            
-            <hr class="govuk-section-break govuk-section-break--visible"> 
-            
-              <li style="padding-top:16px;">
-                <div class="govuk-grid-row">
-                <div class="govuk-grid-column-full">
-                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">Charity for Civil Servants</a> </h3>
-                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-SCH-2021-03-2717</p>
-                
-                    <p>This is to help support the running of the charity for civil servants.</p>
-                       
-                    
-                    <table class="govuk-table govuk-!-margin-bottom-3">
-                      <tbody class="govuk-table__body">    
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Grant in aid start date:</th>
-                          <td class="govuk-body-s">01-04-2016</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Grant in aid end date:</th>
-                          <td class="govuk-body-s">31-03-2018</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Total amount paid:</th>
-                          <td class="govuk-body-s">£250,000.00</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Recipient name:</th>
-                          <td class="govuk-body-s">The Charity for Civil Servants</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Managed by:</th>
-                          <td class="govuk-body-s">Cabinet Office</td>
-                        </tr>  
-                      </tbody>
-                    </table>
-                    
-                </div>
-                </div>
-              </li>
-            
-            <hr class="govuk-section-break govuk-section-break--visible"> 
-            
-              <li style="padding-top:16px;">
-                <div class="govuk-grid-row">
-                <div class="govuk-grid-column-full">
-                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">Charity for Civil Servants</a> </h3>
-                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-SCH-2021-03-2717</p>
-                
-                    <p>This is to help support the running of the charity for civil servants.</p>
-                       
-                    
-                    <table class="govuk-table govuk-!-margin-bottom-3">
-                      <tbody class="govuk-table__body">    
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Grant in aid start date:</th>
-                          <td class="govuk-body-s">01-04-2016</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Grant in aid end date:</th>
-                          <td class="govuk-body-s">31-03-2018</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Total amount paid:</th>
-                          <td class="govuk-body-s">£250,000.00</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Recipient name:</th>
-                          <td class="govuk-body-s">The Charity for Civil Servants</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Managed by:</th>
-                          <td class="govuk-body-s">Cabinet Office</td>
-                        </tr>  
-                      </tbody>
-                    </table>
-                    
-                </div>
-                </div>
-              </li>
-            
-            <hr class="govuk-section-break govuk-section-break--visible"> 
-            
-              <li style="padding-top:16px;">
-                <div class="govuk-grid-row">
-                <div class="govuk-grid-column-full">
-                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">Charity for Civil Servants</a> </h3>
-                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-SCH-2021-03-2717</p>
-                
-                    <p>This is to help support the running of the charity for civil servants.</p>
-                       
-                    
-                    <table class="govuk-table govuk-!-margin-bottom-3">
-                      <tbody class="govuk-table__body">    
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Grant in aid start date:</th>
-                          <td class="govuk-body-s">01-04-2016</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Grant in aid end date:</th>
-                          <td class="govuk-body-s">31-03-2018</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Total amount paid:</th>
-                          <td class="govuk-body-s">£250,000.00</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Recipient name:</th>
-                          <td class="govuk-body-s">The Charity for Civil Servants</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Managed by:</th>
-                          <td class="govuk-body-s">Cabinet Office</td>
-                        </tr>  
-                      </tbody>
-                    </table>
-                    
-                </div>
-                </div>
-              </li>
-            
-            <hr class="govuk-section-break govuk-section-break--visible"> 
-            
-              <li style="padding-top:16px;">
-                <div class="govuk-grid-row">
-                <div class="govuk-grid-column-full">
-                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">Charity for Civil Servants</a> </h3>
-                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-SCH-2021-03-2717</p>
-                
-                    <p>This is to help support the running of the charity for civil servants.</p>
-                       
-                    
-                    <table class="govuk-table govuk-!-margin-bottom-3">
-                      <tbody class="govuk-table__body">    
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Grant in aid start date:</th>
-                          <td class="govuk-body-s">01-04-2016</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Grant in aid end date:</th>
-                          <td class="govuk-body-s">31-03-2018</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Total amount paid:</th>
-                          <td class="govuk-body-s">£250,000.00</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Recipient name:</th>
-                          <td class="govuk-body-s">The Charity for Civil Servants</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Managed by:</th>
-                          <td class="govuk-body-s">Cabinet Office</td>
-                        </tr>  
-                      </tbody>
-                    </table>
-                    
-                </div>
-                </div>
-              </li>
-            
-            <hr class="govuk-section-break govuk-section-break--visible"> 
-            
-              <li style="padding-top:16px;">
-                <div class="govuk-grid-row">
-                <div class="govuk-grid-column-full">
-                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">Charity for Civil Servants</a> </h3>
-                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-SCH-2021-03-2717</p>
-                
-                    <p>This is to help support the running of the charity for civil servants.</p>
-                       
-                    
-                    <table class="govuk-table govuk-!-margin-bottom-3">
-                      <tbody class="govuk-table__body">    
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Grant in aid start date:</th>
-                          <td class="govuk-body-s">01-04-2016</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Grant in aid end date:</th>
-                          <td class="govuk-body-s">31-03-2018</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Total amount paid:</th>
-                          <td class="govuk-body-s">£250,000.00</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Recipient name:</th>
-                          <td class="govuk-body-s">The Charity for Civil Servants</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Managed by:</th>
-                          <td class="govuk-body-s">Cabinet Office</td>
-                        </tr>  
-                      </tbody>
-                    </table>
-                    
-                </div>
-                </div>
-              </li>
-            
-            <hr class="govuk-section-break govuk-section-break--visible"> 
-            
-              <li style="padding-top:16px;">
-                <div class="govuk-grid-row">
-                <div class="govuk-grid-column-full">
-                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">Charity for Civil Servants</a> </h3>
-                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-SCH-2021-03-2717</p>
-                
-                    <p>This is to help support the running of the charity for civil servants.</p>
-                       
-                    
-                    <table class="govuk-table govuk-!-margin-bottom-3">
-                      <tbody class="govuk-table__body">    
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Grant in aid start date:</th>
-                          <td class="govuk-body-s">01-04-2016</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Grant in aid end date:</th>
-                          <td class="govuk-body-s">31-03-2018</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Total amount paid:</th>
-                          <td class="govuk-body-s">£250,000.00</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Recipient name:</th>
-                          <td class="govuk-body-s">The Charity for Civil Servants</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Managed by:</th>
-                          <td class="govuk-body-s">Cabinet Office</td>
-                        </tr>  
-                      </tbody>
-                    </table>
-                    
-                </div>
-                </div>
-              </li>
-            
-            <hr class="govuk-section-break govuk-section-break--visible"> 
-            
-              <li style="padding-top:16px;">
-                <div class="govuk-grid-row">
-                <div class="govuk-grid-column-full">
-                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">Charity for Civil Servants</a> </h3>
-                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-SCH-2021-03-2717</p>
-                
-                    <p>This is to help support the running of the charity for civil servants.</p>
-                       
-                    
-                    <table class="govuk-table govuk-!-margin-bottom-3">
-                      <tbody class="govuk-table__body">    
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Grant in aid start date:</th>
-                          <td class="govuk-body-s">01-04-2016</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Grant in aid end date:</th>
-                          <td class="govuk-body-s">31-03-2018</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Total amount paid:</th>
-                          <td class="govuk-body-s">£250,000.00</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Recipient name:</th>
-                          <td class="govuk-body-s">The Charity for Civil Servants</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Managed by:</th>
-                          <td class="govuk-body-s">Cabinet Office</td>
-                        </tr>  
-                      </tbody>
-                    </table>
-                    
-                </div>
-                </div>
-              </li>
-            
-            <hr class="govuk-section-break govuk-section-break--visible"> 
-            
-              <li style="padding-top:16px;">
-                <div class="govuk-grid-row">
-                <div class="govuk-grid-column-full">
-                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">Charity for Civil Servants</a> </h3>
-                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-SCH-2021-03-2717</p>
-                
-                    <p>This is to help support the running of the charity for civil servants.</p>
-                       
-                    
-                    <table class="govuk-table govuk-!-margin-bottom-3">
-                      <tbody class="govuk-table__body">    
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Grant in aid start date:</th>
-                          <td class="govuk-body-s">01-04-2016</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Grant in aid end date:</th>
-                          <td class="govuk-body-s">31-03-2018</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Total amount paid:</th>
-                          <td class="govuk-body-s">£250,000.00</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Recipient name:</th>
-                          <td class="govuk-body-s">The Charity for Civil Servants</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Managed by:</th>
-                          <td class="govuk-body-s">Cabinet Office</td>
-                        </tr>  
-                      </tbody>
-                    </table>
-                    
-                </div>
-                </div>
-              </li>
-            
-            <hr class="govuk-section-break govuk-section-break--visible"> 
-            
-              <li style="padding-top:16px;">
-                <div class="govuk-grid-row">
-                <div class="govuk-grid-column-full">
-                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">Charity for Civil Servants</a> </h3>
-                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-SCH-2021-03-2717</p>
-                
-                    <p>This is to help support the running of the charity for civil servants.</p>
-                       
-                    
-                    <table class="govuk-table govuk-!-margin-bottom-3">
-                      <tbody class="govuk-table__body">    
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Grant in aid start date:</th>
-                          <td class="govuk-body-s">01-04-2016</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Grant in aid end date:</th>
-                          <td class="govuk-body-s">31-03-2018</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Total amount paid:</th>
-                          <td class="govuk-body-s">£250,000.00</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Recipient name:</th>
-                          <td class="govuk-body-s">The Charity for Civil Servants</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Managed by:</th>
-                          <td class="govuk-body-s">Cabinet Office</td>
-                        </tr>  
+                        </tr> 
                       </tbody>
                     </table>
                     
@@ -2914,15 +2898,18 @@
                     <img src="/public/icons/caret-up.svg" class="govuk-!-padding-left-0" alt="arrow" style="height: 10px;">
                 </a>
             </th>   
+              
+            <th scope="col" class="govuk-table__header govuk-body-s">
+                <a href="#sort5" class="govuk-link" style="display: inline-flex; align-items: top;">Actual amount paid
+                    <img src="/public/icons/caret-up.svg" class="govuk-!-padding-left-0" alt="arrow" style="height: 10px;">
+                </a>
+            </th>   
 
             <th scope="col" class="govuk-table__header govuk-body-s">
-                <a href="#sort5" class="govuk-link" style="display: inline-flex; align-items: top;">Recipient name
+                <a href="#sort6" class="govuk-link" style="display: inline-flex; align-items: top;">Recipient name
                     <img src="/public/icons/sort.svg" class="govuk-!-padding-left-0" alt="arrow" style="height: 20px;">
                 </a>
             </th>
-              
-            <th scope="col" class="govuk-table__header govuk-body-s">Managed by
-              </th> 
 
           </tr>
         </thead>
@@ -2939,9 +2926,9 @@
             
             <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
 
-            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+            <td class="govuk-table__cell govuk-body-s">£150,000.00</td>
 
-            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
 
           </tr>
 
@@ -2955,9 +2942,9 @@
             
             <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
 
-            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+            <td class="govuk-table__cell govuk-body-s">£150,000.00</td>
 
-            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
 
           </tr>
 
@@ -2971,9 +2958,9 @@
             
             <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
 
-            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+            <td class="govuk-table__cell govuk-body-s">£150,000.00</td>
 
-            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
 
           </tr>
 
@@ -2987,9 +2974,9 @@
             
             <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
 
-            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+            <td class="govuk-table__cell govuk-body-s">£150,000.00</td>
 
-            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
 
           </tr>
             
@@ -3003,9 +2990,9 @@
             
             <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
 
-            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+            <td class="govuk-table__cell govuk-body-s">£150,000.00</td>
 
-            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
 
           </tr>
             
@@ -3019,9 +3006,9 @@
             
             <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
 
-            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+            <td class="govuk-table__cell govuk-body-s">£150,000.00</td>
 
-            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
 
           </tr>
             
@@ -3035,9 +3022,9 @@
             
             <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
 
-            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+            <td class="govuk-table__cell govuk-body-s">£150,000.00</td>
 
-            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
 
           </tr>
             
@@ -3051,9 +3038,9 @@
             
             <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
 
-            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+            <td class="govuk-table__cell govuk-body-s">£150,000.00</td>
 
-            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
 
           </tr>
             
@@ -3067,9 +3054,9 @@
             
             <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
 
-            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+            <td class="govuk-table__cell govuk-body-s">£150,000.00</td>
 
-            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
 
           </tr>
             
@@ -3083,9 +3070,9 @@
             
             <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
 
-            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+            <td class="govuk-table__cell govuk-body-s">£150,000.00</td>
 
-            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
 
           </tr>   
             
@@ -3099,9 +3086,9 @@
             
             <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
 
-            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+            <td class="govuk-table__cell govuk-body-s">£150,000.00</td>
 
-            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
 
           </tr> 
             
@@ -3115,9 +3102,9 @@
             
             <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
 
-            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+            <td class="govuk-table__cell govuk-body-s">£150,000.00</td>
 
-            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
 
           </tr> 
             
@@ -3131,9 +3118,9 @@
             
             <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
 
-            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+            <td class="govuk-table__cell govuk-body-s">£150,000.00</td>
 
-            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
 
           </tr> 
             
@@ -3147,9 +3134,9 @@
             
             <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
 
-            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+            <td class="govuk-table__cell govuk-body-s">£150,000.00</td>
 
-            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
 
           </tr> 
             
@@ -3163,9 +3150,9 @@
             
             <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
 
-            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+            <td class="govuk-table__cell govuk-body-s">£150,000.00</td>
 
-            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
 
           </tr> 
             
@@ -3179,9 +3166,9 @@
             
             <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
 
-            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+            <td class="govuk-table__cell govuk-body-s">£150,000.00</td>
 
-            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
 
           </tr> 
             
@@ -3195,9 +3182,9 @@
             
             <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
 
-            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+            <td class="govuk-table__cell govuk-body-s">£150,000.00</td>
 
-            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
 
           </tr> 
             
@@ -3211,9 +3198,9 @@
             
             <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
 
-            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+            <td class="govuk-table__cell govuk-body-s">£150,000.00</td>
 
-            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
 
           </tr> 
             
@@ -3227,9 +3214,9 @@
             
             <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
 
-            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+            <td class="govuk-table__cell govuk-body-s">£150,000.00</td>
 
-            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
 
           </tr> 
             
@@ -3243,9 +3230,9 @@
             
             <td class="govuk-table__cell govuk-body-s">£250,000.00</td>  
 
-            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
+            <td class="govuk-table__cell govuk-body-s">£150,000.00</td>
 
-            <td class="govuk-table__cell govuk-body-s">Cabinet Office</td>
+            <td class="govuk-table__cell govuk-body-s">The Charity for Civil Servants</td>
 
           </tr>     
 
