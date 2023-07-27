@@ -22,13 +22,6 @@
 }) }}
 {% endblock %}
 
-{% block pageScripts %}
-  <script type="text/javascript">
-    var $element = document.querySelector('#step-by-step-navigation')
-    var stepByStepNavigation = new GOVUK.Modules.AppStepNav($element).init()
-  </script>
-{% endblock %}
-
 {% block beforeContent %}
 {{ govukPhaseBanner({
   tag: {
@@ -41,11 +34,11 @@
     items: [
       {
         text: "Home",
-        href: "/sprint_3/start-page.html"
+        href: "/sprint_5/start-page.html"
       },
       {
         text: "Downloads",
-        href: "/sprint_3/downloads.html"
+        href: "/sprint_5/downloads.html"
       }
     ]
   }) }}
@@ -61,19 +54,19 @@
         Downloads
       </h1>
         
-        <p class="govuk-body">On this page you can download GGiS data from your own department and across government. The spreadsheets are generated for you using live GGiS data.</p>
+        <p class="govuk-body">On this page you can download GGiS data from your organisation and the rest of government. The spreadsheets are generated for you using live GGiS data.</p>
         
         <p class="govuk-body">You can also filter and download spreadsheets on the following pages:</p>
         
         <ul class="govuk-list govuk-list--bullet">
-        <li><a href="/sprint_3/schemes#view-grants-in-aid" class="govuk-link">View grant schemes</a></li>
-        <li><a href="/sprint_3/awards#view-awards" class="govuk-link">View your awards</a></li>
+        <li><a href="/sprint_5/schemes#view-grants-in-aid" class="govuk-link">View grant schemes</a></li>
+        <li><a href="/sprint_5/awards#view-awards" class="govuk-link">View your awards</a></li>
         </ul>
         
         <p class="govuk-body">You can search for a recipient then download all their awards through the following page:</p>
         
         <ul class="govuk-list govuk-list--bullet">
-        <li><a href="/sprint_3/awards#view-recipients" class="govuk-link">View recipients</a></li>
+        <li><a href="/sprint_5/awards#view-recipients" class="govuk-link">View recipients</a></li>
         </ul>
         
         <div class="govuk-!-padding-bottom-4"></div>
@@ -81,11 +74,14 @@
         <details class="govuk-details" data-module="govuk-details">
           <summary class="govuk-details__summary">
             <span class="govuk-details__summary-text">
-              Data Disclaimers
+              Read this before using this data
             </span>
           </summary>
           <div class="govuk-details__text">
-            Accuracy of GGiS data is the responsibility of the funding departments and not GGMF, data downloaded from GGiS should only be utilised internally and should not be used to make public facing statistical claims unless express agreement from the department's Grants Champion has been sought. For publicly available grants data, please refer to the published <a href="https://www.gov.uk/government/collections/government-grants-data-and-statistics" class="govuk-link">Government grants data and statistics</a>.
+            <p class="govuk-body">Accuracy of GGiS data is the responsibility of the funding departments.</p>
+            <p class="govuk-body">Data downloaded from GGiS should only be utilised internally and should not be used to make public facing statistical claims unless express agreement from the department's Grants Champion has been sought.</p>  
+            <p class="govuk-body">For publicly available grants data, please refer to the published
+              <a href="https://www.gov.uk/government/collections/government-grants-data-and-statistics" class="govuk-link">Government grants data and statistics</a>.</p>
           </div>
         </details>
         
@@ -95,19 +91,15 @@
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-full"> 
             
-            <!--<div class="" style="background-color:#f3f3f3; height: 48px;">
-            <h1 class="govuk-heading-m" style="padding:8px; border-bottom-style:solid;">
-               Report name          
-            </h1>   
-            </div>-->
-            
             <hr class="govuk-section-break govuk-section-break--visible"> 
             
                 <div class="govuk-grid-row">
                   <div class="govuk-!-padding-top-6"></div>
                       <div class="govuk-grid-column-two-thirds">
                         <h2 class="govuk-heading-m">My Organisation’s Schemes</h2>                   
-                        <p class="govuk-body">If your organisation sponsors ALBs, their awards will be included.</p>
+                        <p class="govuk-body">For Arm’s-length body (ALB) users, this will include all schemes that belong to your ALB.</p>
+                        <p class="govuk-body">For central department users, this will include all schemes that belong either to your department or to an ALB your department sponsors.</p>   
+                        <p>Includes all years for which GGiS has data.</p>
                           
                       </div>
                       <div class="govuk-grid-column-one-third">
@@ -116,7 +108,7 @@
                       </button>
                       </div>
                 </div>
-            <div class="govuk-!-padding-bottom-6"></div>
+            <div class="govuk-!-padding-bottom-2"></div>
             
             <hr class="govuk-section-break govuk-section-break--visible"> 
             
@@ -124,7 +116,9 @@
                   <div class="govuk-!-padding-top-6"></div>
                       <div class="govuk-grid-column-two-thirds">
                         <h2 class="govuk-heading-m">My Organisation’s Awards</h2>            
-                          <p class="govuk-body">If your organisation sponsors ALBs, their awards will be included.</p>
+                          <p class="govuk-body">For ALB users, this will include all awards that belong to your ALB.</p>
+                          <p class="govuk-body">For central department users, this will include all awards that belong either to your department or to an ALB your department sponsors.</p>  
+                          <p>Includes all years for which GGiS has data.</p>
 
                       </div>
                       <div class="govuk-grid-column-one-third">
@@ -133,7 +127,7 @@
                       </button>
                       </div>
                 </div>
-            <div class="govuk-!-padding-bottom-6"></div>
+            <div class="govuk-!-padding-bottom-2"></div>
               
             <hr class="govuk-section-break govuk-section-break--visible"> 
             
@@ -142,6 +136,7 @@
                       <div class="govuk-grid-column-two-thirds">
                         <h2 class="govuk-heading-m">My Organisation’s Grants in Aid</h2>   
                           <p class="govuk-body">Grants in aid are a way for one part of the government to fund another.</p>
+                          <p class="govuk-body">Includes all years for which GGiS has data.</p>
                           
                           <span class="govuk-body-s" style="color:#505A5F;">This is only visible to central departments.</span>
                           
@@ -160,7 +155,7 @@
                   <div class="govuk-!-padding-top-6"></div>
                       <div class="govuk-grid-column-two-thirds">
                         <h2 class="govuk-heading-m">All Schemes</h2>                   
-                        <p class="govuk-body">Includes schemes for all government departments and ALBs.</p>
+                        <p class="govuk-body">Includes all years for which GGiS has data, and schemes for all government departments and ALBs.</p>
                         <span class="govuk-body-s" style="color:#505A5F;">You can view data from other departments unless it has been marked as “do not publish”.</span>
                       </div>
                       <div class="govuk-grid-column-one-third">
@@ -177,7 +172,7 @@
                   <div class="govuk-!-padding-top-6"></div>
                       <div class="govuk-grid-column-two-thirds">
                         <h2 class="govuk-heading-m">All Departments’ Awards</h2>                   
-                        <p class="govuk-body">Historical data can be found on the page for <a href="https://www.gov.uk/government/collections/government-grants-data-and-statistics" class="govuk-link">Government grants data and statistics</a>.</p>
+                        <p class="govuk-body">Includes data for the current and past two financial years. Historical data can be found on the page for <a href="https://www.gov.uk/government/collections/government-grants-data-and-statistics" class="govuk-link">Government grants data and statistics</a>.</p>
                         <span class="govuk-body-s" style="color:#505A5F;">You can view data from other departments unless it has been marked as “do not publish”.</span>  
                       </div>
                       <div class="govuk-grid-column-one-third">
