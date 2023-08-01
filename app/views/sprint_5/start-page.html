@@ -19,6 +19,10 @@
     {
       href: "#",
       text: "How to"
+    },
+    {
+      href: "release-notes",
+      text: "What's new"
     }
   ]
 }) }}
@@ -34,6 +38,26 @@
 {% endblock %}
 
 {% block content %}
+
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">       
+
+        <div class="govuk-notification-banner" role="region"
+          aria-labelledby="govuk-notification-banner-title"
+          data-module="govuk-notification-banner">
+          <div class="govuk-notification-banner__header">
+            <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+              Important
+            </h2>
+          </div>
+          <div class="govuk-notification-banner__content">
+           <p class="govuk-body">We've made some updates to the Homepage and the Reports page, now called Downloads. Read about all these updates on the new <a class="govuk-notification-banner__link" href="#">What's new</a> page in the header at the top.</p> <p> Readiness assessments are no longer available, if you need to view old assessments you can contact <a class="govuk-notification-banner__link" href="#">grantshubsupport@cabinetoffice.gov.uk</a>.</p> 
+          </div>
+        </div>
+     </div>
+</div>
+
+
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
@@ -122,7 +146,7 @@
          </div>
         </div>
         
-        <div class="govuk-!-padding-bottom-6"></div>
+       <!-- <div class="govuk-!-padding-bottom-6"></div>
 
         <div class="govuk-notification-banner" role="region"
           aria-labelledby="govuk-notification-banner-title"
@@ -135,6 +159,6 @@
           <div class="govuk-notification-banner__content">
            <p class="govuk-body">Readiness assessments are no longer available, if you need to view old assessments you can contact <a class="govuk-notification-banner__link" href="#">person@email.com</a>.</p> 
           </div>
-        </div>
+        </div> -->
 
 {% endblock %}

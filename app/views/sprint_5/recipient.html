@@ -1,0 +1,126 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  {{ govukHeader({
+  homepageUrl: "../index.html",
+  serviceName: "Government Grants Management Function",
+  serviceUrl: "#",
+  navigation: [
+    {
+      href: "#",
+      text: "Support tickets"
+    },
+    {
+      href: "#",
+      text: "How to"
+    },
+    {
+      href: "release-notes",
+      text: "What's new"
+    }
+  ]
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+ {{ govukPhaseBanner({
+  tag: {
+    text: "prototype"
+  },
+  html: 'This is a prototype service'
+}) }}
+
+ {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "/sprint_5/start-page.html"
+      },
+      {
+        text: "Grant awards",
+        href: "/sprint_5/awards#view-recipients"
+      },
+      {
+        text: "Peter Ashley Activity Centre Trust",
+        href: "/sprint_5/recipient.html"
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+        <span class="govuk-caption-l">Recipient</span>
+            <h1 class="govuk-heading-l">Peter Ashley Activity Centre Trust</h1>
+      
+        <!-- <h1 class="govuk-heading-l">
+        Peter Ashley Activity Centre Trust
+      </h1>
+
+    <!-- <p class="govuk-body" style="color:#505A5F;">
+        Recipient ID: 12345678
+      </p> -->
+        
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Recipient ID
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  12345678
+                </dd>              
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Address
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  PO6 1BJ
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Country
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <p class="govuk-body">United Kingdom</p>
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>  
+        
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-third">
+                <p class="govuk-body">Total number of awards:</p>
+                <p class="govuk-body govuk-!-font-size-24 govuk-!-font-weight-bold">1</p>
+            </div> 
+            <div class="govuk-grid-column-one-third">
+                <p class="govuk-body">Total funding agreement value:</p>
+                <p class="govuk-body govuk-!-font-size-24 govuk-!-font-weight-bold">£26,465.00</p>
+            </div>
+            <div class="govuk-grid-column-one-third">
+                <p class="govuk-body">Total amount paid:</p>
+                <p class="govuk-body govuk-!-font-size-24 govuk-!-font-weight-bold">£26,465.00</p>
+            </div>
+        </div> 
+        
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+        
+        <!--<p class="govuk-body">These summary statistics are refreshed daily at midnight. It is possible therefore that they may not match exactly with the awards in the table below, due to awards being added between refreshes.</p> -->
+
+    </div>
+  </div>
+
+         
+
+{% endblock %}
