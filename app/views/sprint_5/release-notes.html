@@ -1,0 +1,128 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  {{ govukHeader({
+  homepageUrl: "../index.html",
+  serviceName: "Government Grants Management Function",
+  serviceUrl: "#",
+  navigation: [
+    {
+      href: "#",
+      text: "Support tickets"
+    },
+    {
+      href: "#",
+      text: "How to"
+    },
+    {
+      href: "release-notes",
+      text: "What's new"
+    }
+  ]
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+ {{ govukPhaseBanner({
+  tag: {
+    text: "prototype"
+  },
+  html: 'This is a prototype service'
+}) }}
+
+ {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "/sprint_5/start-page.html"
+      },
+      {
+        text: "What's new",
+        href: "/sprint_5/release-notes.html"
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        What's new in GGiS
+      </h1>
+        
+        <div class="govuk-body-s">
+            <span class="govuk-visually-hidden">Posted by:</span>
+            <a href="#" title="Posts by">Caleb Rowan</a>, 
+            <span class="govuk-visually-hidden">Posted on: </span>
+            <time class="updated" datetime="2023-08-01T15:59:13+00:00" pubdate="">1 August 2023</time>
+        </div>
+        
+      <div class="govuk-!-padding-bottom-4"></div>  
+
+      <p class="govuk-body">
+        We've made some changes to the system in the following areas:
+      </p>  
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Home</li>    
+          <li>Reports (Now called Downloads)</li>
+          <li>View grant schemes</li>
+          <li>View grants in aid</li>
+          <li>View your awards</li>  
+          <li>View recipients</li>      
+        </ul>
+        
+      <p class="govuk-body">
+        Read about all the changes below. 
+      </p>   
+        
+      <h2 class="govuk-heading-l">Summary of changes</h2>
+        <h3 class="govuk-heading-m">Home</h3> 
+        <p class="govuk-body">
+        We've updated the look of the homepage, removing the coloured tiles and icons and added more content explaining each section. We've also added quick links to all the different areas and introduced a notifcation banner to update you on any changes to the system. 
+      </p>  
+        
+      <h3 class="govuk-heading-m">Reports (Now called Downloads)</h3> 
+        <p class="govuk-body"><s>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum laoreet interdum sem, quis fermentum sem tempor quis. Aenean iaculis dolor lorem, non eleifend orci suscipit sit amet.</s>
+      </p>    
+        
+      <h3 class="govuk-heading-m">View grant schemes</h3> 
+        <p class="govuk-body"><s>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum laoreet interdum sem, quis fermentum sem tempor quis. Aenean iaculis dolor lorem, non eleifend orci suscipit sit amet.</s>
+      </p> 
+    
+      <h3 class="govuk-heading-m">View grants in aid</h3> 
+        <p class="govuk-body"><s>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum laoreet interdum sem, quis fermentum sem tempor quis. Aenean iaculis dolor lorem, non eleifend orci suscipit sit amet.</s>
+      </p> 
+        
+      <h3 class="govuk-heading-m">View your awards</h3> 
+        <p class="govuk-body"><s>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum laoreet interdum sem, quis fermentum sem tempor quis. Aenean iaculis dolor lorem, non eleifend orci suscipit sit amet.</s>
+      </p>   
+        
+      <h3 class="govuk-heading-m">View recipients</h3> 
+        <p class="govuk-body"><s>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum laoreet interdum sem, quis fermentum sem tempor quis. Aenean iaculis dolor lorem, non eleifend orci suscipit sit amet.</s>
+      </p>    
+        
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+        
+      <h3 class="govuk-heading-m">Previous updates</h3> 
+        <ul class="govuk-list govuk-list--bullet">
+          <li><a href="#" title="Posts by">Heading - 01/07/2023</a></li>    
+          <li><a href="#" title="Posts by">Heading - 01/06/2023</a></li>
+          <li><a href="#" title="Posts by">Heading - 01/05/2023</a></li>    
+        </ul>  
+
+    </div>
+  </div>
+
+{% endblock %}
