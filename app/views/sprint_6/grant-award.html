@@ -42,11 +42,11 @@
       },
       {
         text: "Grant awards",
-        href: "/sprint_6/awards#view-recipients"
+        href: "/sprint_6/awards.html"
       },
       {
-        text: "Peter Ashley Activity Centre Trust",
-        href: "/sprint_6/recipient.html"
+        text: "Award name",
+        href: "/sprint_6/grant-award.html"
       }
     ]
   }) }}
@@ -68,87 +68,45 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
 
-        <span class="govuk-caption-l">Recipient</span>
-            <h1 class="govuk-heading-l">Peter Ashley Activity Centre Trust</h1>
-
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-two-thirds">
-            <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  Recipient ID
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  12345678
-                </dd>              
-              </div>
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  Recipient category
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  UK Charity 
-                </dd>              
-              </div>    
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  Address
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  PO6 1BJ
-                </dd>
-              </div>
-              <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">
-                  Country
-                </dt>
-                <dd class="govuk-summary-list__value">
-                  <p class="govuk-body">United Kingdom</p>
-                </dd>
-              </div>
-            </dl>
-          </div>
-        </div> 
-        
-        <h2 class="govuk-heading-l">Awards information</h2>
-        
-        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+        <span class="govuk-caption-l">Grant award</span>
+            <h1 class="govuk-heading-l">LGBT Foundation</h1>
         
         <div class="govuk-!-padding-bottom-2"></div>
+
+        <div class="govuk-tabs" data-module="govuk-tabs">
+              <h2 class="govuk-tabs__title">
+                Contents
+              </h2>
+              <ul class="govuk-tabs__list">
+                <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                  <a class="govuk-tabs__tab" href="#award-information" style="color: #1d70b8;">
+                    Grant award information 
+                  </a>
+                </li>
+                <li class="govuk-tabs__list-item">
+                  <a class="govuk-tabs__tab" href="#award-audit" style="color: #1d70b8;">
+                    Award audit history
+                  </a>
+                </li>
+              </ul>
+              <div class="govuk-tabs__panel" id="award-information">         
+              </div>
+              <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="award-audit">
+                  
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds">   
+                <h2 class="govuk-heading-l">View this award's audit history</h2>
+                  
+                  <p class="govuk-body"><s>Here are all the actions that have taken place for this award.</s></p>
+                </div> 
+                </div> 
+                  
+                  <hr class="govuk-section-break govuk-section-break--visible govuk-!-padding-top-3"> 
         
-        <div class="govuk-grid-row">
-            <div class="govuk-grid-column-one-third">
-                <p class="govuk-body">Total number of awards:</p>
-                <p class="govuk-body govuk-!-font-size-27 govuk-!-font-weight-bold" style="color:#00703c">1</p>
-            </div> 
-            <div class="govuk-grid-column-one-third">
-                <p class="govuk-body">Total funding agreement value:</p>
-                <p class="govuk-body govuk-!-font-size-27 govuk-!-font-weight-bold" style="color:#00703c">£26,465.00</p>
-            </div>
-            <div class="govuk-grid-column-one-third">
-                <p class="govuk-body">Total amount paid:</p>
-                <p class="govuk-body govuk-!-font-size-27 govuk-!-font-weight-bold" style="color:#00703c">£26,465.00</p>
-            </div>
-        </div>
-        
-        <div class="govuk-!-padding-bottom-6"></div>
-        
-        <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
-        <p class="govuk-body govuk-!-margin-bottom-0">These summary statistics are refreshed daily at midnight. It is possible therefore that they may not match exactly with the awards in the table below, due to awards being added between refreshes.</p> 
-        </div> 
-        </div>    
-        
-        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-        
-        <div class="govuk-!-padding-bottom-4"></div>
-        
-             <h2 class="govuk-heading-l">Awards received</h2> 
-        
-              <div class="govuk-grid-row govuk-!-padding-bottom-4">
+              <div class="govuk-grid-row govuk-!-padding-top-7 govuk-!-padding-bottom-4">
                   <div class="govuk-grid-column-three-quarters">
                   <div class="govuk-grid-column-three-quarters govuk-!-padding-right-0 govuk-!-padding-left-0">
-                    <input class="govuk-input govuk-!-width-full govuk-!-padding-left-3" id="full" name="full" type="text" placeholder="Search award name">
+                    <input class="govuk-input govuk-!-width-full govuk-!-padding-left-3" id="full" name="full" type="text" placeholder="Search">
                   </div>
                   <div class="govuk-grid-column-one-quarter govuk-!-padding-left-0">
                     <button class="govuk-button" style="background-color:#1d70b8" data-module="govuk-button">
@@ -157,17 +115,12 @@
                   </div>
               </div>
               
-              <div class="govuk-grid-column-one-thrid">
-                    <button class="govuk-button" data-module="govuk-button">
-                          Download results (CSV)
-                    </button>
-                </div> 
           </div>
-        
-         <div class="govuk-!-padding-bottom-2"></div>
+                  
+          <div class="govuk-!-padding-bottom-2"></div>
               
               <div class="govuk-grid-row">
-            <div class="govuk-grid-column-one-third">
+           <!-- <div class="govuk-grid-column-one-third">
             
             <p class="govuk-body govuk-!-font-weight-bold">Filters</p>
             
@@ -270,90 +223,18 @@
               </div>     
                 
             </details>      
-        </div> 
+        </div> -->
     
-    <div class="govuk-grid-column-two-thirds">  
+    <div class="govuk-grid-column-full">  
     
     <div class="govuk-grid-column-one-half govuk-!-padding-left-0">     
     <p class="govuk-body">Showing 1 - 1 of 1 result</p>
     </div>
     
-    <div class="govuk-grid-column-one-half govuk-!-padding-right-0 govuk-!-padding-top-1" style="text-align: right;">     
-        
-      <!--  <a href="#/" class="govuk-link govuk-link--no-visited-state govuk-link--no-underline" id="grid-toggle-3">
-          <!--  <img src="/public/icons/table.svg" class="govuk-!-padding-right-2" alt="table icon" style="height: 20px;"> 
-            Change view
-        </a> -->
+    <div class="govuk-grid-column-one-half govuk-!-padding-right-0 govuk-!-padding-top-1" style="text-align: right;">    
 
     </div>
-        
-    <div class="govuk-grid-column-full govuk-!-padding-0 hide" id="awardtable">
-        
-         <hr class="govuk-section-break govuk-section-break--visible"> 
-        
-        <div class="govuk-grid-row govuk-!-padding-top-4 govuk-!-padding-bottom-4">
-          <div class="govuk-grid-column-one-half ">  
-            <div class="govuk-grid-row">
-              <div class="govuk-grid-column-one-third govuk-!-padding-right-0">
-                <label class="govuk-label govuk-!-padding-top-1" for="sort">
-                    Sort by
-                </label>
-              </div>
-              <div class="govuk-grid-column-two-thirds govuk-!-padding-left-0">
-                <select class="govuk-select" id="sort" name="sort">
-                    <option value="name" selected>Award name (A-Z)</option>
-                    <option value="name">Award name (Z-A)</option>
-                    <option value="start">Award start date</option>
-                    <option value="end">Award end date</option>
-                    <option value="value">Highest funding agreement value</option>
-                    <option value="value">Lowest funding agreement value</option>
-                    <option value="value">Highest total amount paid</option>
-                    <option value="value">Lowest total amount paid</option>
-                </select>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        
-        <ul class="govuk-list">
-            
-            <hr class="govuk-section-break govuk-section-break--visible"> 
-            
-            <li style="padding-top:16px;">
-                <div class="govuk-grid-row">
-                <div class="govuk-grid-column-full">
-                    <h3 class="govuk-heading-m govuk-link"><a href="#16" class="govuk-link">Fort Purbrook, Portsdown Hill Road</a> </h3>
-                    <p class="govuk-body-s" style="color:#505A5F;">GGIS Ref: G2-GA-2023051058060</p>
-      
-                    <table class="govuk-table govuk-!-margin-bottom-3">
-                      <tbody class="govuk-table__body">    
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Award start date:</th>
-                          <td class="govuk-body-s">01-04-2022</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Award  end date:</th>
-                          <td class="govuk-body-s">31-03-2023</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Funding agreement value:</th>
-                          <td class="govuk-body-s">£26,465.00</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                          <th scope="row" class="govuk-body-s">Total amount paid:</th>
-                          <td class="govuk-body-s">£26,465.00</td>
-                        </tr>  
-                      </tbody>
-                    </table>
-                    
-                </div>
-                </div>
-              </li>
-        </ul>
-        
-    </div>    
-            
+               
     <div class="govuk-grid-column-full govuk-!-padding-0" id="awardgrid">
         
       <hr class="govuk-section-break govuk-section-break--visible">     
@@ -363,32 +244,38 @@
         <thead class="govuk-table__head">
           <tr class="govuk-table__row">
 
-            <th scope="col" class="govuk-table__header">Award name
-              <!--  <a style="display: inline-flex; align-items: top;">Award name
+            <th scope="col" class="govuk-table__header">Date
+              <!--  <a style="display: inline-flex; align-items: top;">Date
                     <img src="/public/icons/sort-2.svg" class="govuk-!-padding-left-1" alt="arrow" style="height: 20px;">
                 </a> -->
             </th>
               
-            <th scope="col" class="govuk-table__header">Start date
-              <!--   <a style="display: inline-flex; align-items: top;">Start date
+            <th scope="col" class="govuk-table__header">User
+              <!--   <a style="display: inline-flex; align-items: top;">User
                     <img src="/public/icons/sort-2.svg" class="govuk-!-padding-left-0" alt="arrow" style="height: 20px;">
                 </a> -->
             </th>
             
-            <th scope="col" class="govuk-table__header">End date
-              <!--   <a style="display: inline-flex; align-items: top;">End date
+            <th scope="col" class="govuk-table__header">Object
+              <!--   <a style="display: inline-flex; align-items: top;">Object
                     <img src="/public/icons/sort-2.svg" class="govuk-!-padding-left-0" alt="arrow" style="height: 20px;">
                 </a> -->
             </th>
               
-            <th scope="col" class="govuk-table__header">Funding agreement value
-              <!--   <a style="display: inline-flex; align-items: top;">Funding agreement value
+            <th scope="col" class="govuk-table__header">Field
+              <!--   <a style="display: inline-flex; align-items: top;">Field
                     <img src="/public/icons/sort-2.svg" class="govuk-!-padding-left-0" alt="arrow" style="height: 20px;">
                 </a> -->
             </th>   
             
-            <th scope="col" class="govuk-table__header">Total amount paid
-              <!--   <a style="display: inline-flex; align-items: top;">Total amount paid
+            <th scope="col" class="govuk-table__header">Original value
+              <!--   <a style="display: inline-flex; align-items: top;">Original value
+                    <img src="/public/icons/sort-2.svg" class="govuk-!-padding-left-0" alt="arrow" style="height: 20px;">
+                </a> -->
+            </th>   
+              
+            <th scope="col" class="govuk-table__header">New value
+              <!--   <a style="display: inline-flex; align-items: top;">New value
                     <img src="/public/icons/sort-2.svg" class="govuk-!-padding-left-0" alt="arrow" style="height: 20px;">
                 </a> -->
             </th>   
@@ -400,31 +287,31 @@
 
           <tr class="govuk-table__row">
 
-            <th scope="row" class="govuk-table__header"><a href="##1" class="govuk-link">Fort Purbrook, Portsdown Hill Road</a></th>
+            <td class="govuk-table__cell">???</td>
 
-            <td class="govuk-table__cell">01-04-2022</td>
+            <td class="govuk-table__cell">???</td>
 
-            <td class="govuk-table__cell">31-03-2023</td>
+            <td class="govuk-table__cell">???</td>
             
-            <td class="govuk-table__cell">£26,465.00</td>  
+            <td class="govuk-table__cell">???</td>  
 
-            <td class="govuk-table__cell">£26,465.00</td>
+            <td class="govuk-table__cell">???</td>
+              
+            <td class="govuk-table__cell">???</td>  
 
           </tr>
-
-          
-                
+           
         </tbody>
       </table> 
         
     </div>
     </div>
-    </div>     
-
+    </div>             
+                  
+              </div>
+            </div>
 
     </div>
   </div>
-
-         
 
 {% endblock %}
