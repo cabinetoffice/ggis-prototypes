@@ -1,0 +1,786 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  {{ govukHeader({
+  homepageUrl: "../index.html",
+  serviceName: "Government Grants Management Function",
+  serviceUrl: "#",
+  navigation: [
+    {
+      href: "#",
+      text: "Support tickets"
+    },
+    {
+      href: "#",
+      text: "How to"
+    },
+    {
+      href: "release-notes",
+      text: "What's new"
+    }
+  ]
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+ {{ govukPhaseBanner({
+  tag: {
+    text: "prototype"
+  },
+  html: 'This is a prototype service'
+}) }}
+
+ {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "/sprint_6/start-page.html"
+      },
+      {
+        text: "Grant schemes",
+        href: "/sprint_6/schemes.html"
+      },
+      {
+        text: "EU Referendum voter registration",
+        href: "/sprint_6/grant-scheme.html"
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block pageScripts %}
+  <script>
+    $(function() {
+        $('#grid-toggle-3').click(function() {
+        $("#awardtable").toggleClass('hide')
+        $("#awardgrid").toggleClass('hide')
+        });
+    })
+  </script>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+        <span class="govuk-caption-l">Grant scheme</span>
+            <h1 class="govuk-heading-l">EU Referendum voter registration</h1>
+        
+        <div class="govuk-!-padding-bottom-2"></div>
+
+        <div class="govuk-tabs" data-module="govuk-tabs">
+              <h2 class="govuk-tabs__title">
+                Contents
+              </h2>
+              <ul class="govuk-tabs__list">
+                <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                  <a class="govuk-tabs__tab" href="#scheme-information" style="color: #1d70b8;">
+                    Grant scheme information 
+                  </a>
+                </li>
+                <li class="govuk-tabs__list-item">
+                  <a class="govuk-tabs__tab" href="#associated-awards" style="color: #1d70b8;">
+                    Associated awards
+                  </a>
+                </li>
+                <li class="govuk-tabs__list-item">
+                  <a class="govuk-tabs__tab" href="#scheme-audit" style="color: #1d70b8;">
+                    Scheme audit history
+                  </a>
+                </li>
+                <li class="govuk-tabs__list-item">
+                  <a class="govuk-tabs__tab" href="#associated-documents" style="color: #1d70b8;">
+                    Associated documents
+                  </a>
+                </li>  
+              </ul>
+              <div class="govuk-tabs__panel" id="scheme-information">         
+              </div>
+            
+              <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="associated-awards">
+                  
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds">    
+                <h2 class="govuk-heading-l">View this scheme's grant awards</h2>
+                  
+                  <p class="govuk-body"><s>Here are all of this scheme's grant awards. To narrow your selection, select a filter from the dropdown menu.</s></p>
+                </div>
+                </div>  
+                  
+                  <hr class="govuk-section-break govuk-section-break--visible govuk-!-padding-top-3"> 
+        
+              <div class="govuk-grid-row govuk-!-padding-top-7 govuk-!-padding-bottom-4">
+                  <div class="govuk-grid-column-three-quarters">
+                  <div class="govuk-grid-column-three-quarters govuk-!-padding-right-0 govuk-!-padding-left-0">
+                    <input class="govuk-input govuk-!-width-full govuk-!-padding-left-3" id="full" name="full" type="text" placeholder="Search award, recipient name or reference numbers">
+                  </div>
+                  <div class="govuk-grid-column-one-quarter govuk-!-padding-left-0">
+                    <button class="govuk-button" style="background-color:#1d70b8" data-module="govuk-button">
+                       Search
+                    </button>  
+                  </div>
+              </div>
+                  
+            <div class="govuk-grid-column-one-thrid">
+                    <button class="govuk-button" data-module="govuk-button">
+                          Download results (CSV)
+                    </button>
+                </div>       
+              
+          </div>
+                  
+          <div class="govuk-!-padding-bottom-2"></div>
+              
+              <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-third">
+            
+            <p class="govuk-body govuk-!-font-weight-bold">Filters</p>
+            
+            <hr class="govuk-section-break govuk-section-break--visible">
+    
+            <details class="govuk-details govuk-section-break govuk-section-break--visible govuk-!-padding-bottom-2 govuk-!-margin-bottom-4 govuk-!-padding-top-4" data-module="govuk-details">
+              
+                <summary class="govuk-details__summary ">
+                <span class="govuk-details__summary-text govuk-link--no-underline">
+                  Financial year dates
+                </span>
+              </summary>      
+                
+                <div class="govuk-form-group govuk-!-padding-top-4 govuk-!-padding-left-2">     
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          Active in current financial year (2023/24)
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                          Active in last financial year (2022/23)
+                        </label>
+                      </div>
+                  </div>
+                </div> 
+                
+                <div class="govuk-form-group">
+                    <label class="govuk-label govuk-!-padding-bottom-3" for="event-name">
+                        Active between 
+                    </label>
+                  <div class="govuk-input__wrapper govuk-grid-column-one-half govuk-!-padding-left-0 govuk-!-padding-right-0">
+                    <div class="govuk-input__prefix" aria-hidden="true">01/04</div>
+                    <input class="govuk-input govuk-!-width-half" id="cost" name="cost" type="text" spellcheck="false"><p class="govuk-!-padding-left-2 govuk-!-padding-top-1">-</p>
+                  </div>      
+                  <div class="govuk-input__wrapper govuk-grid-column-one-half govuk-!-padding-left-0 govuk-!-padding-right-0"><p class="govuk-!-padding-right-2"></p>
+                    <div class="govuk-input__prefix" aria-hidden="true">31/03</div>
+                    <input class="govuk-input govuk-!-width-half" id="cost" name="cost" type="text" spellcheck="false">
+                  </div>                 
+                </div>
+            </details>
+            
+            <details class="govuk-details govuk-section-break govuk-section-break--visible govuk-!-padding-bottom-2 govuk-!-margin-bottom-4" data-module="govuk-details">
+              <summary class="govuk-details__summary ">
+                <span class="govuk-details__summary-text govuk-link--no-underline">
+                  Funding agreement value
+                </span>
+              </summary>      
+              <div class="govuk-form-group govuk-!-padding-top-4 govuk-!-padding-left-2">
+                  <div class="govuk-body">
+                  Agreement value
+                  </div>
+                  <div class="govuk-form-group govuk-!-padding-right-2">
+                    <label class="govuk-label" for="event-name">
+                        Greater than
+                    </label>
+                  <div class="govuk-input__wrapper">
+                    <div class="govuk-input__prefix" aria-hidden="true">£</div>
+                    <input class="govuk-input govuk-!-width-full" id="cost" name="cost" type="text" spellcheck="false">
+                  </div>
+                  <br>
+                  <div class="govuk-form-group">
+                      <label class="govuk-label" for="event-name">
+                        Less than
+                      </label>
+                      <div class="govuk-input__wrapper">
+                        <div class="govuk-input__prefix" aria-hidden="true">£</div>
+                        <input class="govuk-input govuk-!-width-full" id="cost" name="cost" type="text" spellcheck="false">
+                      </div>      
+                  </div>       
+                </div>
+              </div> 
+                
+            <div class="govuk-form-group govuk-!-padding-top-4 govuk-!-padding-left-2">
+                  <div class="govuk-body">
+                  Total amount paid
+                  </div>
+                  <div class="govuk-form-group govuk-!-padding-right-2">
+                    <label class="govuk-label" for="event-name">
+                        Greater than
+                    </label>
+                  <div class="govuk-input__wrapper">
+                    <div class="govuk-input__prefix" aria-hidden="true">£</div>
+                    <input class="govuk-input govuk-!-width-full" id="cost" name="cost" type="text" spellcheck="false">
+                  </div>
+                  <br>
+                  <div class="govuk-form-group">
+                      <label class="govuk-label" for="event-name">
+                        Less than
+                      </label>
+                      <div class="govuk-input__wrapper">
+                        <div class="govuk-input__prefix" aria-hidden="true">£</div>
+                        <input class="govuk-input govuk-!-width-full" id="cost" name="cost" type="text" spellcheck="false">
+                      </div>      
+                  </div>       
+                </div>
+              </div>     
+                
+            </details>      
+        </div> 
+    
+    <div class="govuk-grid-column-two-thirds">  
+    
+    <div class="govuk-grid-column-one-half govuk-!-padding-left-0">     
+    <p class="govuk-body">Showing 1 - 4 of 4 results</p>
+    </div>
+    
+    <div class="govuk-grid-column-one-half govuk-!-padding-right-0 govuk-!-padding-top-1" style="text-align: right;">    
+
+    </div>
+               
+    <div class="govuk-grid-column-full govuk-!-padding-0">
+        
+      <hr class="govuk-section-break govuk-section-break--visible">     
+        
+      <table class="govuk-table">
+
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+
+            <th scope="col" class="govuk-table__header">Date
+              <!--  <a style="display: inline-flex; align-items: top;">Date
+                    <img src="/public/icons/sort-2.svg" class="govuk-!-padding-left-1" alt="arrow" style="height: 20px;">
+                </a> -->
+            </th>
+              
+            <th scope="col" class="govuk-table__header">User
+              <!--   <a style="display: inline-flex; align-items: top;">User
+                    <img src="/public/icons/sort-2.svg" class="govuk-!-padding-left-0" alt="arrow" style="height: 20px;">
+                </a> -->
+            </th>
+            
+            <th scope="col" class="govuk-table__header">Object
+              <!--   <a style="display: inline-flex; align-items: top;">Object
+                    <img src="/public/icons/sort-2.svg" class="govuk-!-padding-left-0" alt="arrow" style="height: 20px;">
+                </a> -->
+            </th>
+              
+            <th scope="col" class="govuk-table__header">Field
+              <!--   <a style="display: inline-flex; align-items: top;">Field
+                    <img src="/public/icons/sort-2.svg" class="govuk-!-padding-left-0" alt="arrow" style="height: 20px;">
+                </a> -->
+            </th>   
+            
+            <th scope="col" class="govuk-table__header">Original value
+              <!--   <a style="display: inline-flex; align-items: top;">Original value
+                    <img src="/public/icons/sort-2.svg" class="govuk-!-padding-left-0" alt="arrow" style="height: 20px;">
+                </a> -->
+            </th>   
+              
+            <th scope="col" class="govuk-table__header">New value
+              <!--   <a style="display: inline-flex; align-items: top;">New value
+                    <img src="/public/icons/sort-2.svg" class="govuk-!-padding-left-0" alt="arrow" style="height: 20px;">
+                </a> -->
+            </th>   
+
+          </tr>
+        </thead>
+
+        <tbody class="govuk-table__body">
+
+          <tr class="govuk-table__row">
+
+            <td class="govuk-table__cell">???</td>
+
+            <td class="govuk-table__cell">???</td>
+
+            <td class="govuk-table__cell">???</td>
+            
+            <td class="govuk-table__cell">???</td>  
+
+            <td class="govuk-table__cell">???</td>
+              
+            <td class="govuk-table__cell">???</td>  
+
+          </tr>
+           
+        </tbody>
+      </table> 
+        
+    </div>
+    </div>
+    </div>             
+                  
+              </div>
+            
+              <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="scheme-audit">
+                  
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds">    
+                <h2 class="govuk-heading-l">View this scheme's audit history</h2>
+                  
+                  <p class="govuk-body"><s>Here are all the actions that have taken place for this scheme.</s></p>
+                </div> 
+                </div>    
+                  
+                  <hr class="govuk-section-break govuk-section-break--visible govuk-!-padding-top-3"> 
+        
+              <div class="govuk-grid-row govuk-!-padding-top-7 govuk-!-padding-bottom-4">
+                  <div class="govuk-grid-column-three-quarters">
+                  <div class="govuk-grid-column-three-quarters govuk-!-padding-right-0 govuk-!-padding-left-0">
+                    <input class="govuk-input govuk-!-width-full govuk-!-padding-left-3" id="full" name="full" type="text" placeholder="Search">
+                  </div>
+                  <div class="govuk-grid-column-one-quarter govuk-!-padding-left-0">
+                    <button class="govuk-button" style="background-color:#1d70b8" data-module="govuk-button">
+                       Search
+                    </button>  
+                  </div>
+              </div>
+              
+          </div>
+                  
+          <div class="govuk-!-padding-bottom-2"></div>
+              
+              <div class="govuk-grid-row">
+           <!-- <div class="govuk-grid-column-one-third">
+            
+            <p class="govuk-body govuk-!-font-weight-bold">Filters</p>
+            
+            <hr class="govuk-section-break govuk-section-break--visible">
+    
+            <details class="govuk-details govuk-section-break govuk-section-break--visible govuk-!-padding-bottom-2 govuk-!-margin-bottom-4 govuk-!-padding-top-4" data-module="govuk-details">
+              
+                <summary class="govuk-details__summary ">
+                <span class="govuk-details__summary-text govuk-link--no-underline">
+                  Financial year dates
+                </span>
+              </summary>      
+                
+                <div class="govuk-form-group govuk-!-padding-top-4 govuk-!-padding-left-2">     
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          Active in current financial year (2023/24)
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                          Active in last financial year (2022/23)
+                        </label>
+                      </div>
+                  </div>
+                </div> 
+                
+                <div class="govuk-form-group">
+                    <label class="govuk-label govuk-!-padding-bottom-3" for="event-name">
+                        Active between 
+                    </label>
+                  <div class="govuk-input__wrapper govuk-grid-column-one-half govuk-!-padding-left-0 govuk-!-padding-right-0">
+                    <div class="govuk-input__prefix" aria-hidden="true">01/04</div>
+                    <input class="govuk-input govuk-!-width-half" id="cost" name="cost" type="text" spellcheck="false"><p class="govuk-!-padding-left-2 govuk-!-padding-top-1">-</p>
+                  </div>      
+                  <div class="govuk-input__wrapper govuk-grid-column-one-half govuk-!-padding-left-0 govuk-!-padding-right-0"><p class="govuk-!-padding-right-2"></p>
+                    <div class="govuk-input__prefix" aria-hidden="true">31/03</div>
+                    <input class="govuk-input govuk-!-width-half" id="cost" name="cost" type="text" spellcheck="false">
+                  </div>                 
+                </div>
+            </details>
+            
+            <details class="govuk-details govuk-section-break govuk-section-break--visible govuk-!-padding-bottom-2 govuk-!-margin-bottom-4" data-module="govuk-details">
+              <summary class="govuk-details__summary ">
+                <span class="govuk-details__summary-text govuk-link--no-underline">
+                  Funding agreement value
+                </span>
+              </summary>      
+              <div class="govuk-form-group govuk-!-padding-top-4 govuk-!-padding-left-2">
+                  <div class="govuk-body">
+                  Agreement value
+                  </div>
+                  <div class="govuk-form-group govuk-!-padding-right-2">
+                    <label class="govuk-label" for="event-name">
+                        Greater than
+                    </label>
+                  <div class="govuk-input__wrapper">
+                    <div class="govuk-input__prefix" aria-hidden="true">£</div>
+                    <input class="govuk-input govuk-!-width-full" id="cost" name="cost" type="text" spellcheck="false">
+                  </div>
+                  <br>
+                  <div class="govuk-form-group">
+                      <label class="govuk-label" for="event-name">
+                        Less than
+                      </label>
+                      <div class="govuk-input__wrapper">
+                        <div class="govuk-input__prefix" aria-hidden="true">£</div>
+                        <input class="govuk-input govuk-!-width-full" id="cost" name="cost" type="text" spellcheck="false">
+                      </div>      
+                  </div>       
+                </div>
+              </div> 
+                
+            <div class="govuk-form-group govuk-!-padding-top-4 govuk-!-padding-left-2">
+                  <div class="govuk-body">
+                  Total amount paid
+                  </div>
+                  <div class="govuk-form-group govuk-!-padding-right-2">
+                    <label class="govuk-label" for="event-name">
+                        Greater than
+                    </label>
+                  <div class="govuk-input__wrapper">
+                    <div class="govuk-input__prefix" aria-hidden="true">£</div>
+                    <input class="govuk-input govuk-!-width-full" id="cost" name="cost" type="text" spellcheck="false">
+                  </div>
+                  <br>
+                  <div class="govuk-form-group">
+                      <label class="govuk-label" for="event-name">
+                        Less than
+                      </label>
+                      <div class="govuk-input__wrapper">
+                        <div class="govuk-input__prefix" aria-hidden="true">£</div>
+                        <input class="govuk-input govuk-!-width-full" id="cost" name="cost" type="text" spellcheck="false">
+                      </div>      
+                  </div>       
+                </div>
+              </div>     
+                
+            </details>      
+        </div> -->
+    
+    <div class="govuk-grid-column-full">  
+    
+    <div class="govuk-grid-column-one-half govuk-!-padding-left-0">     
+    <p class="govuk-body">Showing 1 - 1 of 1 result</p>
+    </div>
+    
+    <div class="govuk-grid-column-one-half govuk-!-padding-right-0 govuk-!-padding-top-1" style="text-align: right;">    
+
+    </div>
+               
+    <div class="govuk-grid-column-full govuk-!-padding-0" id="awardgrid">
+        
+      <hr class="govuk-section-break govuk-section-break--visible">     
+        
+      <table class="govuk-table">
+
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+
+            <th scope="col" class="govuk-table__header">Date
+              <!--  <a style="display: inline-flex; align-items: top;">Date
+                    <img src="/public/icons/sort-2.svg" class="govuk-!-padding-left-1" alt="arrow" style="height: 20px;">
+                </a> -->
+            </th>
+              
+            <th scope="col" class="govuk-table__header">User
+              <!--   <a style="display: inline-flex; align-items: top;">User
+                    <img src="/public/icons/sort-2.svg" class="govuk-!-padding-left-0" alt="arrow" style="height: 20px;">
+                </a> -->
+            </th>
+            
+            <th scope="col" class="govuk-table__header">Object
+              <!--   <a style="display: inline-flex; align-items: top;">Object
+                    <img src="/public/icons/sort-2.svg" class="govuk-!-padding-left-0" alt="arrow" style="height: 20px;">
+                </a> -->
+            </th>
+              
+            <th scope="col" class="govuk-table__header">Field
+              <!--   <a style="display: inline-flex; align-items: top;">Field
+                    <img src="/public/icons/sort-2.svg" class="govuk-!-padding-left-0" alt="arrow" style="height: 20px;">
+                </a> -->
+            </th>   
+            
+            <th scope="col" class="govuk-table__header">Original value
+              <!--   <a style="display: inline-flex; align-items: top;">Original value
+                    <img src="/public/icons/sort-2.svg" class="govuk-!-padding-left-0" alt="arrow" style="height: 20px;">
+                </a> -->
+            </th>   
+              
+            <th scope="col" class="govuk-table__header">New value
+              <!--   <a style="display: inline-flex; align-items: top;">New value
+                    <img src="/public/icons/sort-2.svg" class="govuk-!-padding-left-0" alt="arrow" style="height: 20px;">
+                </a> -->
+            </th>   
+
+          </tr>
+        </thead>
+
+        <tbody class="govuk-table__body">
+
+          <tr class="govuk-table__row">
+
+            <td class="govuk-table__cell">???</td>
+
+            <td class="govuk-table__cell">???</td>
+
+            <td class="govuk-table__cell">???</td>
+            
+            <td class="govuk-table__cell">???</td>  
+
+            <td class="govuk-table__cell">???</td>
+              
+            <td class="govuk-table__cell">???</td>  
+
+          </tr>
+           
+        </tbody>
+      </table> 
+        
+    </div>
+    </div>
+    </div>             
+                  
+              </div>
+    
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="associated-documents">
+                  
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds">    
+                <h2 class="govuk-heading-l">View and download associated documents</h2>
+                  
+                  <p class="govuk-body"><s>Here are the documents associated with this scheme.</s></p>
+                    
+                  <div class="govuk-form-group govuk-!-padding-top-2">
+                      <label class="govuk-label" for="file-upload-1">
+                        Upload a file
+                      </label>
+                      <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+                    </div>  
+                    
+                </div> 
+                </div>    
+                  
+                  <hr class="govuk-section-break govuk-section-break--visible govuk-!-padding-top-3"> 
+        
+              <div class="govuk-grid-row govuk-!-padding-top-7 govuk-!-padding-bottom-4">
+                  <div class="govuk-grid-column-three-quarters">
+                  <div class="govuk-grid-column-three-quarters govuk-!-padding-right-0 govuk-!-padding-left-0">
+                    <input class="govuk-input govuk-!-width-full govuk-!-padding-left-3" id="full" name="full" type="text" placeholder="Search">
+                  </div>
+                  <div class="govuk-grid-column-one-quarter govuk-!-padding-left-0">
+                    <button class="govuk-button" style="background-color:#1d70b8" data-module="govuk-button">
+                       Search
+                    </button>  
+                  </div>
+              </div>
+             
+            <div class="govuk-grid-column-one-thrid">
+                    <button class="govuk-button" data-module="govuk-button">
+                          Download results (CSV)
+                    </button>
+                </div>       
+              
+          </div>
+                  
+          <div class="govuk-!-padding-bottom-2"></div>
+              
+              <div class="govuk-grid-row">
+           <!-- <div class="govuk-grid-column-one-third">
+            
+            <p class="govuk-body govuk-!-font-weight-bold">Filters</p>
+            
+            <hr class="govuk-section-break govuk-section-break--visible">
+    
+            <details class="govuk-details govuk-section-break govuk-section-break--visible govuk-!-padding-bottom-2 govuk-!-margin-bottom-4 govuk-!-padding-top-4" data-module="govuk-details">
+              
+                <summary class="govuk-details__summary ">
+                <span class="govuk-details__summary-text govuk-link--no-underline">
+                  Financial year dates
+                </span>
+              </summary>      
+                
+                <div class="govuk-form-group govuk-!-padding-top-4 govuk-!-padding-left-2">     
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                          Active in current financial year (2023/24)
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                        <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                          Active in last financial year (2022/23)
+                        </label>
+                      </div>
+                  </div>
+                </div> 
+                
+                <div class="govuk-form-group">
+                    <label class="govuk-label govuk-!-padding-bottom-3" for="event-name">
+                        Active between 
+                    </label>
+                  <div class="govuk-input__wrapper govuk-grid-column-one-half govuk-!-padding-left-0 govuk-!-padding-right-0">
+                    <div class="govuk-input__prefix" aria-hidden="true">01/04</div>
+                    <input class="govuk-input govuk-!-width-half" id="cost" name="cost" type="text" spellcheck="false"><p class="govuk-!-padding-left-2 govuk-!-padding-top-1">-</p>
+                  </div>      
+                  <div class="govuk-input__wrapper govuk-grid-column-one-half govuk-!-padding-left-0 govuk-!-padding-right-0"><p class="govuk-!-padding-right-2"></p>
+                    <div class="govuk-input__prefix" aria-hidden="true">31/03</div>
+                    <input class="govuk-input govuk-!-width-half" id="cost" name="cost" type="text" spellcheck="false">
+                  </div>                 
+                </div>
+            </details>
+            
+            <details class="govuk-details govuk-section-break govuk-section-break--visible govuk-!-padding-bottom-2 govuk-!-margin-bottom-4" data-module="govuk-details">
+              <summary class="govuk-details__summary ">
+                <span class="govuk-details__summary-text govuk-link--no-underline">
+                  Funding agreement value
+                </span>
+              </summary>      
+              <div class="govuk-form-group govuk-!-padding-top-4 govuk-!-padding-left-2">
+                  <div class="govuk-body">
+                  Agreement value
+                  </div>
+                  <div class="govuk-form-group govuk-!-padding-right-2">
+                    <label class="govuk-label" for="event-name">
+                        Greater than
+                    </label>
+                  <div class="govuk-input__wrapper">
+                    <div class="govuk-input__prefix" aria-hidden="true">£</div>
+                    <input class="govuk-input govuk-!-width-full" id="cost" name="cost" type="text" spellcheck="false">
+                  </div>
+                  <br>
+                  <div class="govuk-form-group">
+                      <label class="govuk-label" for="event-name">
+                        Less than
+                      </label>
+                      <div class="govuk-input__wrapper">
+                        <div class="govuk-input__prefix" aria-hidden="true">£</div>
+                        <input class="govuk-input govuk-!-width-full" id="cost" name="cost" type="text" spellcheck="false">
+                      </div>      
+                  </div>       
+                </div>
+              </div> 
+                
+            <div class="govuk-form-group govuk-!-padding-top-4 govuk-!-padding-left-2">
+                  <div class="govuk-body">
+                  Total amount paid
+                  </div>
+                  <div class="govuk-form-group govuk-!-padding-right-2">
+                    <label class="govuk-label" for="event-name">
+                        Greater than
+                    </label>
+                  <div class="govuk-input__wrapper">
+                    <div class="govuk-input__prefix" aria-hidden="true">£</div>
+                    <input class="govuk-input govuk-!-width-full" id="cost" name="cost" type="text" spellcheck="false">
+                  </div>
+                  <br>
+                  <div class="govuk-form-group">
+                      <label class="govuk-label" for="event-name">
+                        Less than
+                      </label>
+                      <div class="govuk-input__wrapper">
+                        <div class="govuk-input__prefix" aria-hidden="true">£</div>
+                        <input class="govuk-input govuk-!-width-full" id="cost" name="cost" type="text" spellcheck="false">
+                      </div>      
+                  </div>       
+                </div>
+              </div>     
+                
+            </details>      
+        </div> -->
+    
+    <div class="govuk-grid-column-full">  
+    
+    <div class="govuk-grid-column-one-half govuk-!-padding-left-0">     
+    <p class="govuk-body">Showing 1 - 1 of 1 result</p>
+    </div>
+    
+    <div class="govuk-grid-column-one-half govuk-!-padding-right-0 govuk-!-padding-top-1" style="text-align: right;">    
+
+    </div>
+               
+    <div class="govuk-grid-column-full govuk-!-padding-0" id="awardgrid">
+        
+      <hr class="govuk-section-break govuk-section-break--visible">     
+        
+      <table class="govuk-table">
+
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+
+            <th scope="col" class="govuk-table__header">Date
+              <!--  <a style="display: inline-flex; align-items: top;">Date
+                    <img src="/public/icons/sort-2.svg" class="govuk-!-padding-left-1" alt="arrow" style="height: 20px;">
+                </a> -->
+            </th>
+              
+            <th scope="col" class="govuk-table__header">Document name
+              <!--   <a style="display: inline-flex; align-items: top;">Document name
+                    <img src="/public/icons/sort-2.svg" class="govuk-!-padding-left-0" alt="arrow" style="height: 20px;">
+                </a> -->
+            </th>
+            
+            <th scope="col" class="govuk-table__header">Uploaded by user
+              <!--   <a style="display: inline-flex; align-items: top;">Uploaded by user
+                    <img src="/public/icons/sort-2.svg" class="govuk-!-padding-left-0" alt="arrow" style="height: 20px;">
+                </a> -->
+            </th>
+              
+            <th scope="col" class="govuk-table__header">File type
+              <!--   <a style="display: inline-flex; align-items: top;">File type
+                    <img src="/public/icons/sort-2.svg" class="govuk-!-padding-left-0" alt="arrow" style="height: 20px;">
+                </a> -->
+            </th>   
+            
+            <th scope="col" class="govuk-table__header">Original value
+              <!--   <a style="display: inline-flex; align-items: top;">Original value
+                    <img src="/public/icons/sort-2.svg" class="govuk-!-padding-left-0" alt="arrow" style="height: 20px;">
+                </a> -->
+            </th>   
+              
+            <th scope="col" class="govuk-table__header">New value
+              <!--   <a style="display: inline-flex; align-items: top;">New value
+                    <img src="/public/icons/sort-2.svg" class="govuk-!-padding-left-0" alt="arrow" style="height: 20px;">
+                </a> -->
+            </th>   
+
+          </tr>
+        </thead>
+
+        <tbody class="govuk-table__body">
+
+          <tr class="govuk-table__row">
+
+            <td class="govuk-table__cell">???</td>
+
+            <td class="govuk-table__cell">???</td>
+
+            <td class="govuk-table__cell">???</td>
+            
+            <td class="govuk-table__cell">???</td>  
+
+            <td class="govuk-table__cell">???</td>
+              
+            <td class="govuk-table__cell">???</td>  
+
+          </tr>
+           
+        </tbody>
+      </table> 
+        
+    </div>
+    </div>
+    </div>             
+                  
+              </div>        
+            </div>
+
+    </div>
+  </div>
+        
+{% endblock %}
